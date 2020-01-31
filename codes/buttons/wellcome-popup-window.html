@@ -1,0 +1,62 @@
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<style>
+#wc-back {display:none;background:none;width:100%;height:100%;position:fixed;top:0;left:0;z-index:99999;}
+#wc-exit {width:100%;height:100%;}
+#wc-box {background:#173377;width:500px;height:auto;position:absolute;top:15%;left:35%;}
+#exit-button {float:right;cursor:pointer;background:url(https://lh4.googleusercontent.com/-x93wEjHeGvQ/VVpf9KsDXDI/AAAAAAAARRk/isibWWRw_Ds/s25-no/Close-button-25.png) no-repeat;height:25px;width:25px;padding:0px;margin:0px;position:relative;}
+.x-box {height:25px;width:474px;margin:0 auto;background:#105105;margin-top:0px;position:relative;margin-left:0px;}
+#linkit {color:#33FFFF;font:13px Arial;margin: 5px;float:center;}
+#linkit a {color:#33FFFF;font:13px Arial;margin: 5px;float:center;}
+#linkit a:hover {color:#FFFF00;font:13px Arial;margin: 5px;float:center;}
+</style>
+<script>
+jQuery.cookie = function (key, value, options) {
+if (arguments.length > 1 && String(value) !== "[object Object]") {
+options = jQuery.extend({}, options);
+if (value === null || value === undefined) {
+options.expires = -1;}
+if (typeof options.expires === 'number') {
+var days = options.expires, t = options.expires = new Date();
+t.setDate(t.getDate() + days);}
+value = String(value);
+return (document.cookie = [
+encodeURIComponent(key), '=',
+options.raw ? value : encodeURIComponent(value),
+options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+options.path ? '; path=' + options.path : '',
+options.domain ? '; domain=' + options.domain : '',
+options.secure ? '; secure' : ''
+].join(''));}
+options = value || {};
+var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
+return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;};
+</script>
+
+<script>
+jQuery(document).ready(function($){
+if($.cookie('popup_user_login') != 'yes'){
+$('#wc-back').delay(100).fadeIn('medium');
+$('#exit-button, #wc-exit').click(function(){
+$('#wc-back').stop().fadeOut('medium');});}
+$.cookie('popup_user_login', 'yes', { path: '/', expires: 7 });});
+</script>
+
+<div id='wc-back'>
+<div id='wc-exit'></div>
+<div id='wc-box'>
+<div id='exit-button'></div>
+<div class='x-box'>
+<span style="color:#FFFFFF;font:bold 15px Arial;padding:5px;">ΚΑΛΩΣ ΗΛΘΑΤΕ ΣΤΟ WIDGETS FOR BLOGS</span>
+</div>
+<p><a href="http://the-best-widgets.blogspot.gr" target="_blank"><center><img src="https://lh3.googleusercontent.com/--37o7xy6ad4/VVtGzEDCjqI/AAAAAAAARY8/iaizHq9tv2M/w240-h171-no/MY%2BDEMO%2BBLOGS.gif" border="0" alt="MY DEMO BLOGS"/></a></center></p>
+<p><span style="background:#A11111;color:#FFFFFF;font:bold 15px Arial;margin-left:100px;padding:4px;}">ΚΛΙΚ ΣΤΗΝ ΕΙΚΟΝΑ ΓΙΑ ΤΟ ΚΥΡΙΟ BLOG</span></p>
+<div id='linkit'><div id='linkit a'><div id='linkit a:hover'>
+<p><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">ΔΕΙΤΕ ΤΑ ΠΕΡΙΕΧΟΜΕΝΑ ΤΟΥ BLOG ΜΟΥ ΕΔΩ</a></p>
+<p><a href="http://gadgetsforblogs1.blogspot.gr">ΔΕΙΤΕ ΤΟ DEMO BLOG ΜΟΥ GADGETS FOR BLOGS-1</a></p>
+<p><a href="http://gadgetsforblogs2.blogspot.gr">ΔΕΙΤΕ ΤΟ DEMO BLOG ΜΟΥ GADGETS FOR BLOGS-2</a></p>
+<p><a href="http://gadgetsforblogs3.blogspot.gr">ΔΕΙΤΕ ΤΟ DEMO BLOG ΜΟΥ GADGETS FOR BLOGS-3</a></p>
+<p><a href="http://gadgetsforblogs4.blogspot.gr">ΔΕΙΤΕ ΤΟ DEMO BLOG ΜΟΥ GADGETS FOR BLOGS-4</a></p>
+<p><a href="http://gadgetsforblogs5.blogspot.gr">ΔΕΙΤΕ ΤΟ DEMO BLOG ΜΟΥ GADGETS FOR BLOGS-5</a></p>
+<p><a href="http://gadgetsforblogs6.blogspot.gr">ΔΕΙΤΕ ΤΟ DEMO BLOG ΜΟΥ GADGETS FOR BLOGS-6</a></p>
+<p><a href="http://gadgetsforblogs7.blogspot.gr">ΔΕΙΤΕ ΤΟ DEMO BLOG ΜΟΥ GADGETS FOR BLOGS-7</a></p>
+</div></div></div></div></div>

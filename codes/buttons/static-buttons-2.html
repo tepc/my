@@ -1,0 +1,31 @@
+<TITLE>STATIC BUTTONS-2</TITLE>
+<style>
+.widgethidden {display:none}
+.widgetshown {display:inline;position:fixed;top:31px;left:0px;z-index:9999;}
+</style>
+<script>
+function togglewidget (postid) {
+var whichpost = document.getElementById(postid);
+if (whichpost.className=="widgetshown") {whichpost.className="widgethidden";}
+else { whichpost.className="widgetshown";}}
+</script>
+<a wtitle="click to expand" href="javascript:togglewidget('UniqueName')">
+<button style="position:fixed;top:0px;left:61px;width:auto; height:30px; background:#FFFF00; color:#000; font:14px Arial;">BLOGGER TOOLS ▼</button></a><br />
+<div class="widgethidden" id="UniqueName">
+<iframe frameborder="0" height="750" width="1480" src="https://start.me/p/Vb68d7"></iframe>
+</div>
+<style>
+.widgethidden1 {display:none}
+.widgetshown1 {display:inline;position:fixed;top:31px;left:0px;z-index:9999;}
+</style>
+<script>
+function togglewidget (postid) {
+var whichpost = document.getElementById(postid);
+if (whichpost.className=="widgetshown1") {whichpost.className="widgethidden1";}
+else { whichpost.className="widgetshown1";}}
+</script>
+<a wtitle="click to expand" href="javascript:togglewidget('UniqueName1')">
+<button style="position:fixed;top:0px;left:216px;width:auto; height:30px; background:#00FF00; color:#000; font:14px Arial;">ALL MY LINKS ▼</button></a><br />
+<div class="widgethidden1" id="UniqueName1">
+<iframe frameborder="0" height="750" width="1520" src="https://my-posts-1.blogspot.gr/2016/09/my-links.html"></iframe>
+</div>

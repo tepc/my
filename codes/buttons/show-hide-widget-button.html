@@ -1,0 +1,15 @@
+<style>
+.widgethidden {display:none}
+.widgetshown {display:inline}
+</style>
+<script>
+function togglewidget (postid) {
+var whichpost = document.getElementById(postid);
+if (whichpost.className=="widgetshown") {whichpost.className="widgethidden";}
+else { whichpost.className="widgetshown";}}
+</script>
+<a wtitle="click to expand" href="javascript:togglewidget('UniqueName')">
+<button style="width:auto; height:28px; background:#FF6600; color:#FFFFFF; font:14px Arial;">SHOW / HIDE WIDGETS LIST</a></button><br />
+<div class="widgethidden" id="UniqueName">
+<iframe frameborder="0" height="3000" width="960" src="https://docs.google.com/spreadsheets/d/1aLXP3gygj2TILXQkEmfF-CBe5sqp7y5zlLk92pQU1tE/pubhtml?widget=true&amp;headers=false"></iframe>
+</div>
