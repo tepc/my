@@ -1,0 +1,23 @@
+<a style="background:#A11111;color:#FFF; font:13 px arial; border-radius:5px; padding:3px;"href="javascript:jumpto ('https://docs.google.com/spreadsheets/d/1250n3upxFNUwA50hSL73OZK0fvXv0CHmFF1OTE_443M/pubhtml?gid=1951055053&amp;single=true&amp;widget=true&amp;headers=false')">MY POSTS</a>
+<a style="background:#105105;color:#FFF; font:13 px arial; border-radius:5px; padding:3px;" href="javascript:jumpto ('https://docs.google.com/spreadsheets/d/1mdEE_FkslrVn_TEgWRdVUdp7g4rnJ9r4ge4jgglv_YA/pubhtml?gid=25900094&amp;single=true&amp;widget=true&amp;headers=false')">MY LINKS</a>
+<a style="background:#740777;color:#FFF; font:13 px arial; border-radius:5px; padding:3px;" href="javascript:jumpto ('https://docs.google.com/spreadsheets/d/1aLXP3gygj2TILXQkEmfF-CBe5sqp7y5zlLk92pQU1tE/pubhtml?widget=true&amp;headers=false')">WIDGETS LIST</a>
+<a style="background:#FF4500;color:#FFF; font:13 px arial; border-radius:5px; padding:3px;" href="javascript:jumpto ('https://start.me/p/Vb68d7/blogger-articles')">BLOGGER ARTICLES</a>
+<a style="background:#173374;color:#FFF; font:13 px arial; border-radius:5px; padding:3px;" href="javascript:jumpto ('https://start.me/p/WqMDRn/sosial-networks')">SOSIAL NETWORKS</a> 
+
+<script>
+var displaymode=0
+var iframecode='<iframe id="external" style="width:100%;height:750px" src="http://www.bing.com"></iframe>'
+if (displaymode==0)
+document.write(iframecode)
+function jumpto(inputurl){
+if (document.getElementById&&displaymode==0)
+document.getElementById("external").src=inputurl
+else if (document.all&&displaymode==0)
+document.all.external.src=inputurl
+else{
+if (!window.win2||win2.closed)
+win2=window.open(inputurl)
+else{
+win2.location=inputurl
+win2.focus()}}}
+</script>

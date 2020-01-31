@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<title>TABS CONTAINER-5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<div class="container"></div>
+<div class="bar">
+  <button class="bar button" onclick="openTab('links1')">MY LINKS-1</button>
+  <button class="bar button" onclick="openTab('links2')">MY LINKS-2</button>
+  <button class="bar button" onclick="openTab('links3')">MY LINKS-3</button>
+</div>
+
+<div id="links1" class="container tab">  
+<iframe frameborder="0" width="930" height="760" src="https://docs.google.com/spreadsheets/d/1250n3upxFNUwA50hSL73OZK0fvXv0CHmFF1OTE_443M/pubhtml?gid=1951055053&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+</div>
+
+<div id="links2" class="container tab" style="display:none">  
+<iframe frameborder="0" width="930" height="760" src="https://docs.google.com/spreadsheets/d/1mdEE_FkslrVn_TEgWRdVUdp7g4rnJ9r4ge4jgglv_YA/pubhtml?gid=25900094&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+</div>
+
+<div id="links3" class="container tab" style="display:none">  
+<iframe frameborder="0" height="760" src="https://docs.google.com/spreadsheets/d/1aLXP3gygj2TILXQkEmfF-CBe5sqp7y5zlLk92pQU1tE/pubhtml?widget=true&amp;headers=false" width="930"></iframe>
+</div>
+<script>
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";}
+document.getElementById(tabName).style.display = "block";}
+</script>
+</body>
+</html>

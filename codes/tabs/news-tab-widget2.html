@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>TABS CONTAINER-5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<div class="container2"></div>
+<div class="bar2">
+<button class="bar2 button" style="background:#FFFF00;color:#000;margin:2px;padding:4px;border-radius:8px;font:14px arial;" onclick="openTab2('b0')">WEATHER</button>
+<button class="bar2 button" style="background:#FF0000;color:#FFF;margin:2px;padding:4px;border-radius:8px;font:14px arial;" onclick="openTab2('b1')">RADIO STATIONS</button>
+<button class="bar2 button" style="background:#740777;color:#FFF;margin:2px;padding:4px;border-radius:8px;font:14px arial;" onclick="openTab2('b2')">TV CHANNELS</button>
+<button class="bar2 button" style="background:#115599;color:#FFF;margin:2px;padding:4px;border-radius:8px;font:14px arial;" onclick="openTab2('b3')">SOSIAL FOLLOW ICONSr</button>
+<button class="bar2 button" style="background:#009900;color:#FFF;margin:2px;padding:4px;border-radius:8px;font:14px arial;" onclick="openTab2('b4')">I-NEWS-1</button>
+<button class="bar2 button" style="background:#173377;color:#FFF;margin:2px;padding:4px;border-radius:8px;font:14px arial;" onclick="openTab2('b5')">I-NEWS-2</button>
+</div>
+<div id="b0" class="container2 tab2">  
+<div id="kairos" style="background:#333;width:1500px;height:100px;">
+<iframe scrolling="no" allowtransparency="true" frameborder="0" style="width: 1316px; height: 77px;" src="https://www.weather.gr/widgets/weather_w4.aspx?p1=3&amp;p2=19&amp;p3=53&amp;p4=39&amp;p5=17&amp;p6=23"></iframe>
+</div>
+</div>
+<div id="b1" class="container2 tab2" style=" background:#333;width:1500px;height:100px;display:none">  
+<iframe src="https://my-posts-1.blogspot.com/p/radio-buttons.html" width="1500" height="110" scrolling="no" style="border:0;"></iframe></div>
+<div id="b2" class="container2 tab2" style=" background:#333;width:1500px;height:100px;display:none">  
+<iframe src="https://my-posts-1.blogspot.com/p/tv-buttons.html" width="1500" height="110" scrolling="no" style="border:0;"></iframe></div>
+<div id="b3" class="container2 tab2" style="background:#333;width:1500px;height:100px;display:none">  
+<iframe src="https://my-posts-1.blogspot.com/p/sosial-follow-buttons.html" width="1500" height="110" scrolling="no" style="border:0;"></iframe></div>
+<div id="b4" class="container2 tab2" style=" background:#333;width:1500px;height:260px;display:none">
+<div style="width:300px;text-align:right;line-height:11px; float:left;">
+<iframe scrolling="no" frameborder="0" style="border:0; width: 300px; height: 250px; margin:0; padding:0;" src="https://www.inewsgr.com/widgets/popular300.html"></iframe><br></div>
+<div style="width:300px;text-align:right;line-height:11px; float:left;">
+<iframe scrolling="no" frameborder="0" style="border:0; width: 300px; height: 250px; margin:0; padding:0;" src="https://www.inewsgr.com/widgets/sport-popular300.html"></iframe><br></div>
+<div style="width:300px;text-align:right;line-height:11px; float:left;">
+<iframe scrolling="no" frameborder="0" style="border:0; width: 300px; height: 250px; margin:0; padding:0;" src="https://www.inewsgr.com/widgets/oikonomia-popular300.html"></iframe><br></div>
+<div style="width:300px;text-align:right;line-height:11px; float:left;">
+<iframe scrolling="no" frameborder="0" style="border:0; width: 300px; height: 250px; margin:0; padding:0;" src="https://www.inewsgr.com/widgets/lifestyle-popular300.html"></iframe><br></div>
+<div style="float:left;width:285px;text-align:center;">
+<iframe src="https://www.eortologio.net/widget.php?color=ffffff&color2=105105&bgcolor=115599&width=285&height=250" 
+width="285" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div>  
+</div>
+<div id="b5" class="container2 tab2" style="background:#333;width:1500px;height:260px;display:none">
+<div style="width:300px;text-align:right;line-height:11px; float:left;">
+<iframe scrolling="no" frameborder="0" style="border:0; width: 300px; height: 250px; margin:0; padding:0;" src="https://www.inewsgr.com/widgets/blogs-popular300.html"></iframe><br></div>
+<div style="width:300px;text-align:right;line-height:11px; float:left;">
+<iframe scrolling="no" frameborder="0" style="border:0; width: 300px; height: 250px; margin:0; padding:0;" src="https://www.inewsgr.com/widgets/texnologia-popular300.html"></iframe><br></div>
+<div style="width:300px;text-align:right;line-height:11px; float:left;">
+<iframe scrolling="no" frameborder="0" style="border:0; width: 300px; height: 250px; margin:0; padding:0;" src="https://www.inewsgr.com/widgets/automoto-popular300.html"></iframe><br></div>
+<div style="width:300px;text-align:right;line-height:11px; float:left;">
+<iframe scrolling="no" frameborder="0" style="border:0; width: 300px; height: 250px; margin:0; padding:0;" src="https://www.inewsgr.com/widgets/psyxagwgia-popular300.html"></iframe><br></div>
+<div style="float:left;width:285px;"><iframe src="https://hmerologio.gr/iframe/cal" frameborder="0" width="285px" height="250px" style="border:medium none;overflow:hidden;"></iframe></div>  
+</div>
+<script>
+function openTab2(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab2");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";}
+document.getElementById(tabName).style.display = "block";}
+</script>
+</body>
+</html>

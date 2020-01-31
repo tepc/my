@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>TABS CONTAINER-5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<div class="container3">
+</div>
+<div class="bar3" style="background:#333;width:250px;">
+<button class="bar3 button" onclick="openTab3('c0')" style="background: #ffff00; border-radius: 4px; color: black; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Πρωτοσέλιδα</button>
+<button class="bar3 button" onclick="openTab3('c1')" style="background: #ff0000; border-radius: 4px; color: white; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Cnn Greece</button>
+<button class="bar3 button" onclick="openTab3('c2')" style="background: #115599; border-radius: 4px; color: white; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Ana.gr</button>
+<button class="bar3 button" onclick="openTab3('c3')" style="background: #740777; border-radius: 4px; color: white; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">NewsBomb.gr</button>
+<button class="bar3 button" onclick="openTab3('c4')" style="background: #009900; border-radius: 4px; color: white; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">OnSports.gr</button>
+<button class="bar3 button" onclick="openTab3('c5')" style="background: #173377; border-radius: 4px; color: white; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Sdna.gr</button>
+<button class="bar3 button" onclick="openTab3('c6')" style="background: #ff0099; border-radius: 4px; color: white; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Gossip</button>
+<button class="bar3 button" onclick="openTab3('c7')" style="background: #000000; border-radius: 4px; color: white; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Zodia</button>
+<button class="bar3 button" onclick="openTab3('c8')" style="background: #FFBB22; border-radius: 4px; color: black; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Εορτολόγιο</button>
+<button class="bar3 button" onclick="openTab3('c9')" style="background: #FF4500;border-radius: 4px; color: white; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Radio</button>
+<button class="bar3 button" onclick="openTab3('c10')" style="background: #661111; border-radius: 4px; color:#FFF; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">TV</button>
+<button class="bar3 button" onclick="openTab3('c11')" style="background: #33ffff; border-radius: 4px; color:#000; font: 14px &quot;arial&quot;; margin: 1px; padding: 4px;">Καιρός</button>
+</div>
+<div class="container3 tab3" id="c0" style="background: #333; width: 250px;">
+<div id="fp" style="background: #333; height: 600px; width: 250px;">
+<div style="float: left;">
+<iframe align="middle" frameborder="no" height="300" scrolling="no" src="https://www.protoselidaefimeridon.gr/customticker.php?category=politikes&amp;width=225&amp;height=290&amp;color=FFFFFF&amp;effect=rain&amp;uri=http%3A%2F%2F&amp;vexcep=%5B%5D" style="margin: 0; overflow: hidden; padding: 0;" width="235"></iframe></div>
+<div style="float: left;">
+<iframe align="middle" frameborder="no" height="300" scrolling="no" src="https://www.protoselidaefimeridon.gr/customticker.php?category=athlitikes&amp;width=225&amp;height=290&amp;color=FFFFFF&amp;effect=rain&amp;uri=http%3A%2F%2F&amp;vexcep=%5B%5D" style="margin: 0; overflow: hidden; padding: 0;" width="235"></iframe></div>
+</div>
+</div>
+<div class="container3 tab3" id="c1" style="display: none;">
+<div class="t7" id="cnn-root" style="height: 600px; width: 250px;">
+</div>
+<script>var es = document.createElement("script"); es.async = true;es.src = "//www.cnn.gr/services/js/news.js?vs=1";document.getElementById("cnn-root").appendChild(es);</script>
+</div>
+<div class="container3 tab3" id="c2" style="display: none;">
+<iframe frameborder="0" height="600" src="https://www.amna.gr/news-widget" width="250"></iframe>
+</div>
+<div class="container3 tab3" id="c3" style="display: none;">
+<div class="t7" id="nb-root" style="height: 600px; width: 250px;">
+</div>
+<script>
+var es = document.createElement("script"); es.async = true;
+es.src = "https://www.newsbomb.gr/services/js/news.js?vs=7"
+document.getElementById("nb-root").appendChild(es);
+</script>
+</div>
+<div class="container3 tab3" id="c4" style="display: none;">
+<div class="t6" id="news-root" style="height: 600px; width: 250px;">
+</div>
+<script>
+var es = document.createElement('script'); es.async = true;
+es.src = 'https://www.onsports.gr/services/js/news.js?vs=2'
+document.getElementById('news-root').appendChild(es);
+</script>
+</div>
+<div class="container3 tab3" id="c5" style="display: none;">
+<iframe height="600" scrolling="no" src="https://www.sdna.gr/widgets/news" style="border: 0;" width="250"></iframe>
+</div>
+<div class="container3 tab3" id="c6" style="display: none;">
+<iframe height="600" scrolling="no" src="https://www.sdna.gr/widgets/gossip" style="border: 0;" width="250"></iframe>
+</div>
+<div class="container3 tab3" id="c7" style="display: none;">
+<iframe height="600" scrolling="no" src="https://www.sdna.gr/widgets/zodia" style="border: 0;" width="250"></iframe>
+</div>
+<div class="container3 tab3" id="c8" style="display: none;">
+<iframe border="0" frameborder="0" height="600" marginheight="0" marginwidth="0" scrolling="no" src="https://www.eortologio.net/widget.php?color=ffffff&amp;color2=105105&amp;bgcolor=115599&amp;width=250&amp;height=600" style="border: 0; margin: 0; padding: 0;" width="250"></iframe>
+</div>
+<div class="container3 tab3" id="c9" style="background: #333; display: none; height: 600px; width: 260px;">
+<iframe height="600" scrolling="no" src="https://my-posts-1.blogspot.com/p/radio-buttons-2.html" style="border: 0;" width="260"></iframe>
+</div>
+<div class="container3 tab3" id="c10" style="background: #333; display: none; height: 600px; width: 270px;">
+<iframe height="600" scrolling="no" src="https://my-posts-1.blogspot.com/p/tv-buttons-2_27.html" style="border: 0;" width="270"></iframe>
+</div>
+<div class="container3 tab3" id="c11" style="background: #333; display: none; height: 600px; width: 270px;">
+<iframe allowtransparency="true" frameborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" scrolling="NO" src="https://www.meteoblue.com/el/%CE%BA%CE%B1%CE%B9%CF%81%CF%8C%CF%82/widget/daily/%ce%91%ce%b8%ce%ae%ce%bd%ce%b1_%ce%95%ce%bb%ce%bb%ce%b7%ce%bd%ce%b9%ce%ba%ce%ae-%ce%94%ce%b7%ce%bc%ce%bf%ce%ba%cf%81%ce%b1%cf%84%ce%af%ce%b1_264371?geoloc=fixed&amp;days=5&amp;tempunit=CELSIUS&amp;windunit=BEAUFORT&amp;precipunit=MILLIMETER&amp;coloured=coloured&amp;pictoicon=0&amp;pictoicon=1&amp;maxtemperature=0&amp;maxtemperature=1&amp;mintemperature=0&amp;mintemperature=1&amp;windspeed=0&amp;windspeed=1&amp;windgust=0&amp;windgust=1&amp;winddirection=0&amp;winddirection=1&amp;uv=0&amp;uv=1&amp;humidity=0&amp;humidity=1&amp;precipitation=0&amp;precipitation=1&amp;precipitationprobability=0&amp;precipitationprobability=1&amp;spot=0&amp;spot=1&amp;pressure=0&amp;pressure=1&amp;layout=dark" style="height: 459px; width: 270px;"></iframe> 
+</div>
+<script>
+function openTab3(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab3");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";}
+document.getElementById(tabName).style.display = "block";}
+</script>
+</body>
+</html>

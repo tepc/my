@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<title>MULTIWIDGETS TAB WIDGET</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<div class="bar" style="width:480px;">
+<button class="bar button" onclick="openTab('links0')" style="background: #ffff00; border-radius: 8px; color: black; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Πρωτοσέλιδα</button>
+  <button class="bar button" onclick="openTab('links1')" style="background: #ff0000; border-radius: 8px; color: white; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Cnn Greece</button>
+  <button class="bar button" onclick="openTab('links2')" style="background: #740777; border-radius: 8px; color: white; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">NewsBomb.gr</button>
+  <button class="bar button" onclick="openTab('links3')" style="background: #115599; border-radius: 8px; color: white; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Ama.gr</button>
+  <button class="bar button" onclick="openTab('links4')" style="background: #009900; border-radius: 8px; color: white; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">OnSports.gr</button>
+  <button class="bar button" onclick="openTab('links5')" style="background: #173377; border-radius: 8px; color: white; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Sdna.gr</button>
+  <button class="bar button" onclick="openTab('links6')" style="background: #ff0099; border-radius: 8px; color: white; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Gossip</button>
+  <button class="bar button" onclick="openTab('links7')" style="background: #000000; border-radius: 8px; color: white; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Zodia</button>
+  <button class="bar button" onclick="openTab('links8')" style="background: #ffbb22; border-radius: 8px; color: black; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Εορτολόγιο</button>
+  <button class="bar button" onclick="openTab('links9')" style="background: #33ffff; border-radius: 8px; color: black; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Καιρός</button>
+  <button class="bar button" onclick="openTab('links10')" style="background: #ff4500; border-radius: 8px; color: white; font: 14px &quot;arial&quot;; margin: 2px; padding: 4px;">Radio-TV</button>
+</div>
+<div class="container tab" id="links0">
+<div id="hex" style="background: #333; height: 750px; width: 480px;">
+<br />
+<div style="float: left;">
+<iframe align="middle" frameborder="no" height="300" scrolling="no" src="https://www.protoselidaefimeridon.gr/customticker.php?category=politikes&amp;width=225&amp;height=290&amp;color=FFFFFF&amp;effect=rain&amp;uri=http%3A%2F%2F&amp;vexcep=%5B%5D" style="margin: 0; overflow: hidden; padding: 0;" width="235"></iframe></div>
+<div style="float: left;">
+<iframe align="middle" frameborder="no" height="300" scrolling="no" src="https://www.protoselidaefimeridon.gr/customticker.php?category=athlitikes&amp;width=225&amp;height=290&amp;color=FFFFFF&amp;effect=rain&amp;uri=http%3A%2F%2F&amp;vexcep=%5B%5D" style="margin: 0; overflow: hidden; padding: 0;" width="235"></iframe></div>
+<div style="float: left;">
+<iframe align="middle" frameborder="no" height="300" scrolling="no" src="https://www.protoselidaefimeridon.gr/customticker.php?category=oikonomikes&amp;width=225&amp;height=290&amp;color=FFFFFF&amp;effect=rain&amp;uri=http%3A%2F%2F&amp;vexcep=%5B%5D" style="margin: 0; overflow: hidden; padding: 0;" width="235"></iframe></div>
+<div style="float: left;">
+<iframe align="middle" frameborder="no" height="300" scrolling="no" src="https://www.protoselidaefimeridon.gr/customticker.php?category=eparxiakes&amp;width=225&amp;height=290&amp;color=FFFFFF&amp;effect=rain&amp;uri=http%3A%2F%2F&amp;vexcep=%5B%5D" style="margin: 0; overflow: hidden; padding: 0;" width="235"></iframe></div>
+</div>
+</div>
+<div class="container tab" id="links1" style="display: none;">
+<div class="t7" id="cnn-root" style="height: 750px; width: 475px;">
+</div>
+<script>var es = document.createElement("script"); es.async = true;es.src = "//www.cnn.gr/services/js/news.js?vs=1";document.getElementById("cnn-root").appendChild(es);</script>
+</div>
+<div class="container tab" id="links2" style="display: none;">
+<div class="t7" id="nb-root" style="height: 760px; width: 475px;">
+</div>
+<script>
+var es = document.createElement("script"); es.async = true;
+es.src = "https://www.newsbomb.gr/services/js/news.js?vs=7"
+document.getElementById("nb-root").appendChild(es);
+</script>
+</div>
+<div class="container tab" id="links3" style="display: none;">
+<iframe frameborder="0" height="750" src="https://www.amna.gr/news-widget" width="475"></iframe>
+</div>
+<div class="container tab" id="links4" style="display: none;">
+<div class="t6" id="news-root" style="height: 760px; width: 475px;">
+</div>
+<script>
+var es = document.createElement('script'); es.async = true;
+es.src = 'https://www.onsports.gr/services/js/news.js?vs=2'
+document.getElementById('news-root').appendChild(es);
+</script>
+</div>
+<div class="container tab" id="links5" style="display: none;">
+<iframe height="750" scrolling="no" src="https://www.sdna.gr/widgets/news" style="border: 0;" width="475"></iframe>
+</div>
+<div class="container tab" id="links6" style="display: none;">
+<iframe height="750" scrolling="no" src="https://www.sdna.gr/widgets/gossip" style="border: 0;" width="475"></iframe>
+</div>
+<div class="container tab" id="links7" style="display: none;">
+<iframe height="750" scrolling="no" src="https://www.sdna.gr/widgets/zodia" style="border: 0;" width="475"></iframe>
+</div>
+<div class="container tab" id="links8" style="display: none;">
+<iframe border="0" frameborder="0" height="755" marginheight="0" marginwidth="0" scrolling="no" src="https://www.eortologio.net/widget.php?color=ffffff&amp;color2=105105&amp;bgcolor=115599&amp;width=475&amp;height=755" style="border: 0; margin: 0; padding: 0;" width="475"></iframe>
+</div>
+<div class="container tab" id="links9" style="background: #eee; display: none; height: 750px; width: 475px;">
+<iframe border="0" frameborder="0" height="750" src="//kairos123.gr/widget7_show.php?areas=12,1,10,32,23,31,15,22,3,47&amp;width=400&amp;color=purple" style="margin-left: 30px; padding: 0;" width="420"></iframe></div>
+<div class="container tab" id="links10" style="background: #333; display: none; height: 750px; width: 475px;">
+<iframe height="750" scrolling="no" src="https://my-posts-1.blogspot.com/p/radio-tv-buttons.html" style="border: 0;" width="475"></iframe>
+</div>
+<script>
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";}
+document.getElementById(tabName).style.display = "block";}
+</script>
+</body>
+</html>
