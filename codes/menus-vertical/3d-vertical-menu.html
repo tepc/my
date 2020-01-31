@@ -1,0 +1,26 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>3D ΚΑΘΕΤΟ ΜΕΝΟΥ</TITLE>
+<style>
+#menu1 {width:240px; margin-top:12px;padding:5px;}
+#menu1 ul li {width:240px;height:40px;}
+#menu1 ul li a {display: block; width:240px; height: 40px; font:14px Arial; line-height: 40px; background: #173377; color: #FFFFFF; text-align:left; padding:6px;margin:-20px; -webkit-perspective: 1000px; -moz-perspective: 1000px; perspective: 1000px;}
+#menu1 ul li a span {position:relative;display: inline-block;width:240px;height:40px;background: #115599; -webkit-transition: -webkit-transform 0.5s, background 0.5s; -moz-transition: -moz-transform 0.5s, background 0.5s; transition: transform 0.5s, background 0.5s; -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; transform-origin: 50% 0; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; transform-style: preserve-3d;}
+#menu1 ul li a span::before {position: absolute;top:100%;left: 0;width:240px;height:100%; background: #173377; content: attr(data-hover); -webkit-transition: background 0.5s; -moz-transition: background 0.5s; transition: background 0.5s; -webkit-transform: rotateX(-90deg); -moz-transform: rotateX(-90deg); transform: rotateX(-90deg); -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; transform-origin: 50% 0;}
+#menu1 ul li a:hover span,
+#menu1 ul li a:focus span {-webkit-transform: rotateX(90deg) translateY(-22px); -moz-transform: rotateX(90deg) translateY(-22px); transform: rotateX(90deg) translateY(-22px);}
+#menu1 ul li a:hover span,
+#menu1 ul li a:focus span {background: #F11111;}
+#menu1 ul li a:hover span::before,
+#menu1 ul li a:focus span::before {background: #105105;}
+</style>
+
+<div id="menu1">
+<ul>
+<li><a href="http://the-best-widgets.blogspot.gr"><span data-hover="HOME">HOME</span></a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html"><span data-hover="MY POSTS">MY POSTS</span></a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html"><span data-hover="MY LINKS">MY LINKS</span></a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/p/photo-gallery-1.html"><span data-hover="MY PHOTOS">MY PHOTOS</span></a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html"><span data-hover="MY VIDEOS">MY VIDEOS</span></a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html"><span data-hover="MY FILES">MY FILES</span></a></li>
+</ul>
+</div>

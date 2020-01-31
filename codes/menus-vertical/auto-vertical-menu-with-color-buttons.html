@@ -1,0 +1,95 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>ΑΥΤΟΜΑΤΟ ΚΑΘΕΤΟ ΜΕΝΟΥ ΜΕ ΕΓΧΡΩΜΑ BUTTONS</TITLE>
+<style>
+#but1, #but2, #but3, #but4, #but5, #but6, #but7, #but8, #but9, #but10, #but11, #but12, #but13, #but14, #but15, #but16, #but17 {position:absolute;left:241px;top:-5px;background-color: #333333;color: #FFF;border:2px solid #FBBB22;border-radius:8px;width:550px;height:auto;padding:1px; z-index:999;display: none;}
+</style>
+
+<script>
+function toggle_visibility(id) {
+var e = document.getElementById(id);
+if(e.style.display == 'block')
+e.style.display = 'none';
+else
+e.style.display = 'block';}
+</script>
+
+<script>
+function recentpostslist(json) {document.write('<ol>');
+for (var i = 0; i < json.feed.entry.length; i++)
+{for (var j = 0; j < json.feed.entry[i].link.length; j++)
+{if (json.feed.entry[i].link[j].rel == 'alternate')
+{break;}}
+var entryUrl = "'" + json.feed.entry[i].link[j].href + "'";//bs
+var entryTitle = json.feed.entry[i].title.$t;
+var item = "<li>" + "<a href="+ entryUrl + '" target="_parent">' + entryTitle + "</a> </li>";
+document.write(item);}
+document.write('</ol>');}
+</script>
+<div style="width:250px;">
+<input type=button name=type style="width:42px; height:25px; background:#333333; color:#FFFFFF;  font: 12px Arial;" value='SEO' onclick="toggle_visibility('but1');">
+<div id="but1" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/SEO?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:192px; height:25px; background:#A11111; color:#FFFFFF;  font: 12px Arial;" value='ΤΑΞΙΝΟΜΗΣΗ ΑΝΑΡΤΗΣΕΩΝ' onclick="toggle_visibility('but2');">
+<div id="but2" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΤΑΞΙΝΟΜΗΣΗ ΑΝΑΡΤΗΣΕΩΝ?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:88px; height:25px; background:#532000; color:#FFFFFF;  font: 12px Arial;" value='TEXT BOXES' onclick="toggle_visibility('but3');">
+<div id="but3" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/TEXT BOXES?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:146px; height:25px; background:#740777; color:#FFFFFF;  font: 12px Arial;" value='ΜΟΡΦΟΠΟΙΗΣΗ BLOG' onclick="toggle_visibility('but4');">
+<div id="but4" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΜΟΡΦΟΠΟΙΗΣΗ BLOG?max-results=40&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:117px; height:25px; background:#00FF00; color:#000000;  font: 12px Arial;" value=' BACKGROUNDS' onclick="toggle_visibility('but5');">
+<div id="but5" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/BACKGROUNDS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:117px; height:25px; background:#FBBB22; color:#000000;  font: 12px Arial;" value='ΕΝΣΩΜΑΤΩΣΕΙΣ' onclick="toggle_visibility('but6');">
+<div id="but6" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΕΝΣΩΜΑΤΩΣΗ ΑΡΧΕΙΩΝ?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:117px; height:25px; background:#178058; color:#FFFFFF;  font: 12px Arial;" value=' ΑΛΛΑ WIDGETS' onclick="toggle_visibility('but7');">
+<div id="but7" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/WIDGETS ΓΙΑ BLOGS?max-results=50&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:117px; height:25px; background:#333333; color:#FFFFFF;  font: 12px Arial;" value='ΑΣΦΑΛΕΙΑ BLOG' onclick="toggle_visibility('but8');">
+<div id="but8" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΑΣΦΑΛΕΙΑ BLOG?max-results=20&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:90px; height:25px; background:#173377; color:#FFFFFF;  font: 12px Arial;" value='FACEBOOK' onclick="toggle_visibility('but9');">
+<div id="but9" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/FACEBOOK WIDGETS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:144px; height:25px; background:#33FFFF; color:#000000;  font: 12px Arial;" value='BUTTONS & WINDOWS' onclick="toggle_visibility('but10');">
+<div id="but10" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/SOSIAL BUTTONS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:115px; height:25px; background:#F4B1DC; color:#000;  font: 12px Arial;" value='IMAGE EFFECTS' onclick="toggle_visibility('but11');">
+<div id="but11" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/IMAGE EFFECTS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:119px; height:25px; background:#FF6600; color:#FFF;  font: 12px Arial;" value='ΣΧΟΛΙΑ BLOGGER' onclick="toggle_visibility('but12');">
+<div id="but12" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΣΧΟΛΙΑ BLOGGER?max-results=100&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:80px; height:25px; background:#105105; color:#FFF;  font: 12px Arial;" value='MENUS' onclick="toggle_visibility('but13');">
+<div id="but13" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΟΡΙΖΟΝΤΙΑ ΚΑΙ ΚΑΘΕΤΑ ΜΕΝΟΥ?max-results=40&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:154px; height:25px; background:#661111; color:#FFF;  font: 12px Arial;" value='ON LINE ΕΡΓΑΛΕΙΑ' onclick="toggle_visibility('but14');">
+<div id="but14" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ON LINE TOOLS?max-results=100&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:236px; height:25px; background:#FFFF00; color:#000;  font: 12px Arial;" value='GALLERIES, SLIDERS & SLIDESHOWS' onclick="toggle_visibility('but15');">
+<div id="but15" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/SLIDESHOWS?max-results=40&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+<input type=button name=type style="width:236px; height:25px; background:#740777; color:#FFF;  font: 12px Arial;" value='ΚΥΛΙΟΜΕΝΑ LINKS TEXT IMAGES' onclick="toggle_visibility('but16');">
+<div id="but16" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΚΥΛΙΟΜΕΝΑ LINKS TEXT IMAGES?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+
+<input type=button name=type style="width:236px; height:25px; background:#FFFFF0; color:#A11111;  font: 12px Arial;" value='GADGETS ΓΙΑ ΤΑ ΧΡΙΣΤΟΥΓΕΝΝΑ' onclick="toggle_visibility('but17');">
+<div id="but17" style="display:none;">
+<script src="http://the-best-widgets.blogspot.gr/feeds/posts/summary/-/CHRISTMAS WIDGETS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></div>
+</div>
