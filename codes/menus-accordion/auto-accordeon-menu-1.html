@@ -1,0 +1,69 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>AUTO ACCORDION-1</TITLE>
+<style>
+#accordion .item {width: 240px;height:21px;overflow:hidden;border-radius: 5px;margin-bottom: 2px;font:13px arial;}
+#accordion a {display:block;background: #173377;padding:4px; color: #FFF;
+text-decoration: none; font:13px arial;}
+#accordion ul {background: #333333;width:500px;height: auto;padding: 4px; font:13px arial;}
+#accordion div:hover {background: #333333;width:500px;height: auto; font:13px arial;}
+#accordion div:hover a {background: #333333;border-bottom: 1px solid #FFFF00;font:13px arial;}
+</style>
+
+<script>
+function recentpostslist(json){document.write('<ol>');for(var i=0;i<json.feed.entry.length;i++)
+{for(var j=0;j<json.feed.entry[i].link.length;j++)
+{if(json.feed.entry[i].link[j].rel=='alternate')
+{break;}}
+var entryUrl="'"+ json.feed.entry[i].link[j].href+"'";var entryTitle=json.feed.entry[i].title.$t;
+var item="<li>"+"<a href="+ entryUrl+'" target="_parent">'+ entryTitle+"</a> </li>";document.write(item);}
+document.write('</ol>');}
+</script>
+<div id="accordion">
+<div class="item">
+<a href="#">TEXT BOXES ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/TEXT BOXES?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">BACKGROUNDS ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/BACKGROUNDS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΕΝΣΩΜΑΤΩΣΕΙΣ ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΕΝΣΩΜΑΤΩΣΗ ΑΡΧΕΙΩΝ?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">IMAGE EFFECTS ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/IMAGE EFFECTS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΑΣΦΑΛΕΙΑ BLOG ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΑΣΦΑΛΕΙΑ BLOG?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΣΥΜΒΟΥΛΕΣ SEO ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/SEO?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΣΧΟΛΙΑ BLOGGER ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΣΧΟΛΙΑ BLOGGER?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ON LINE ΕΡΓΑΛΕΙΑ ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ON LINE TOOLS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">FACEBOOK WIDGETS ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/FACEBOOK WIDGETS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΜΟΡΦΟΠΟΙΗΣΗ BLOG ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΜΟΡΦΟΠΟΙΗΣΗ BLOG?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΑΛΛΑ WIDGETS ΓΙΑ BLOGS ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/WIDGETS ΓΙΑ BLOGS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΤΑΞΙΝΟΜΗΣΗ ΑΝΑΡΤΗΣΕΩΝ ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΤΑΞΙΝΟΜΗΣΗ ΑΝΑΡΤΗΣΕΩΝ?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">BUTTONS & POP UP WINDOWS ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/SOSIAL BUTTONS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΟΡΙΖΟΝΤΙΑ ΚΑΙ ΚΑΘΕΤΑ ΜΕΝΟΥ ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΟΡΙΖΟΝΤΙΑ ΚΑΙ ΚΑΘΕΤΑ ΜΕΝΟΥ?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">ΚΥΛΙΟΜΕΝΑ LINKS TEXT IMAGES ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/ΚΥΛΙΟΜΕΝΑ LINKS TEXT IMAGES?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div>
+<div class="item">
+<a href="#">GALLERIES SLIDERS SLIDESHOWS ▼</a>
+<ul><script src="https://the-best-widgets.blogspot.gr/feeds/posts/summary/-/SLIDESHOWS?max-results=30&amp;alt=json-in-script&amp;callback=recentpostslist"></script></ul></div></div>

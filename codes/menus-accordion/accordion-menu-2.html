@@ -1,0 +1,112 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>ACCORDION MENU-2</TITLE>
+<style>
+.text-center {text-align: center;}
+*, *:before, *:after {-webkit-border-sizing: border-box;  -moz-border-sizing: border-box;  border-sizing: border-box;}
+.container {width: 240px;background: #333333; margin:0; padding:0;}
+.container > ul {list-style:none; padding:0; margin:0;}
+.dropdown a {text-decoration: none;}
+.dropdown [data-toggle="dropdown"] {position:relative;display:block;background: #333333;color:#FFFFFF;font:13px Arial;border-bottom:1px solid #FBBB22;padding:5px;}
+.dropdown [data-toggle="dropdown"]:hover {background: #105105;}
+.dropdown .icon-arrow {position: absolute;display: block;font:13px Arial;color:#FFFFFF;top:5px;right:5px;}
+.dropdown .icon-arrow:before {content: '\25BC';}
+.dropdown .dropdown-menu {max-height:0;width:580px;background: #333333;overflow: hidden;list-style: none;padding:0;margin:0;}
+.dropdown .dropdown-menu li {padding: 0;}
+.dropdown .dropdown-menu li a {display: block;color: #FFFFFF;background: #333333; font:13px Arial; border-bottom:1px solid #FBBB22;padding:5px;}
+.dropdown .dropdown-menu li a:hover {background: #105105;}
+.dropdown .show, .dropdown .hide {
+-moz-transform-origin: 50% 0%; -ms-transform-origin: 50% 0%;
+-webkit-transform-origin: 50% 0%; transform-origin: 50% 0%;}
+.dropdown .show {display: block; max-height: 9999px;
+-moz-transform: scaleY(1);  -ms-transform: scaleY(1); 
+-webkit-transform: scaleY(1);  transform: scaleY(1);
+animation: showAnimation 0.2s ease-in-out;
+-moz-animation: showAnimation 0.2s ease-in-out;
+-webkit-animation: showAnimation 0.2s ease-in-out;
+-moz-transition: max-height 1s ease-in-out;
+-o-transition: max-height 1s ease-in-out;
+-webkit-transition: max-height 1s ease-in-out;
+transition: max-height 1s ease-in-out;}
+.dropdown .hide {max-height: 0;
+-moz-transform: scaleY(0);  -ms-transform: scaleY(0);
+-webkit-transform: scaleY(0);  transform: scaleY(0);
+animation: hideAnimation 0.2s ease-out;
+-moz-animation: hideAnimation 0.2s ease-out;
+-webkit-animation: hideAnimation 0.2s ease-out;
+-moz-transition: max-height 0.2s ease-out;
+-o-transition: max-height 0.2s ease-out;
+-webkit-transition: max-height 0.2s ease-out;
+transition: max-height 0.2s ease-out;}
+</style>
+
+<div class="container">
+<ul>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown">TEXT BOXES<i class="icon-arrow"></i></a>
+<ul class="dropdown-menu">
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-1</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-2</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-3</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-4</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-5</a></li>
+</ul></li>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown">BACKGROUNDS<i class="icon-arrow"></i></a>
+<ul class="dropdown-menu">
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-1</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-2</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-3</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-4</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-5</a></li>
+</ul></li>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown">IMAGE EFFECTS<i class="icon-arrow"></i></a>
+<ul class="dropdown-menu">
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-1</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-2</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-3</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-4</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-5</a></li>
+</ul></li>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown">ΕΝΣΩΜΑΤΩΣΕΙΣ<i class="icon-arrow"></i></a>
+<ul class="dropdown-menu">
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-1</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-2</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-3</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-4</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-5</a></li>
+</ul></li>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown">ΑΣΦΑΛΕΙΑ BLOG<i class="icon-arrow"></i></a>
+<ul class="dropdown-menu">
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-1</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-2</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-3</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-4</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr">LINK-5</a></li>
+</ul></li>
+</ul></div>
+<script>
+var dropdown = document.querySelectorAll('.dropdown');
+var dropdownArray = Array.prototype.slice.call(dropdown,0);
+dropdownArray.forEach(function(el){
+var button = el.querySelector('a[data-toggle="dropdown"]'),
+menu = el.querySelector('.dropdown-menu'),
+arrow = button.querySelector('i.icon-arrow');
+button.onclick = function(event) {
+if(!menu.hasClass('show')) {
+menu.classList.add('show');
+menu.classList.remove('hide');
+arrow.classList.add('open');
+arrow.classList.remove('close');
+event.preventDefault();}
+else {
+menu.classList.remove('show');
+menu.classList.add('hide');
+arrow.classList.remove('open');
+arrow.classList.add('close');
+event.preventDefault();}};})
+Element.prototype.hasClass = function(className) {
+return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);};
+</script>

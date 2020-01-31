@@ -1,0 +1,82 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>ACCORDION MENU-3</TITLE>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>    
+<script>
+(function($){
+$.fn.lksMenu=function(){
+return this.each(function(){
+var menu= $(this);
+menu.find('ul li ul.active').slideDown('medium');
+menu.find('ul li > a').bind('click',function(event){
+var ahref = $(event.currentTarget).attr('href');
+if(ahref!='#'){
+window.location.href = ahref;
+}else{
+var currentlink=$(event.currentTarget);
+if (currentlink.parent().find('ul.active').size()==1){
+currentlink.parent().find('ul.active').slideUp('medium',function(){
+currentlink.parent().find('ul.active').removeClass('active');});}
+else if (menu.find('ul li ul.active').size()==0){
+show(currentlink);}
+else{
+menu.find('ul li ul.active').slideUp('medium',function(){
+menu.find('ul li ul').removeClass('active');
+show(currentlink);});}}});
+function show(currentlink){
+currentlink.parent().find('ul').addClass('active');
+currentlink.parent().find('ul').slideDown('medium');}});}})(jQuery);
+</script>
+<script>
+$('document').ready(function(){
+$('.menu').lksMenu();});
+</script>
+
+<style>
+.menu{font:14px arial;}
+.menu ul{list-style:none;margin:0;padding:0;width:250px;}
+.menu ul li{margin:0;padding:0;}
+.menu ul li a{background:#FF4500;color:FFF;border:1px solid #FBBB22;margin:0px;padding:5px;display:block;text-decoration: none;font:14px arial;height:18px;font-weight: bold;}
+.menu ul li ul a{border:0;margin:2px;padding:5px;display:block;text-decoration: none;color:#FFF;font:14px arial;height:18px;font-weight: normal;}
+.menu ul li a:hover{background:#255720;color:FFF;}
+.menu ul li ul a:hover{background:#115599;color:FFF;}
+.menu ul li ul{display:none;}
+</style>
+
+<div class="menu">
+<ul>
+<li><a href="#">ΟΡΙΖΟΝΤΙΑ ΜΕΝΟΥ</a>
+<ul>
+<li><a href="https://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΟΡΙΖΟΝΤΙΟ ΜΕΝΟΥ-1</a></li>
+<li><a href="https://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΟΡΙΖΟΝΤΙΟ ΜΕΝΟΥ-2</a></li>
+<li><a href="https://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΟΡΙΖΟΝΤΙΟ ΜΕΝΟΥ-3</a></li> 
+<li><a href="https://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΟΡΙΖΟΝΤΙΟ ΜΕΝΟΥ-4</a></li>
+<li><a href="https://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΟΡΙΖΟΝΤΙΟ ΜΕΝΟΥ-5</a></li>
+</ul></li>
+<li><a href="#">ACCORDION MENU</a>
+<ul>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ACCORDION MENU-1</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ACCORDION MENU-2</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ACCORDION MENU-3</a></li> 
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ACCORDION MENU-4</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ACCORDION MENU-5</a></li>
+</ul></li>
+<li><a href="#">ΚΑΘΕΤΑ ΜΕΝΟΥ</a>
+<ul>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΚΑΘΕΤΟ ΜΕΝΟΥ-1</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΚΑΘΕΤΟ ΜΕΝΟΥ-2</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΚΑΘΕΤΟ ΜΕΝΟΥ-3</a></li> 
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΚΑΘΕΤΟ ΜΕΝΟΥ-4</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">ΚΑΘΕΤΟ ΜΕΝΟΥ-5</a></li>
+</ul></li>
+<li><a href="#">MEGA MENU</a>
+<ul>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">MEGA MENU-1</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">MEGA MENU-2</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">MEGA MENU-3</a></li> 
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">MEGA MENU-4</a></li>
+<li><a href="http://the-best-widgets.blogspot.gr/2013/05/blog-post.html">MEGA MENU-5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</div>

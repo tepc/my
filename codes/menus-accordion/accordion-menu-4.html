@@ -1,0 +1,50 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>ACCORDION MENU-4</TITLE>
+<style>
+#accordion {background:#400030;list-style:none;padding:0;width:240px;border-radius:5px;}
+#accordion li{background:#400030;color:#FFF;font:14px arial;margin:0px;cursor:pointer; padding:5px;list-style:none;border-radius:5px;}
+#accordion a{color:#FFF;font:14px arial;}
+#accordion li a{color:#FFF;font:14px arial;}
+#accordion li a:hover {background:#105105;text-decoration:none;}
+#accordion ul {list-style:none;padding:0;display:none;}
+#accordion ul li{font:12px arial;cursor:auto;background:#173377;color:#FFF;padding:5px;}
+#accordion li:hover {background:#105105;text-decoration:none;}
+</style>
+
+<ul id="accordion">
+<li><a href="https://the-best-widgets.blogspot.gr">HOME</a></li>
+<li>MEGA MENUS ▼</li>
+<ul>
+<li><a href="#">Mega menu-1</a></li>
+<li><a href="#">Mega menu-2</a></li>
+<li><a href="#">Mega menu-3</a></li>
+<li><a href="#">Mega menu-4</a></li>
+<li><a href="#">Mega menu-5</a></li>
+</ul>
+<li>VECTRICAL MENUS ▼</li>
+<ul>
+<li><a href="#">Vectrical menu-1</a></li>
+<li><a href="#">Vectrical menu-2</a></li>
+<li><a href="#">Vectrical menu-3</a></li>
+<li><a href="#">Vectrical menu-4</a></li>
+<li><a href="#">Vectrical menu-5</a></li>
+</ul>
+<li>HORIZONTAL MENUS ▼</li>
+<ul>
+<li><a href="#">Horizontal menu-1</a></li>
+<li><a href="#">Horizontal menu-2</a></li>
+<li><a href="#">Horizontal menu-3</a></li>
+<li><a href="#">Horizontal menu-4</a></li>
+<li><a href="#">Horizontal menu-5</a></li>
+</ul>
+<li><a href="#">VIDEOS</a></li>
+</ul>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<SCRIPT>
+$("#accordion > li").click(function(){
+if(false == $(this).next().is(':visible')) {
+$('#accordion > ul').slideUp(300);}
+$(this).next().slideToggle(300);});
+$('#accordion > ul:eq(1)').hide();
+</SCRIPT>
