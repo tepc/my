@@ -1,0 +1,27 @@
+<title>BODY SLIDER-2</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src='https://dl.dropboxusercontent.com/s/bdmk7tsmf2gur79/Background-slider.js' type='text/javascript'></script>
+<script>
+var images = [
+"https://i.imgur.com/Pq9Dexa.jpg",
+"https://i.imgur.com/kbCkBYe.jpg",
+"https://i.imgbox.com/MIiFeUzy",
+"https://i.imgbox.com/ZpvJrjg4",
+"https://i.imgbox.com/4jvkDVTA",
+"https://i.imgbox.com/R6GYEpSU",
+"https://i.imgur.com/I9SFA0s.jpg",
+"https://i.imgur.com/UMQ2IrD.jpg",
+"https://i.imgur.com/l9hrZQQ.jpg",
+"https://i.imgur.com/YezgGht.jpg",
+"https://i.imgur.com/W8LjNt5.jpg",
+"https://i.imgur.com/0pOnQXw.jpg",
+"https://i.imgur.com/XZLp5MA.jpg",
+"https://i.imgur.com/7X4wjWS.jpg"];
+$(images).each(function(){
+$('<img/>')[0].src = this;});
+var index = 0;
+$.backstretch(images[index], {speed: 400});
+var slideshow = setInterval(function() {
+index = (index >= images.length - 1) ? 0 : index + 1;
+$.backstretch(images[index]);}, 4000);
+</script>

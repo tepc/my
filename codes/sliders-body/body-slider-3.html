@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>BODY SLIDER-3</title>
+<style>
+body {background:#115599;background-image:url(https://i.imgur.com/75NFaF8.jpg);background-attachment:fixed;background-position:center top;background-repeat:no-repeat;}  
+#b1 {background-image:url(https://i.imgur.com/PSKcGt8.jpg);}
+#b2 {background-image:url(https://i.imgur.com/KX8ScuV.jpg);}
+#b3 {background-image:url(https://i.imgur.com/gYTByhi.jpg);}
+#b4 {background-image:url(https://i.imgur.com/g8vOuCP.jpg);}
+#b5 {background-image:url(https://i.imgur.com/7yU1vKx.jpg);}
+#b6 {background-image:url(https://i.imgur.com/acIDbmZ.jpg);}
+#b7 {background-image:url(https://i.imgur.com/OWulAvD.jpg);}
+#b8 {background-image:url(https://i.imgur.com/4dTOwLl.jpg);}
+#b9 {background-image:url(https://i.imgur.com/RQJMKIe.jpg);}
+#b10{background-image:url(https://i.imgur.com/4BXcUtX.jpg);}
+</style>       
+</head>
+<body> 
+<script>   
+function run(interval, frames) {
+var int = 1;
+function func() {
+document.body.id = "b"+int;
+int++;
+if(int === frames) {int = 1;}}
+var swap = window.setInterval(func, interval);}
+run(4000, 40); //milliseconds, frames 
+</script>     
+</body>
+</html>

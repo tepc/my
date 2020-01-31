@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BODY SLIDER-6</title>       
+    </head>
+    <body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function() {
+var body = $('body');
+var backgrounds = new Array(
+'url(http://i.imgur.com/wIBlr1Z.jpg)',
+'url(http://i.imgur.com/3owbxWE.jpg)',
+'url(http://i.imgur.com/JJWRsYq.jpg)');
+var current = 0;
+function nextBackground() {
+body.css('background', backgrounds[current = ++current % backgrounds.length]);
+setTimeout(nextBackground, 4000);}
+setTimeout(nextBackground, 4000);
+body.css('background', backgrounds[0]);});
+</script> 
+</body>
+</html>
