@@ -1,0 +1,28 @@
+<img id="slideshow" src="http://i.imgur.com/Pq9Dexal.jpg" />
+<script>
+var myimages=[
+"http://i.imgur.com/Pq9Dexal.jpg",
+"http://i.imgur.com/kbCkBYel.jpg",
+"http://i.imgur.com/gCr4ycDl.jpg",
+"http://i.imgur.com/JcRaeRSl.jpg",
+"http://i.imgur.com/XMS6PHsl.jpg",
+"http://i.imgur.com/I9SFA0sl.jpg"]
+var slideshow=document.getElementById("slideshow")
+var nextslideindex=0
+function rotateimage(e){
+var evt=window.event || e
+var delta=evt.detail? evt.detail*(-100) : evt.wheelDelta
+nextslideindex=(delta<=-100)? nextslideindex+1 : nextslideindex-1
+nextslideindex=(nextslideindex<0)? myimages.length-1 : (nextslideindex>
+myimages.length-1)? 0 : nextslideindex
+slideshow.src=myimages[nextslideindex]
+if (evt.preventDefault)
+evt.preventDefault()
+else
+return false}
+var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel"
+if (slideshow.attachEvent)
+slideshow.attachEvent("on"+mousewheelevt, rotateimage)
+else if (slideshow.addEventListener)
+slideshow.addEventListener(mousewheelevt, rotateimage, false)
+</script>

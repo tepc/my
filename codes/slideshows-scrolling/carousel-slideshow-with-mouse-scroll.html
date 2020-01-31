@@ -1,0 +1,77 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>CAROUSEL WITH MOUSE SCROLL</TITLE>
+<style>
+#BloggerSpiceCarouselSlider {height:100px;background:#115599;border:5px solid #00CC00;position:relative;margin:0px;overflow:auto;}
+#BloggerSpiceCarouselSlider:before, #BloggerSpiceCarouselSlider:after {content:""; display:block; position:absolute;top:0;bottom:0;left:-4px;width:4px;height:100%;z-index:10;}
+#BloggerSpiceCarouselSlider:after {left:auto;right:-4px;}
+#BloggerSpiceCarouselSlider .container {position:absolute;top:0;left:0;margin:5px 0 0 5px; width:100%;height:120px;}
+#BloggerSpiceCarouselSlider figure {display:block;background:#115599;float:left;width:160px; height:100px;margin:0 5px 0 0;position:relative;overflow:hidden;}
+#BloggerSpiceCarouselSlider figcaption {display:block;position:absolute;right:0;bottom:-50px;left:0;background:#000;font:11px Arial;color:#FFF;padding:4px 10px;text-align:left; opacity:0.7;}
+#BloggerSpiceCarouselSlider figure img {display:block;border:none;margin:0 0;}
+</style>
+
+<div id="BloggerSpiceCarouselSlider">
+<div class="container">
+<figure><a href="https://i.imgur.com/f9ORcuL.jpg" title="TSAMPIKA" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/f9ORcuLt.jpg"/></a></figure>
+<figure><a href="https://i.imgur.com/saM7PPl.jpg" title="AFANTOU" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/saM7PPlt.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/N6zBkS5.jpg" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/N6zBkS5t.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/nI47JEN.jpg" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/nI47JENt.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/eHaD7hD.jpg" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/eHaD7hDt.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/mPZGRly.jpg" title="LINDOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/mPZGRlyt.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/car9Z5x.jpg" title="LINDOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/car9Z5xt.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/KKM7XqZ.jpg" title="LINDOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/KKM7XqZt.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/xyDlwTr.jpg" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/xyDlwTrt.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/Nma255F.jpg" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/Nma255Ft.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/jWa2Nf7.jpg" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/jWa2Nf7t.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/KGh0xkb.jpg" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/KGh0xkbt.jpg" /></a></figure>
+<figure><a href="https://i.imgur.com/8kvUHbS.png" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/8kvUHbSt.png" /></a></figure>
+<figure><a href="https://i.imgur.com/vbK91Ue.jpg" title="RODOS" target="_blank">
+<img alt="RODOS" src="https://i.imgur.com/vbK91Uet.jpg" /></a></figure>
+</div></div>
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
+
+<script>
+(function($) {
+var config = {
+itemMargins: 5};
+var $thumbnailScroller = $('#BloggerSpiceCarouselSlider'),
+$container = $thumbnailScroller.find('.container'),
+$item = $container.find('figure'),
+item_length = $item.length,
+item_width = $item.outerWidth(),
+item_margin = config.itemMargins,
+total_width = (item_width + item_margin) * item_length,
+$window = $(window);
+$thumbnailScroller.css('overflow', 'hidden');
+$container.css('width', total_width);
+$item.each(function(cap) {
+if ($(this).children().attr('title')) {
+cap = $(this).children().attr('title');
+$(this).children().removeAttr('title');
+$(this).append('<figcaption>' + cap + '</figcaption>');}}).hover(function() {
+$(this).find('figcaption').stop().animate({bottom: 0}, 200);}, function() {
+$(this).find('figcaption').stop().animate({bottom: -50}, 200);});
+$window.on("resize", function() {
+var o_l = $thumbnailScroller.offset().left,
+t_w = $thumbnailScroller.width(),
+c_w = total_width;
+$thumbnailScroller.on("mousemove", function(e) {
+if ($(this).width() < $container.width()) {
+$container.css('left', -((e.pageX - o_l) * (c_w - t_w) / t_w));}});}).trigger("resize");
+})(jQuery);
+</script>
+<script>(function(d, s, id) {var js, pastejs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src ='https://www.pastery.net/static/js/embed.js';pastejs.parentNode.insertBefore(js, pastejs);}(document, 'script', 'pastery-jssdk'));</script><div class='paste-list' data-pasteid='vqndfx'></div>
