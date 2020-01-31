@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8">	
+ <style>
+ /* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+@import url('reset.css');
+/* Page Styles */
+body {background: url('https://images2.imgbox.com/aa/fd/2o2qKNr9_o.jpg'), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BFEFFF), to(#9AC0CD));
+background-color: #115599;}
+#wrapper {margin: 0 auto;width: 960px;
+	-webkit-perspective: 800px;
+    -moz-perspective: 800px;
+	-o-perspective: 800px;
+	-ms-perspective: 800px;
+	 perspective: 800px;position: relative;}
+/* Controls */
+#scroll {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#CCC));
+  background: -webkit-linear-gradient(top, #EEE 0%, #CCC 100%);
+  background: -moz-linear-gradient(top, #EEE 0%, #CCC 100%);
+  background: -o-linear-gradient(top, #EEE 0%, #CCC 100%);
+  background: -ms-linear-gradient(top, #EEE 0%, #CCC 100%);
+  width: 40px;  height: 40px;  border: none;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  position: absolute; right: 250px;
+  -webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.6);
+  -o-box-shadow: 0px 3px 3px rgba(0,0,0,0.6);
+  -ms-box-shadow: 0px 3px 3px rgba(0,0,0,0.6);
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.6);}
+#scroll:after {content: " "; position: absolute; top: 12px; left: 12px; height: 0; width: 0;
+   border-left: 8px solid transparent;
+   border-right: 8px solid transparent;
+   border-bottom: 16px solid #a9a9a9;
+  -webkit-box-shadow: 0px 1px 0px  #000;
+  -moz-box-shadow: 0px 1px 0px  #000;
+  -o-box-shadow: 0px 1px 0px  #000;
+  -ms-box-shadow: 0px 1px 0px  #000;
+   box-shadow: 0px 1px 0px  #000;}
+#scroll:active {
+  box-shadow: inset 0px 1px 5px #000;
+ -webkit-box-shadow: inset 0px 1px 5px #000;
+ -moz-box-shadow: inset 0px 1px 5px #000;
+ -o-box-shadow: inset 0px 1px 5px #000;
+ -ms-box-shadow: inset 0px 1px 5px #000;}
+#scroll:active:after {
+   box-shadow: 0px 0px 0px  #000;
+   -webkit-box-shadow: 0px 0px 0px  #000;
+   -moz-box-shadow: 0px 0px 0px  #000;
+   -o-box-shadow: 0px 0px 0px  #000;
+   -ms-box-shadow: 0px 0px 0px  #000;}
+#scroll:active ~ #photo_viewer {
+	-webkit-animation-play-state: running; 
+	-moz-animation-play-state: running; 
+	-o-animation-play-state: running; 
+	-ms-animation-play-state: running; 
+	animation-play-state: running; }
+/* Photo Viewer */
+#photo_viewer {width: 260px;height: 200px;margin: 220px auto;	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-animation: scroll 4s infinite linear;
+	-moz-animation: scroll 4s infinite linear;
+	-o-animation: scroll 4s infinite linear;
+	-ms-animation: scroll 4s infinite linear;
+	-o-animation: scroll 4s infinite linear;
+
+	-webkit-animation-play-state: paused; 
+	-moz-animation-play-state: paused; 
+	-o-animation-play-state: paused; 
+	-ms-animation-play-state: paused; 
+	animation-play-state: paused; }
+
+#photo_viewer .photos {position: absolute;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;}
+
+#photo_viewer #photo-1 {
+	-webkit-transform: translateZ(250px);
+	-moz-transform: translateZ(250px);
+	-o-transform: translateZ(250px);
+	-ms-transform: translateZ(250px);
+	transform: translateZ(250px);}
+
+#photo_viewer #photo-2 {
+	-webkit-transform: rotateX(45deg)  translateZ(250px);
+	-moz-transform: rotateX(45deg)  translateZ(250px);
+	-o-transform: rotateX(45deg)  translateZ(250px);
+	-ms-transform: rotateX(45deg)  translateZ(250px);
+	transform: rotateX(45deg)  translateZ(250px);}
+
+#photo_viewer #photo-3 {
+	-webkit-transform: rotateX(90deg) translateZ(250px) ;
+	-moz-transform: rotateX(90deg) translateZ(250px) ;
+	-o-transform: rotateX(90deg) translateZ(250px) ;
+	-ms-transform: rotateX(90deg) translateZ(250px) ;
+     transform: rotateX(90deg) translateZ(250px) ;}
+
+#photo_viewer #photo-4 {
+	-webkit-transform: rotateX(135deg) translateZ(250px);
+	-moz-transform: rotateX(135deg) translateZ(250px);
+	-o-transform: rotateX(135deg) translateZ(250px);
+	-ms-transform: rotateX(135deg) translateZ(250px);
+	 transform: rotateX(135deg) translateZ(250px);}
+
+#photo_viewer #photo-5 {
+	-webkit-transform: rotateX(180deg) translateZ(250px);
+	-moz-transform: rotateX(180deg) translateZ(250px);
+	-o-transform: rotateX(180deg) translateZ(250px);
+	-ms-transform: rotateX(180deg) translateZ(250px);
+	transform: rotateX(180deg) translateZ(250px);}
+
+#photo_viewer #photo-6 {
+	-webkit-transform: rotateX(225deg) translateZ(250px);
+	-moz-transform: rotateX(225deg) translateZ(250px);
+	-o-transform: rotateX(225deg) translateZ(250px);
+	-ms-transform: rotateX(225deg) translateZ(250px);
+	 transform: rotateX(225deg) translateZ(250px);}
+
+#photo_viewer #photo-7 {
+	-webkit-transform: rotateX(270deg) translateZ(250px);
+	-moz-transform: rotateX(270deg) translateZ(250px);
+	-o-transform: rotateX(270deg) translateZ(250px);
+	-ms-transform: rotateX(270deg) translateZ(250px);
+	 transform: rotateX(270deg) translateZ(250px);}
+
+#photo_viewer #photo-8 {
+	-webkit-transform: rotateX(315deg) translateZ(250px);
+	-moz-transform: rotateX(315deg) translateZ(250px);
+	-o-transform: rotateX(315deg) translateZ(250px);
+	-ms-transform: rotateX(315deg) translateZ(250px);
+	-o-transform: rotateX(315deg) translateZ(250px);}
+
+@-webkit-keyframes scroll {0% {-webkit-transform: rotateX(0deg);}
+	100% {-webkit-transform: rotateX(360deg);}}
+@-moz-keyframes scroll {	0% {-moz-transform: rotateX(0deg);}
+	100% {-moz-transform: rotateX(360deg);}}
+@-o-keyframes scroll {0% {-o-transform: rotateX(0deg);}
+	100% {-o-transform: rotateX(360deg);}}
+@-ms-keyframes scroll {0% {-ms-transform: rotateX(0deg);}
+	100% { -ms-transform: rotateX(360deg);}}
+@keyframes scroll {	0% {transform: rotateX(0deg);	}
+	100% {transform: rotateX(360deg);}}
+#photo_viewer .photos img {border: 6px solid transparent; width: 188px; height: 188px;
+    -webkit-transition:  -webkit-transform  0.5s linear ;
+    -moz-transition:  -moz-transform  0.5s linear ;
+    -o-transition:  -o-transform  0.5s linear ;
+    -ms-transition:  -ms-transform  0.5s linear ;
+     transition:   transform  0.5s linear ;}
+#photo_viewer .photos:hover img {border: 6px solid #DCDCDC;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+     transform: scale(1.5);}
+</style>
+ </head>
+ <body>	
+ 	<div id="wrapper">	
+	 <button id="scroll"></button>	
+      <div id="photo_viewer" class="photo_viewer">
+	     <div class="photos" id="photo-1"><img src="https://images2.imgbox.com/ef/77/Tdmtkrwb_o.jpg" width="1600" height="900"/></div>
+	     <div class="photos" id="photo-2"><img src="https://images2.imgbox.com/d5/2c/zhbBkSQk_o.jpg" width="200" height="200"/></div>
+	     <div class="photos" id="photo-3"><img src="https://images2.imgbox.com/dd/d1/TrayP0TZ_o.jpg" width="200" height="200"/></div>
+	     <div class="photos" id="photo-4"><img src="https://images2.imgbox.com/81/c7/ZSx1NSP3_o.jpg" width="200" height="200"/></div>
+	     <div class="photos" id="photo-5"><img src="https://images2.imgbox.com/aa/fd/2o2qKNr9_o.jpg" width="200" height="200"/></div>
+	     <div class="photos" id="photo-6"><img src="https://images2.imgbox.com/ed/41/z7mexlDP_o.jpg" width="200" height="200"/></div>
+	     <div class="photos" id="photo-7"><img src="https://images2.imgbox.com/64/66/vu5CVE6h_o.jpg" width="200" height="200"/></div>
+	     <div class="photos" id="photo-8"><img src="https://images2.imgbox.com/7c/9e/Kf8U3MVs_o.jpg" width="200" height="200"/></div>
+      </div> 
+	</div>
+ </body>
+</html>
+
