@@ -1,0 +1,53 @@
+<style>
+body {background:#400030;color:#FFF;}  
+.iconicmenu {position:relative;width:auto;height:45px;overflow:hidden;}
+.iconicmenu, .iconicmenu * {-moz-box-sizing:border-box;box-sizing:border-box;}
+.iconicmenu input[type="checkbox"] {position:absolute;left:0;top:0;opacity:0;}
+.iconicmenu > label {z-index:1000;display:block;position:absolute;width:45px;height:45px;float:left;top:0;left:0;background:#333;color:#FFF;text-indent:-1000000px;border:4px solid #00FF00;cursor: pointer;
+-moz-transition: all 0.3s ease-in;-webkit-transition: all 0.3s ease-in;
+transition: all 0.3s ease-in;}
+.iconicmenu > label::after {
+content: "";display:block;position:absolute;width:100%;height:15px;top:16%;
+left:0;color:#FFF;border:4px solid #FFFF00; -moz-transition: all 0.3s ease-in;-webkit-transition: all 0.3s ease-in; transition: all 0.3s ease-in;}
+.iconicmenu ul {
+margin:0;padding:0;position:absolute;margin-left:50px;background:#333;color:#FFF;left:-100%;height:40px;font:bold 14px arial;text-align:left;list-style:none;opacity:0;-moz-border-radius:8px;-webkit-border-radius:8px;
+border-radius:8px -moz-perspective: 10000px; perspective: 10000px;
+-moz-transition: all 0.5s ease-in; -webkit-transition: all 0.5s ease-in;
+transition: all 0.5s ease-in;}
+.iconicmenu li {display: inline;margin:0;padding:0;}
+.iconicmenu ul label {cursor:pointer;position:relative;height:100%;    text-align:left;}
+.iconicmenu ul label::after {
+content: "x";display: inline-block;line-height:18px;color:#FFF;    -moz-border-radius:50px; -webkit-border-radius: 50px; border-radius: 50px;
+width: 22px;height: 22px;background:#FF0000;font-size:16px;margin:6px;padding:2px;
+-moz-transition: all 0.3s ease-in; -webkit-transition: all 0.3s ease-in; transition: all 0.3s ease-in;}
+.iconicmenu input[type="checkbox"]:checked ~ label, .iconicmenu ul label:hover::after {
+    -moz-transform: rotatey(180deg);
+    -ms-transform: rotatey(180deg);
+    -webkit-transform: rotatey(180deg);
+    transform: rotatey(180deg);}
+.iconicmenu > label:hover, .iconicmenu > label:hover::after, .iconicmenu input[type="checkbox"]:checked ~ label, .iconicmenu input[type="checkbox"]:checked ~ label::after {border-color:#00FF00;}
+.iconicmenu input[type="checkbox"]:checked ~ ul {left:10px;opacity:1;}
+.iconicmenu li a {color:#FFF;display: block;float: left;text-align: center;text-decoration:none;margin:5px;padding:5px;height:100%;}
+.iconicmenu li a:hover {background:#173377;color:#FFF;margin:5px;padding:5px;}
+/* --- CSS Media Queries --- */
+@media screen and (max-width: 600px) {
+.iconicmenu input[type="checkbox"]:checked ~ label {display: none;}
+.iconicmenu input[type="checkbox"]:checked ~ ul {margin-left: 0;}}
+@media screen and (max-width: 600px) {
+.iconicmenu {overflow: visible;}
+.iconicmenu ul {height: auto;}
+.iconicmenu ul li {min-width: 200px;;display: block;}
+.iconicmenu ul li a {float: none;;text-align: left;}}
+</style>
+<div class="iconicmenu">
+<input type="checkbox" id="togglebox" />
+<ul> 
+<li><a href="ΔΙΕΥΘΥΝΣΗ URL">ΤΙΤΛΟΣ</a></li>
+<li><a href="ΔΙΕΥΘΥΝΣΗ URL">ΤΙΤΛΟΣ</a></li>
+<li><a href="ΔΙΕΥΘΥΝΣΗ URL">ΤΙΤΛΟΣ</a></li>
+<li><a href="ΔΙΕΥΘΥΝΣΗ URL">ΤΙΤΛΟΣ</a></li>
+<li><a href="ΔΙΕΥΘΥΝΣΗ URL">ΤΙΤΛΟΣ</a></li>
+<li><label for="togglebox"></label></li>
+</ul>
+<label class="toggler" for="togglebox">Menu</label>
+</div>

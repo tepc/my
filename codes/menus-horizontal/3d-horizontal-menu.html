@@ -1,0 +1,112 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>3D ΟΡΙΖΟΝΤΙΟ ΜΕΝΟΥ</TITLE>
+<style>
+.TD-menu {display: block;}
+.TD-menu li {display: inline-block;}
+.TD-menu li a {
+color: #FFFFFF;
+background:#FF6600;
+display: block;
+text-decoration: none;
+font-family: Arial;
+overflow: visible;
+line-height: 10px;
+font-size: 14px;
+padding: 15px 10px;}
+.tdm {
+-webkit-perspective: 200px;
+-moz-perspective: 200px;
+perspective: 200px;
+-webkit-transition: all .08s linear;
+-moz-transition: all .08s linear;
+transition: all .08s linear;
+position: relative;}
+.tdm:not(.active):hover {cursor: pointer;}
+.tdm:not(.active):hover .tdm-box,
+.tdm:not(.active):focus .tdm-box {
+-moz-transform: translateZ(-20px) rotateX(90deg);
+-webkit-transform: translateZ(-20px) rotateX(90deg);
+-o-transform: translateZ(-20px) rotateX(90deg);
+transform: translateZ(-20px) rotateX(90deg);}
+.tdm-box {
+-webkit-transition: all .5s ease-out;
+-moz-transition: all .5s ease-out;
+-ms-transition: all .5s ease-out;
+-o-transition: all .5s ease-out;
+transition: all .5s ease-out;
+-webkit-transform: translatez(-20px);
+-moz-transform: translatez(-20px);
+-o-transform: translatez(-20px);
+transform: translatez(-20px);
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+-ms-transform-style: preserve-3d;
+-o-transform-style: preserve-3d;
+transform-style: preserve-3d;
+pointer-events: none;
+position: absolute;
+top: 0;
+left: 0;
+display: block;
+width: 100%;
+height: 100%;}
+.front {
+-webkit-transform: rotatex(0deg) translatez(20px);
+-moz-transform: rotatex(0deg) translatez(20px);
+-o-transform: rotatex(0deg) translatez(20px);
+transform: rotatex(0deg) translatez(20px);
+background:#173374;
+color: #FFFFFF;}
+.down {
+-webkit-transform: rotatex(-90deg) translatez(20px);
+-moz-transform: rotatex(-90deg) translatez(20px);
+-o-transform: rotatex(-90deg) translatez(20px);
+transform: rotatex(-90deg) translatez(20px);
+background:#661111;
+color: #FFFFFF;}
+.front, .down {
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+padding: 15px 10px;
+pointer-events: none;
+-moz-box-sizing: border-box;
+box-sizing: border-box;}
+</style>
+<ul class="TD-menu">
+<li><a href="http://gadgetsforblogs3.blogspot.gr" class="tdm">HOME<span class="tdm-box">
+<span class="front">HOME</span>
+<span class="down">HOME</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/my-posts.html" class="tdm">MY POSTS<span class="tdm-box">
+<span class="front">MY POSTS</span>
+<span class="down">MY POSTS</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/my-articles.html" class="tdm">MY ARTICLES<span class="tdm-box">
+<span class="front">MY ARTICLES</span>
+<span class="down">MY ARTICLES</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/my-links.html" class="tdm">MY LINKS<span class="tdm-box">
+<span class="front">MY LINKS</span>
+<span class="down">MY LINKS</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/my-photos.html" class="tdm">MY PHOTOS<span class="tdm-box">
+<span class="front">MY PHOTOS</span>
+<span class="down">MY PHOTOS</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/my-videos.html" class="tdm">MY VIDEOS<span class="tdm-box">
+<span class="front">MY VIDEOS</span>
+<span class="down">MY VIDEOS</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/my-music.html" class="tdm">MY MUSIC<span class="tdm-box">
+<span class="front">MY MUSIC</span>
+<span class="down">MY MUSIC</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/forumchat.html" class="tdm">FORUM+CHAT<span class="tdm-box">
+<span class="front">FORUM+CHAT</span>
+<span class="down">FORUM+CHAT</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/radiotv.html" class="tdm">RADIO+TV<span class="tdm-box">
+<span class="front">RADIO+TV</span>
+<span class="down">RADIO+TV</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/news.html" class="tdm">NEWS<span class="tdm-box">
+<span class="front">NEWS</span>
+<span class="down">NEWS</span></span></a></li>
+<li><a href="http://gadgetsforblogs3.blogspot.gr/p/my-rss.html" class="tdm">RSS<span class="tdm-box">
+<span class="front">RSS</span>
+<span class="down">RSS</span></span></a></li>
