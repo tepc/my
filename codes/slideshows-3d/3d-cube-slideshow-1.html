@@ -1,0 +1,35 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>3D CUBE SLIDESHOW</TITLE>
+<style>
+div.jkcubeslideshow{background:#FFF;display:block;width:960px;height:540px;position: relative; -webkit-perspective:1000px; perspective:1000px;}
+div.side1, div.side2 {width:100%;height:100%;position:absolute; -moz-box-sizing:border-box; box-sizing: border-box; backface-visibility:hidden; transition:all 1s ease-in-out;}
+div.side1 img, div.side2 img {width:100%;height:auto;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://rawgit.com/github-codes/5d17de3549a52b71e0b62be31787b6a8/raw/02a6724eaa21c613caa395e1acfea162e5ad9c0f/3d-cube-slideshow.js"></script>
+<script>
+var cubeshowvar1
+jQuery(function($){
+cubeshowvar1 = new jkcubeslideshow({
+id: 'cubeshow1',
+dimensions: [960, 540],
+images: [
+['https://i.imgur.com/VTKt0Neh.jpg'],
+['https://i.imgur.com/MoYkPMRh.jpg'],
+['https://i.imgur.com/wGsIadFh.jpg'],
+['https://i.imgur.com/TidabmUh.jpg'],
+['https://i.imgur.com/929YTQKh.jpg'],
+['https://i.imgur.com/J8INqXoh.jpg'],
+['https://i.imgur.com/sRPwRGTh.jpg'],
+['https://i.imgur.com/pTL8ZD9h.jpg'],
+['https://i.imgur.com/u6JXTHMh.jpg'],
+['https://i.imgur.com/3SRq2CRh.jpg'],
+['https://i.imgur.com/wbZBj2ch.jpg'],
+['https://i.imgur.com/K55IeoNh.jpg'],
+['https://i.imgur.com/53bMqGQh.jpg']]})})
+</script>
+<div class="jkcubeslideshow" id="cubeshow1"></div>
+<br/>
+<a href="#" onclick="cubeshowvar1.rotatecube('back'); return false" style="background:#fffff0;border-radius: 6px; margin-top:20px; margin-left: 260px;padding: 6px;">◄◄ PREVIOUS</a>
+<a href="#" onclick="cubeshowvar1.rotatecube('forward'); return false" style="background:#fffff0;border-radius:6px;margin-top:20px; margin-left: 300px; padding: 6px;">NEXT ►►</a>
+<script>(function(d, s, id) {var js, pastejs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src ='https://www.pastery.net/static/js/embed.js';pastejs.parentNode.insertBefore(js, pastejs);}(document, 'script', 'pastery-jssdk'));</script><div class='paste-list' data-pasteid='skduhs'></div>

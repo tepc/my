@@ -1,0 +1,35 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>3D-CAROUSEL SLIDESHOW-1</TITLE>
+<style>
+*{margin: 0;padding: 0;outline: none;border:none;box-sizing:border-box;}
+*:before, *:after {box-sizing: border-box;}
+.container {margin: 5% auto;width: 240px;height: 150px;position: relative;perspective: 1000px;}
+#carousel {width: 100%;height: 100%;position: absolute;transform-style: preserve-3d;animation: rotation 20s infinite linear;}
+#carousel:hover {animation-play-state: paused;}
+#carousel figure {display: block;position: absolute;width:208px;height:130px;left:10px;top:10px; background:#115599;overflow: hidden;border: solid 2px #115599;}
+#carousel figure:nth-child(1) {transform: rotateY(0deg) translateZ(320px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(320px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(320px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(320px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(320px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(320px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(320px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(320px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(320px);}
+img {cursor: pointer;transition: all .5s ease;}
+img:hover {transform: scale(1.2,1.2);}
+@keyframes rotation {from{transform: rotateY(0deg);}
+to {transform: rotateY(360deg);}}
+</style>
+<div class="container">
+<div id="carousel">
+<figure><img src="https://i.imgur.com/I9SFA0sl.jpg" alt="ZAKYNTHOS" width="208" height="130"></figure>
+<figure><img src="https://i.imgur.com/gCr4ycDl.jpg" alt="LEYKADA" width="208" height="130"></figure>
+<figure><img src="https://i.imgur.com/Pq9Dexal.jpg" alt="KERKYRA" width="208" height="130"></figure>
+<figure><img src="https://i.imgur.com/XMS6PHsl.jpg" alt="KEFALONIA" width="208" height="130"></figure>
+<figure><img src="https://i.imgur.com/bVvl5ywl.jpg" alt="KYTHYRA" width="208" height="130"></figure>
+<figure><img src="https://i.imgur.com/JcRaeRSl.jpg" alt="ITHAKI" width="208" height="130"></figure>
+<figure><img src="https://i.imgur.com/kbCkBYel.jpg" alt="PAXOI" width="208" height="130"></figure>
+<figure><img src="https://i.imgur.com/Z7B3z0Fl.jpg" alt="SKIATHOS" width="208" height="130"></figure>
+<figure><img src="https://i.imgur.com/UMQ2IrDl.jpg" alt="ALONHSSOS" width="208" height="130"></figure>
+</div></div>
