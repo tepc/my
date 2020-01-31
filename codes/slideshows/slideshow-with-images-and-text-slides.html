@@ -1,0 +1,29 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SLIDESHOW WITH IMAGES AND TEXT SLIDES</TITLE>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<div id="slideshow">
+<div id="sampletext">ΟΙ 5 ΚΑΛΥΤΕΡΕΣ ΕΛΛΗΝΙΚΕΣ ΠΑΡΑΛΙΕΣ</br>ΠΑΡΑΛΙΑ Νο 1</br>ΝΑΥΑΓΙΟ ΖΑΚΥΝΘΟΣ</div>
+<div><img src="http://i.imgur.com/fiVofHI.jpg" alt="ΖΑΚΥΝΘΟΣ" width="960" height="600"></div>    
+<div id="sampletext">ΟΙ 5 ΚΑΛΥΤΕΡΕΣ ΕΛΛΗΝΙΚΕΣ ΠΑΡΑΛΙΕΣ</br>ΠΑΡΑΛΙΑ Νο 2</br>ΠΟΡΤΟ ΚΑΤΣΙΚΙ ΛΕΥΚΑΔΑ</div>
+<div><img src="http://i.imgur.com/rcivwQJ.jpg" alt="ΛΕΥΚΑΔΑ" width="960" height="600"></div>
+<div id="sampletext">ΟΙ 5 ΚΑΛΥΤΕΡΕΣ ΕΛΛΗΝΙΚΕΣ ΠΑΡΑΛΙΕΣ</br>ΠΑΡΑΛΙΑ Νο 3</br>ΜΥΡΤΟΣ ΚΕΦΑΛΛΟΝΙΑ</div>
+<div><img src="http://i.imgur.com/0nyxX2L.jpg" alt="ΚΕΦΑΛΛΟΝΙΑ" width="960" height="600"></div>
+<div id="sampletext">ΟΙ 5 ΚΑΛΥΤΕΡΕΣ ΕΛΛΗΝΙΚΕΣ ΠΑΡΑΛΙΕΣ</br>ΠΑΡΑΛΙΑ Νο 4</br>ΚΟΥΚΟΥΝΑΡΙΕΣ ΣΚΙΑΘΟΣ</div>
+<div><img src="http://i.imgur.com/oSC4D7R.jpg" alt="ΣΚΙΑΘΟΣ" width="960" height="600"></div>
+<div id="sampletext">ΟΙ 5 ΚΑΛΥΤΕΡΕΣ ΕΛΛΗΝΙΚΕΣ ΠΑΡΑΛΙΕΣ</br>ΠΑΡΑΛΙΑ Νο 5</br>ΕΓΓΡΕΜΝΟΙ ΛΕΥΚΑΔΑ</div>
+<div><img src="https://i.imgur.com/H2PNDWB.jpg" alt="ΛΕΥΚΑΔΑ" width="960" height="600"></div></div>
+
+<style>
+#sampletext {position:relative; width:960px; height:600px;font :bold 48px Arial;background:#115599;color:#FFF;}
+#slideshow > div {position:relative;top: 0px;left: 0px;right: 0px;bottom: 0px;}
+</style>
+
+<script>
+$("#slideshow > div:gt(0)").hide();
+setInterval(function() {$('#slideshow > div:first')
+.fadeOut(0)
+.next()
+.fadeIn(0)
+.end()
+.appendTo('#slideshow');},  4000);
+</script>

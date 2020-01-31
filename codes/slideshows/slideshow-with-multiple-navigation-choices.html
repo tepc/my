@@ -1,0 +1,66 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SLIDESHOW WITH NAVIGATION BUTTONS</TITLE>
+<SCRIPT>
+var Onerotate_delay = 3500;
+Onecurrent = 0;
+var OneLinks = new Array(9);
+OneLinks[0] = "http://i.imgur.com/fiVofHI.jpg";
+OneLinks[1] = "http://i.imgur.com/rcivwQJ.jpg";
+OneLinks[2] = "http://i.imgur.com/0nyxX2L.jpg";
+OneLinks[3] = "http://i.imgur.com/gptb8xn.jpg";
+OneLinks[4] = "http://i.imgur.com/oSC4D7R.jpg";
+OneLinks[5] = "http://i.imgur.com/9GqSG9a.jpg";
+OneLinks[6] = "http://i.imgur.com/iMTctrx.jpg";
+OneLinks[7] = "http://i.imgur.com/xHwALvD.jpg";
+OneLinks[8] = "http://i.imgur.com/2OIqV1b.jpg";
+OneLinks[9] = "http://i.imgur.com/Pq9Dexa.jpg";
+function Onenext() {if (document.Oneslideform.Oneslide[Onecurrent+1]) {
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent+1].value;
+document.Oneslideform.Oneslide.selectedIndex = ++Onecurrent;}
+else Onefirst();}
+function Oneprevious() {if (Onecurrent-1 >= 0) {
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent-1].value;
+document.Oneslideform.Oneslide.selectedIndex = --Onecurrent;}
+else Onelast();}
+function Onefirst() {Onecurrent = 0;
+document.images.Oneshow.src = document.Oneslideform.Oneslide[0].value;
+document.Oneslideform.Oneslide.selectedIndex = 0;}
+function Onelast() {Onecurrent = document.Oneslideform.Oneslide.length-1;
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent].value;
+document.Oneslideform.Oneslide.selectedIndex = Onecurrent;}
+function Oneap(text) {document.Oneslideform.Oneslidebutton.value = (text == "STOP") ? "START" : "STOP";
+Onerotate();}
+function Onechange() {Onecurrent = document.Oneslideform.Oneslide.selectedIndex;
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent].value;}
+function Onerotate() {if (document.Oneslideform.Oneslidebutton.value == "STOP") {
+Onecurrent = (Onecurrent == document.Oneslideform.Oneslide.length-1) ? 0 : Onecurrent+1;
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent].value;
+document.Oneslideform.Oneslide.selectedIndex = Onecurrent;
+window.setTimeout("Onerotate()", Onerotate_delay);}}
+function Onetransport(){window.location=OneLinks[Onecurrent]}
+</SCRIPT>
+
+<TABLE border="0" cellspacing="0" cellpadding="0">
+<tr><td><form name="Oneslideform"><div align="center">
+<table width="650" border="1" cellspacing="0" cellpadding="4" bordercolor="#FBBB22">
+<tr><td bgcolor="#115599"><div align="center">
+<span style="font:13px arial;color:#FFF;">GREEK ISLANDS TOP 10 BEACHES</span></div></td></tr>
+<tr><td bgcolor="#FBBB22"><div align="center">
+<a href="javascript:Onetransport()"><img src="http://i.imgur.com/fiVofHIl.jpg" width="640" height="400" name="Oneshow" border="0"></a></div></td></tr>
+<tr><td bgcolor="#115599"><div align="center"><select name="Oneslide" onChange="Onechange();">
+<option value="http://i.imgur.com/fiVofHIl.jpg" selected>ΖΑΚΥΝΘΟΣ ΝΑΥΑΓΙΟ</option>
+<option value="http://i.imgur.com/rcivwQJl.jpg">ΛΕΥΚΑΔΑ ΠΟΡΤΟ ΚΑΤΣΙΚΙ</option>
+<option value="http://i.imgur.com/0nyxX2Ll.jpg">ΚΕΦΑΛΟΝΙΑ ΜΥΡΤΟΣ</option>
+<option value="http://i.imgur.com/gptb8xnl.jpg">ΚΡΗΤΗ ΜΠΑΛΟΣ</option>
+<option value="http://i.imgur.com/oSC4D7Rl.jpg">ΣΚΙΑΘΟΣ ΚΟΥΚΟΥΝΑΡΙΕΣ</option>
+<option value="http://i.imgur.com/9GqSG9al.jpg">ΑΛΟΝΝΗΣΟΣ ΚΟΚΚΙΝΟΚΑΣΤΡΟ</option>
+<option value="http://i.imgur.com/iMTctrxl.jpg">ΚΑΡΠΑΘΟΣ ΑΠΕΛΛΑ</option>
+<option value="http://i.imgur.com/xHwALvDl.jpg">ΡΟΔΟΣ ΤΣΑΜΠΙΚΑ</option>
+<option value="http://i.imgur.com/2OIqV1bl.jpg">ΣΑΜΟΣ ΤΣΑΜΑΔΟΥ</option>
+<option value="http://i.imgur.com/Pq9Dexal.jpg">ΚΕΡΚΥΡΑ ΠΑΛΙΟΚΑΣΤΡΙΤΣΑ</option>
+</select></div></td></tr>
+<tr><td bgcolor="#115599"><div align="center">
+<input type=button onClick="Oneprevious();" value="◄◄" title="Previous">
+<input type=button name="Oneslidebutton" onClick="Oneap(this.value);" value="START ►" title="AutoPlay">
+<input type=button onClick="Onenext();" value="►►" title="Next"></div>
+</td></tr></table></div></form></td></tr></TABLE>
