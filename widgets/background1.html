@@ -1,0 +1,29 @@
+<style>
+body {background:#115599;background-image:url(https://i.imgur.com/VZcildl.jpg);background-attachment:fixed;background-position:left top;background-repeat: no-repeat;
+background-size:1504px 846px;}  
+#b1 {background-image:url(https://i.imgur.com/UKrGMoA.jpg);}
+#b2 {background-image:url(https://i.imgur.com/Jrw6vMy.jpg);}
+#b3 {background-image:url(https://i.imgur.com/1OB6MoL.jpg);}
+#b4 {background-image:url(https://i.imgur.com/aXZruOI.jpg);}
+#b5 {background-image:url(https://i.imgur.com/2t5y2Tc.jpg);}
+#b6 {background-image:url(https://i.imgur.com/2eSYtrp.jpg);}
+#b7 {background-image:url(https://i.imgur.com/seHWgNP.jpg);}
+#b8 {background-image:url(https://i.imgur.com/b7cGD5L.jpg);}
+#b9 {background-image:url(https://i.imgur.com/CHqxCkI.jpg);}
+#b10{background-image:url(https://i.imgur.com/LRmccLf.jpg);}
+#b11 {background-image:url(https://i.imgur.com/4hHNp8t.jpg);}
+#b12 {background-image:url(https://i.imgur.com/EdBhTYQ.jpg);}
+#b13 {background-image:url(https://i.imgur.com/HjoSwfe.jpg);}
+#b14 {background-image:url(https://i.imgur.com/phbIVY1.jpg);}
+#b15{background-image:url(https://i.imgur.com/VZcildl.jpg);}
+</style>       
+<script>   
+function run(interval, frames) {
+var int = 1;
+function func() {
+document.body.id = "b"+int;
+int++;
+if(int === frames) {int = 1;}}
+var swap = window.setInterval(func, interval);}
+run(4000, 15); //milliseconds, frames 
+</script> 
