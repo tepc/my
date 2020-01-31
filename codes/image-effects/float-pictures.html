@@ -1,0 +1,38 @@
+<title>FLOAT PICRURES</title>
+<style>
+ul.gallery{list-style:none;margin:0;padding:0;}
+ul.gallery li{display: block;width: 240px;
+height:50px;position:relative;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;}
+ul.gallery li img{position:relative;top:0px;left:0px;width:100%;border:5px solid #FF0000;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;}
+ul.gallery li:focus{position:relative;z-index: 100;outline: none;pointer-events: none;top:0px;left:0px;}
+ul.gallery li:focus img{top:0px;left:0px;
+  -webkit-transform: scale(3) translateX(100%);
+  -moz-transform: scale(3) translateX(100%);
+  transform: scale(3) translateX(100%);outline:none; -webkit-filter: grayscale(0);filter: none;}
+ul.gallery li:first-of-type:focus img{top:0px;left:0px;}
+svg{position:relative;top:0px;left:0px;visibility: hidden;}
+</style>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<filter id="grayscale">
+<fecolormatrix type="matrix" values=
+"0.1 0.1 0.1 0 0
+0.1 0.1 0.1 0 0
+0.1 0.1 0.1 0 0
+0.1 0.1 0.1 0 0">
+</fecolormatrix>
+</filter>
+</svg>
+<ul class="gallery" title="Tab">
+<li tabindex="1"><img src="https://i.imgur.com/phbIVY1.jpg" /></li>
+<li tabindex="2"><img src="https://i.imgur.com/Jrw6vMy.jpg" /></li>
+<li tabindex="3"><img src="https://i.imgur.com/KGh0xkb.jpg" /></li>
+<li tabindex="4"><img src="http://i.imgur.com/fiVofHI.jpg" /></li>
+<li tabindex="5"><img src="http://i.imgur.com/9GqSG9a.jpg" /></li>
+<li tabindex="6"><img src="http://i.imgur.com/7X4wjWS.jpg" /></li>
+</ul>

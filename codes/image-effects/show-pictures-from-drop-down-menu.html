@@ -1,0 +1,29 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>ΠΡΟΒΟΛΗ ΕΙΚΟΝΩΝ ΑΠΟ DROP DOWN MENU</TITLE>
+<SCRIPT>
+function display_image(form) {
+selectionname = form.imagename.options[form.imagename.selectedIndex].text;
+selection = form.imagename.options[form.imagename.selectedIndex].value;
+PreView = window.open("", "Preview", "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,copyhistory=0,width=665,height=475");
+PreView.document.open();
+PreView.document.write("<form><left><b><font size=3>" +
+selectionname + "</font></b><hr>");
+PreView.document.write("<img hspace=0 vspace=0 " +
+"src='" + selection + "'>");
+PreView.document.write("<hr><form><onClick='window.close()'></form>");
+PreView.document.write("</left>");
+PreView.document.close();}
+</SCRIPT>
+<FORM>
+<select name="imagename" onChange="display_image(this.form)" style="width:240px;background:#115599; color:#FFFFFF">
+<option value="http://i.imgur.com/7X4wjWSl.jpg" selected>ΚΕΡΚΥΡΑ ΠΟΝΤΙΚΟΝΗΣΙ
+<option value="http://i.imgur.com/gCr4ycDl.jpg">ΛΕΥΚΑΔΑ ΠΟΡΤΟ ΚΑΤΣΙΚΙ
+<option value="http://i.imgur.com/qrKer61l.jpg">ΚΕΦΑΛΟΝΙΑ ΜΥΡΤΟΣ
+<option value="http://i.imgur.com/Pq9Dexal.jpg">ΚΕΡΚΥΡΑ ΠΑΛΑΙΟΚΑΣΤΡΙΤΣΑ
+<option value="http://i.imgur.com/oSC4D7Rl.jpg">ΣΚΙΑΘΟΣ ΚΟΥΚΟΥΝΑΡΙΕΣ
+<option value="http://i.imgur.com/xHwALvDl.jpg">ΤΣΑΜΠΙΚΑ ΡΟΔΟΣ
+<option value="http://i.imgur.com/3Jk6C5nl.jpg">ΠΟΤΑΜΙ ΣΑΜΟΣ
+<option value="http://i.imgur.com/gptb8xnl.jpg">ΜΠΑΛΟΣ ΚΡΗΤΗ
+<option value="http://i.imgur.com/H2PNDWBl.jpg">ΕΓΓΡΕΜΝΟΙ ΛΕΥΚΑΔΑ
+<option value="http://i.imgur.com/qMMDdhYl.jpg">ΑΠΕΛΛΑ ΚΑΡΠΑΘΟΣ
+</select></FORM>
