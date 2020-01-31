@@ -1,0 +1,192 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>MEGA MENU WITH TABLES</TITLE>
+<style>
+.mytable1 {width:250px;background:#173374;color:#FFFFFF;font:13px Arial;border-collapse:collapse;}
+.mytable1 th {background:#207907; color:#FFFFFF;}
+.mytable1 td, .mytable th {padding:5px;border:0; }
+.mytable1 td {width:100%;font:13px Arial; border:1px solid #FBBB22;height:16px;list-style:none;}
+</style>
+<style>
+.mytable2 {width:500px;background:#173374;color:#FFFFFF; font:13px Arial;border-collapse:collapse;}
+.mytable2 th {background:#207907; color:#FFFFFF;}
+.mytable2 td, .mytable th {padding:5px;border:0; }
+.mytable2 td {width:50%; font:13px Arial; border:1px solid #FBBB22;height:16px;list-style:none;}
+</style>
+<style>
+.mytable3 {width:750px;background:#173374;color:#FFFFFF;font:13px Arial;border-collapse:collapse;}
+.mytable3 th {background:#207907; color:#FFFFFF;}
+.mytable3 td, .mytable th {padding:5px;border:0; }
+.mytable3 td {width:33,33%; font:13px Arial; border:1px solid #FBBB22;height:16px;list-style:none;}
+</style>
+<style>
+.mytable4 {width:1000px;background:#173374;color:#FFFFFF;font:13px Arial;border-collapse:collapse;}
+.mytable4 th {background:#207907;color:#FFFFFF;}
+.mytable4 td, .mytable th {padding:5px;border:0; }
+.mytable4 td {width:25%; font:13px Arial; border:1px solid #FBBB22;height:16px;list-style:none;}
+</style>
+<style>
+.mytable5 {width:1250px;background:#173374;color:#FFFFFF;font:13px Arial;border-collapse:collapse;}
+.mytable5 th {background:#207907; color:#FFFFFF;}
+.mytable5 td, .mytable th {padding:5px;border:0; }
+.mytable5 td {width:20%; font:13px Arial; border:1px solid #FBBB22;height:16px;list-style:none;}
+</style>
+
+<script>
+function butt(chose) {
+var myboxes = document.getElementsByTagName("div");
+for(var x=0; x<myboxes.length; x++) {
+name = myboxes[x].getAttribute("class");
+if (name == 'butt') {
+if (myboxes[x].id == chose) {
+if (myboxes[x].style.display == 'block') {
+myboxes[x].style.display = 'none';}
+else {myboxes[x].style.display = 'block';}}
+else {myboxes[x].style.display = 'none';}}}}
+</script>
+
+<a id="mybutton" style="width:100px;height:16px; background:#FBBB22; color:#000000;font:14px Arial;border-radius:6px;text-align:center;padding:2px;cursor:pointer;" onclick="window.location.href='http://the-best-widgets.blogspot.gr'">HOME</a>
+<a id="mybutton" style="width:100px;height:16px; background:#333333; color:#FFFFFF;font:14px Arial;border-radius:6px;text-align:center;padding:2px;cursor:pointer;" onclick="window.location.href='http://the-best-widgets.blogspot.gr/p/my-posts.html'">MY POSTS</a>
+<a id="mybutton" style="width:100px;height:16px; background:#115599; color:#FFFFFF;font:14px Arial;border-radius:6px;text-align:center;padding:2px;cursor:pointer;" onclick="javascript:butt('mybox1');" >MY PAGES-1 ▼</a>
+<a id="mybutton" style="width:100px;height:16px; background:#A11111; color:#FFFFFF;font:14px Arial;border-radius:6px;text-align:center;padding:2px;cursor:pointer;" onclick="javascript:butt('mybox2');" >MY PAGES-2 ▼</a>
+<a id="mybutton" style="width:100px;height:16px; background:#105105; color:#FFFFFF;font:14px Arial;border-radius:6px;text-align:center;padding:2px;cursor:pointer;" onclick="javascript:butt('mybox3');" >MY PAGES-3 ▼</a>
+<a id="mybutton" style="width:100px;height:16px; background:#740777; color:#FFFFFF;font:14px Arial;border-radius:6px;text-align:center;padding:2px;cursor:pointer;" onclick="javascript:butt('mybox4');" >MY PAGES-4 ▼</a>
+<a id="mybutton" style="width:100px;height:16px; background:#FF4500; color:#FFFFFF;font:14px Arial;border-radius:6px;text-align:center;padding:2px;cursor:pointer;" onclick="javascript:butt('mybox5');" >MY PAGES-5 ▼</a>
+<a id="mybutton" style="width:150px;height:16px; background:#532000; color:#FFFFFF;font:14px Arial;border-radius:6px;text-align:center;padding:2px;cursor:pointer;" onclick="window.location.href=' http://the-best-widgets.blogspot.gr/p/widgets_9083.html'">RADIO+TV+NEWS</a>
+
+<div class="butt" id="mybox1" style="position:absolute;top:21px;left:0px;width:252px;height:auto;border-radius:6px;border:1px solid #fbbb22;background:#333333;list-style:none;display:none;padding:5px;z-index:999;">
+<table class="mytable1">
+<tr><th>LABEL A</th></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A1</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS A2</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS A3</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS A4</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES A5</a></td></tr>
+</table></div>     
+
+<div class="butt" id="mybox2" style=" position:absolute;top:21px;left:0px; width:502px;height:auto;border-radius:6px;border:1px solid #fbbb22;background:#333333; list-style:none;display: none;padding: 5px; z-index:999;">
+<table class="mytable2">
+<tr><th>LABEL A</th><th>LABEL B</th></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B1</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B2</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B3</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B4</a></td></tr>
+</table></div>     
+
+<div class="butt" id="mybox3" style="position:absolute;top:21px;left:0px;width:752px;height:auto;border-radius:6px;border:1px solid #fbbb22;background:#333333; list-style:none;display: none;padding: 5px; z-index:999;">
+<table class="mytable3">
+<tr><th>LABEL A</th><th>LABEL B</th><th>LABEL C</th></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C1</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C2</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C3</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C4</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C5</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C6</a></td></tr>
+</table></div>
+
+<div class="butt" id="mybox4" style="position:absolute;top:21px;left:0px; width:1002px;height:auto;border-radius:6px;border:1px solid #fbbb22;background:#333333; list-style:none;display: none;padding: 5px; z-index:999;">
+<table class="mytable4">
+<tr><th>LABEL A</th><th>LABEL B</th><th>LABEL C</th><th>LABEL D</th></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D1</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D2</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D3</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D4</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D5</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D6</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A7</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B7</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C7</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D7</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A8</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B8</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C8</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D8</a></td></tr>
+</table></div>
+
+<div class="butt" id="mybox5" style=" position:absolute;top:21px;left:0px; width:1252px;height:auto;border-radius:6px;border:1px solid #fbbb22;background:#333333; list-style:none;display: none;padding: 5px; z-index:999;">
+<table class="mytable5">
+<tr><th>LABEL A</th><th>LABEL B</th><th>LABEL C</th><th>LABEL D</th><th>LABEL E</th></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D1</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E1</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D2</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E2</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D3</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E3</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D4</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E4</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D5</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E5</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D6</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E6</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A7</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B7</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C7</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D7</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E7</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A8</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B8</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C8</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D8</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E8</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A9</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B9</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C9</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D9</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E9</a></td></tr>
+<tr><td><a href="http://the-best-widgets.blogspot.gr/p/my-posts.html">MY POSTS A10</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/blog-page_11.html">MY LINKS B10</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/wigdets.html">MY VIDEOS C10</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_859.html">MY PHOTOS D10</a></td>
+<td><a href="http://the-best-widgets.blogspot.gr/p/widgets_26.html">MY FILES E10</a></td></tr>
+</table></div>
