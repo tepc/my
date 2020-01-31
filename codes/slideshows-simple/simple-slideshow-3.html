@@ -1,0 +1,24 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SIMPLE SLIDESHOW-3</TITLE>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>
+    $("#slideshow > div:gt(0)").hide();
+              setInterval(function() {
+               $('#slideshow > div:first')
+             .fadeIn(2000)
+             .next()
+             .fadeOut(1000)
+             .end()
+             .appendTo('#slideshow');
+           },3000);
+</script>
+<style>
+#slideshow > div{position:absolute;top:0px;left:0px;right:0px;bottom:0px;}
+</style>
+<div id="slideshow">
+<div><img src="https://i.imgur.com/UKrGMoA.jpg" width="800" height="450"></div>
+<div><img src="https://i.imgur.com/phbIVY1.jpg" width="800" height="450"></div>
+<div><img src="https://i.imgur.com/Jrw6vMy.jpg" width="800" height="450"></div>
+<div><img src="https://i.imgur.com/pxOfj7v.jpg" width="800" height="450"></div>
+<div><img src="https://i.imgur.com/1OB6MoL.jpg" width="800" height="450"></div>
+<div><img src="https://i.imgur.com/okL2Ovk.jpg" width="800" height="450"></div>

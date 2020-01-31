@@ -1,0 +1,40 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SIMPLE SLIDESHOW-1</TITLE>
+<script>
+var slideimages = new Array()
+slideimages[0] = new Image()
+slideimages[0].src = "http://i.imgur.com/fiVofHIh.jpg"
+slideimages[1] = new Image()
+slideimages[1].src = "http://i.imgur.com/gCr4ycDh.jpg"
+slideimages[2] = new Image()
+slideimages[2].src = "http://i.imgur.com/qrKer61h.jpg"
+slideimages[3] = new Image()
+slideimages[3].src = "http://i.imgur.com/Pq9Dexah.jpg"
+slideimages[4] = new Image()
+slideimages[4].src = "http://i.imgur.com/oSC4D7Rh.jpg"
+slideimages[5] = new Image()
+slideimages[5].src = "http://i.imgur.com/xHwALvDh.jpg"
+slideimages[6] = new Image()
+slideimages[6].src = "http://i.imgur.com/3Jk6C5nh.jpg"
+slideimages[7] = new Image()
+slideimages[7].src = "http://i.imgur.com/gptb8xnh.jpg"
+slideimages[8] = new Image()
+slideimages[8].src = "http://i.imgur.com/H2PNDWBh.jpg"
+slideimages[9] = new Image()
+slideimages[9].src = "http://i.imgur.com/2OIqV1bh.jpg"
+</script>
+
+<img src="http://i.imgur.com/fiVofHIh.jpg" id="slide" width="944" height="590" />
+<script>
+var step=0
+function slideit(){
+if (!document.images)
+return
+document.getElementById('slide').src = slideimages[step].src
+if (step<9)
+step++
+else
+step=0
+setTimeout("slideit()",4000)}
+slideit()
+</script>

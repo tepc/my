@@ -1,0 +1,59 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SIMPLE SLIDESHOW WITH NAVIGATION BUTTONS-2</TITLE>
+<style>
+body {font:16px arial;margin:0;padding:0;}
+.wrapper {position:relative;top:0px;left:0px;width:808px;margin:0;background:#115599;}
+.scriptSlide {animation-name: slideDiv;animation-duration: 1s}
+.col {border:4px solid #FF0000;padding:0px}
+@keyframes slideDiv {from{opacity:0} to {opacity:1}} 
+</style>
+<div class="wrapper">
+<div class="main-tab">
+<div class="01-tab col scriptSlide">
+<a href="https://www.blogger.com/null" style="background: #ff0000; color: white; font: 20px &quot;arial&quot;; padding: 5px;">SANTORINI</a>
+<a href="https://i.imgur.com/phbIVY1.jpg"><img alt="SANTORINI" height="450" src="https://i.imgur.com/phbIVY1.jpg" title="SANTORINI" width="800" /></a>
+<a href="https://www.blogger.com/null" style="background: #740777; color: white; font: 15px &quot;arial&quot;; padding: 5px;">SANTORINI VOLCANE VIEW</a>
+</div>
+<div class="02-tab col scriptSlide">
+<a href="https://www.blogger.com/null" style="background: #ff0000; color: white; font: 20px &quot;arial&quot;; padding: 5px;">SANTORINI</a>
+<a href="https://i.imgur.com/Jrw6vMy.jpg"><img alt="SANTORINI" height="450" src="https://i.imgur.com/Jrw6vMy.jpg" title="SANTORINI" width="800" /></a>
+<a href="https://www.blogger.com/null" style="background: #740777; color: white; font: 15px &quot;arial&quot;; padding: 5px;">SANTORINI SUNSET WITH VOLCANE VIEW</a>
+</div>
+<div class="03-tab col scriptSlide">
+<a href="https://www.blogger.com/null" style="background: #ff0000; color: white; font: 20px &quot;arial&quot;; padding: 5px;">LEYKADA</a>
+<a href="https://i.imgur.com/V4V4YZI.jpg"><img alt="LEYKADA" height="450" src="https://i.imgur.com/V4V4YZI.jpg" title="LEYKADA" width="800" /></a>   
+<a href="https://www.blogger.com/null" style="background: #740777; color: white; font: 15px &quot;arial&quot;; padding: 5px;">LEYKADA A BOAT IN THE SEA</a>
+</div>
+<div class="04-tab col scriptSlide">
+<a href="https://www.blogger.com/null" style="background: #ff0000; color: white; font: 20px &quot;arial&quot;; padding: 5px;">LEYKADA</a>
+<a href="https://i.imgur.com/ylGwxG.jpg"><img alt="LEYKADA" height="450" src="https://i.imgur.com/ylGwxGw.jpg" title="LEYKADA" width="800" /></a>   
+<a href="https://www.blogger.com/null" style="background: #740777; color: white; font: 15px &quot;arial&quot;; padding: 5px;">LEYKADA PORTO KATSIKI</a>
+</div>
+<div class="05-tab col scriptSlide">
+<a href="https://www.blogger.com/null" style="background: #ff0000; color: white; font: 20px &quot;arial&quot;; padding: 5px;">KERKYRA</a>
+<a href="https://i.imgur.com/X1GGnpj.jpg"><img alt="KERKYRA" height="450" src="https://i.imgur.com/X1GGnpj.jpg" title="KERKYRA" width="800" /></a>   
+<a href="https://www.blogger.com/null" style="background: #740777; color: white; font: 15px &quot;arial&quot;; padding: 5px;">KERKYRA PALAIOKASTRITSA BEACH</a>
+</div>
+<div class="06-tab col scriptSlide">
+<a href="https://www.blogger.com/null" style="background: #ff0000; color: white; font: 20px &quot;arial&quot;; padding: 5px;">KERKYRA</a>
+<a href="https://i.imgur.com/HD6dsKg.jpg"><img alt="KERKYRA" height="450" src="https://i.imgur.com/HD6dsKg.jpg" title="KERKYRA" width="800" /></a>   
+<a href="https://www.blogger.com/null" style="background: #740777; color: white; font: 15px &quot;arial&quot;; padding: 5px;">KERKYRA PALAIOKASTRITSA BEACH AERIAL VIEW</a>
+</div>
+</div>
+<button onclick="plusDivs(-1)" style="background: #ff99aa; left: 300px; position: relative;">◄ PREVIUS</button>
+<button onclick="plusDivs(1)" style="background: #00ff00; left: 320px; position: relative;">NEXT ►</button>
+</div>
+<script>
+ var slideIndex = 1;
+                showDiv(slideIndex);                
+                function plusDivs(n) {
+                  showDiv(slideIndex += n);}
+                function showDiv(n) {
+                  var i;
+                  var x = document.getElementsByClassName("scriptSlide");                  
+                  if (n > x.length) {slideIndex = 1;}    
+                  if (n < 1) {slideIndex = x.length}
+                  for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";}
+                  x[slideIndex-1].style.display = "block";} 
+</script>

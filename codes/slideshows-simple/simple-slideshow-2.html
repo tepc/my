@@ -1,0 +1,23 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SIMPLE SLIDESHOW-2</TITLE>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<style>
+#slideshow > div {position:absolute;top:0px;left:0px;}
+</style>
+<script>
+$("#slideshow > div:gt(0)").hide();
+setInterval(function() {
+$('#slideshow > div:first')
+.next()
+.end()
+.appendTo('#slideshow');},  3000);
+</script>
+<div id="slideshow">
+<div><img src="http://i.imgur.com/fiVofHIh.jpg" width="960" height="600"></div>
+<div><img src="http://i.imgur.com/rcivwQJh.jpg" width="960" height="600"></div>
+<div><img src="http://i.imgur.com/0nyxX2Lh.jpg" width="960" height="600"></div>
+<div><img src="http://i.imgur.com/gptb8xnh.jpg" width="960" height="600"></div>
+<div><img src="http://i.imgur.com/oSC4D7Rl.jpg" width="960" height="600"></div>
+<div><img src="http://i.imgur.com/9GqSG9al.jpg" width="960" height="600"></div>
+<div><img src="http://i.imgur.com/iMTctrxh.jpg" width="960" height="600"></div>
+</div>

@@ -1,0 +1,49 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SIMPLE SLIDESHOW WITH NAVIGATION BUTTONS-1</TITLE>
+<style>
+text-align:left;margin:0;padding:0;
+#imageContainer {max-height:590px;max-width:944px;background:#115599;}
+a  {text-decoration:none;padding:0px;color:#33FFFF;}
+</style>
+
+<script>
+var imgSlide; var pic = 0;
+window.onload = function () {imgSlide = document.getElementById('img');
+images = new Array();
+images[0] = new Image()
+images[0].src = "http://i.imgur.com/fiVofHIh.jpg"
+images[1] = new Image()
+images[1].src = "http://i.imgur.com/rcivwQJh.jpg"
+images[2] = new Image()
+images[2].src = "http://i.imgur.com/0nyxX2Lh.jpg"
+images[3] = new Image()
+images[3].src = "http://i.imgur.com/gptb8xnh.jpg"
+images[4] = new Image()
+images[4].src = "http://i.imgur.com/oSC4D7Rh.jpg"
+images[5] = new Image()
+images[5].src = "http://i.imgur.com/9GqSG9ah.jpg"
+images[6] = new Image()
+images[6].src = "http://i.imgur.com/iMTctrxh.jpg"
+images[7] = new Image()
+images[7].src = "http://i.imgur.com/xHwALvDh.jpg"
+images[8] = new Image()
+images[8].src = "http://i.imgur.com/2OIqV1bh.jpg"
+images[9] = new Image()
+images[9].src = "http://i.imgur.com/Pq9Dexah.jpg"}
+function slide() {imgSlide.src = images[pic].src; if(pic < 9) {pic++;}
+else {pic = 0} timer = setTimeout(slide, 4000);}
+function prev() {if(timer) stopSlide(); if(pic == 0) {pic = 9; imgSlide.src = images[pic].src;}
+else {pic--; imgSlide.src = images[pic].src;}}
+function next() {if(timer) stopSlide(); if(pic == 9) {pic = 0; imgSlide.src = images[pic].src;}
+else {pic++; imgSlide.src = images[pic].src;}}
+function stopSlide() {clearTimeout(timer);}
+</script>
+
+<div id="imageContainer">
+<img id="img" src="http://i.imgur.com/fiVofHIh.jpg" alt="ZAKYNTHOS" title="ZAKYNTHOS" width="944" height="590"/></div>
+<a href="JavaScript:prev()"><button style="width:140px; height:28px; background:#FF6000; color:#000000;  font: 14px Arial;">◄◄ PREVIOUS…</button></a>
+<a href="JavaScript:slide()"><button style="width:100px; height:28px; background:#207907; color:#FFFFFF;  font: 14px Arial;">…PLAY ►</button></a>
+<a href="JavaScript:next()"> <button style="width:120px; height:28px; background:#115595; color:#FFFFFF;  font: 14px Arial;">…NEXT ►►</button></a>
+<a href="JavaScript:stopSlide()"><button style="width:100px; height:28px; background:#FF1111; color:#FFFFFF;  font: 14px Arial;">STOP ■</button></a>
+<a href="http://imgbox.com/g/yxHIeFr0ZS" target="_blank"><button style="width:180px; height:28px; background:#740777; color:#FFFFFF;  font: 14px Arial;">GO TO ALBUM FOLDER</button></a>
+<a href="http://the-best-widgets.blogspot.gr" target="_blank"><button style="width:180px; height:28px; background:#FFFF00; color:#000000;  font: 14px Arial;">GO TO MY HOMEPAGE</button></a>
