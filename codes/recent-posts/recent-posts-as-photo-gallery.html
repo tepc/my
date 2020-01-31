@@ -1,0 +1,31 @@
+<title>RECENT POSTS AS PHOTO GALLERY</title>
+<style>
+#post-gallery {width:1000px;margin:0px auto;font:11px Arial;color:#000; padding:4px;
+ background:#0050AD;
+ -webkit-box-shadow:0px 10px 30px rgba(0, 0, 0, 0.4);
+ -moz-box-shadow:0px 10px 30px rgba(0, 0, 0, 0.4);
+ box-shadow:0px 10px 30px rgba(0, 0, 0, 0.4);
+ -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;}
+#post-gallery h2 {font:20px Arial;color:white;text-shadow:0px 3px 2px black;text-transform:uppercase;margin:2px 2px 2px;padding:7px 14px;background:#961327;text-align: center;}
+#post-gallery .rp-item {float:left;display:inline;position:relative;margin:2px;padding:0px 0px;
+ background:#E96913 url('https://lh5.googleusercontent.com/-w6d1_Vya2FE/VA2njdoSEYI/AAAAAAAAMyc/9aabCOQIWNA/s48-no/loading.gif') no-repeat 50% 50%;width:96px;height:96px;}
+#post-gallery .rp-item img {width:96px;height:96px;border:none !important;margin:0px 0px !important;padding:0px 0px !important;background:transparent !important;display:none;}
+#post-gallery .rp-item .rp-child {position:relative;top:10%!important;left:10%!important;
+ z-index:1000;width:250px;background-color:white;border-top:4px solid #D521D8;
+ -webkit-box-shadow:5px 5px 10px rgba(0, 0, 0, 0.7);
+ -moz-box-shadow:5px 5px 10px rgba(0, 0, 0, 0.7);
+ box-shadow:5px 5px 10px rgba(0, 0, 0, 0.7);
+ padding:10px 15px;overflow:hidden;word-wrap:break-word;display:none;opacity: 0.9;}
+#post-gallery .rp-item .rp-child h4 {font-size:12px;margin:0px 0px 5px;color:#961327;}
+#post-gallery .rp-item:hover .hidden {display:block;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script>
+var rpTitle = "Latest Posts", // Widget Title
+ numposts = 100, // The number of thumbnail / posts to display
+ numchar = 250, // Number of characters in the description tooltip
+ rcFadeSpeed = 100, // Speed of the effect. fadeIn () tooltip appears
+ pBlank = "https://lh6.googleusercontent.com/-cokyHG17bfU/VA2nriaFrTI/AAAAAAAAMyo/YIauVBoKYFc/w299-h242-no/notavailable.jpg", // Image that show up if the post doesn't have a image
+ blogURL = "https://the-best-widgets.blogspot.gr"; // Your Blog Address
+</script>
+<script src="https://github-codes.github.io/mycodes/javascripts/posts-gallery.js"></script>
