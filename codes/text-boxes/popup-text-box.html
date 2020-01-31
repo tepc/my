@@ -1,0 +1,16 @@
+<style>
+#but1 {position:fixed;top:40px;left:0px;background: #FFFFF0;color: #000; font: 13px Arial;border:2px solid #FBBB22;border-radius:8px;width:490px;height:auto;padding:1px; z-index:999;display: none;}
+</style>
+<script>
+function toggle_visibility(id) {
+var e = document.getElementById(id);
+if(e.style.display == 'block')
+e.style.display = 'none';
+else
+e.style.display = 'block';}
+</script>
+<input type=button name=type style="width:200px; height:25px; background:#173377; color:#FFFFFF;  font: 13px Arial;" value='FLOATING TEXT BOX' onclick="toggle_visibility('but1');">
+<div id="but1" style="display:none;">
+<div style="padding:5px;float:left;width:480px;">
+<span style="font:bold 16px Arial; background:#F11111;color:#FFFFFF;">ΑΝΑΔΥΟΜΕΝΟ TEXT BOX ΠΟΥ ΑΝΟΙΓΕΙ ME BUTTON</span><br/>
+<span style="font:15px Arial;color:#000000;">Το παρακάτω text box ανοίγει σε όποια στατική θέση του ιστολογίου σας θέλετε πατώντας πάνω σε ένα button. Η θέση του text box αλλάζει εκεί που γράφει position:fixed; top:0px;left:0px; και οι διαστάσεις του text box εκεί που γράφει width:490px; height:auto; Αντικαταστήστε τους κίτρινους τίτλους με τους δικούς σας. Τα χρώματα μπορείτε να τα αλλάξετε αλλάζοντας τον 6ψήφιο αριθμό που βρίσκεται μετά το σύμβολο της δίεσης #. Ο κώδικας μπορεί να μπεί απλά σαν gadget ή ακόμα και μέσα στο html της ανάρτησής σας. </span></div></div>

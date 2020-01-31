@@ -1,0 +1,32 @@
+<table border="0" cellspacing="0" cellpadding="0">
+<tr><td width="100%"><form name="formmsg">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%"><select name="selectbox" size="1" onChange="changecontent(this)" style="color:#000;background:#FBBB22;font:13px Arial;">
+<option selected value="0">1) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-1</option>
+<option value="1">2) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-2</option>
+<option value="2">3) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-3</option>
+<option value="3">4) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-4</option>
+<option value="4">5) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-5</option>
+<option value="5">6) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-6</option>
+<option value="6">7) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-7</option>
+<option value="7">8) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-8</option>
+<option value="8">9) ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΝΑ ΔΕΙΤΕ ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ TEXT BOX-9</option>
+</select><br></td></tr>
+<tr><td width="100%"><textarea rows="12" name="contentbox" cols="67" wrap="virtual" style="color:#FFF;background:#000555;font:14px Arial;padding:5px;"></textarea><br>
+</td></tr></table></form></td></tr></table>
+
+<script>
+var thecontents=new Array()
+thecontents[0]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 1η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+thecontents[1]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 2η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+thecontents[2]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 3η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+thecontents[3]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 4η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+thecontents[4]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 5η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+thecontents[5]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 6η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+thecontents[6]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 7η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+thecontents[7]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 8η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+thecontents[8]='Εδώ μπορείτε να γράψετε το κείμενο που θέλετε να αντιστοιχεί στην 9η επιλογή του αναπτυσόμενου μενού. Xxxxxx xxx xxxxx xxxx xxxxxxx xxxx xxxx xxxx xxx xxxx xxxx xxxxx xxxxxxxxxxxx xxxxx  xxxxx xxxxxxxx xxxxxx xxxxx xxxxxxx xxxx xxxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxx xxxxxxxx xx xxxxxxx xxx xxxxxxxx xxxxxxx xxxxxxxxxxx xx xxx xxxxxxxxxx xxx.'
+function changecontent(which){
+document.formmsg.contentbox.value=thecontents[which.selectedIndex]}
+document.formmsg.contentbox.value=thecontents[document.formmsg.selectbox.selectedIndex]
+</script>
