@@ -1,0 +1,40 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>CAROUSEL SLIDESHOW WITH BUTTONS-1</TITLE>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script src="https://dl.dropboxusercontent.com/s/4ud370h48unlvqn/jquery.cycle2A.js"></script>
+<script src="https://dl.dropboxusercontent.com/s/ckrrdyjhld0cf5a/jquery.cycle2B.js"></script>
+<script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+
+<style>
+.slideshow {margin: auto}
+.slideshow img {width:auto; height:100px; padding:2px; }
+div.responsive img {width:auto; height:100}
+.center {position:static; text-align:center;margin-top:2px}
+div.vertical {width:auto}
+</style>
+
+<div class="slideshow"
+    data-cycle-fx=carousel
+    data-cycle-timeout=1000
+    data-cycle-carousel-visible=4
+    data-cycle-next="#next"
+    data-cycle-prev="#prev">
+<img src="http://i.imgur.com/fiVofHIm.jpg"/>
+<img src="http://i.imgur.com/rcivwQJm.jpg"/>
+<img src="http://i.imgur.com/0nyxX2Lm.jpg"/>
+<img src="http://i.imgur.com/gptb8xnm.jpg"/>
+<img src="http://i.imgur.com/oSC4D7Rm.jpg"/>
+<img src="http://i.imgur.com/9GqSG9am.jpg"/>
+<img src="http://i.imgur.com/7X4wjWSm.jpg"/>
+<img src="http://i.imgur.com/kbCkBYem.jpg"/>
+<img src="http://i.imgur.com/1l2cZBCm.jpg"/>
+<img src="http://i.imgur.com/XZLp5MAm.jpg"/>
+<img src="http://i.imgur.com/uFoNudkm.jpg"/>
+<img src="http://i.imgur.com/DgCJJQem.jpg"/>
+<img src="http://i.imgur.com/1Yul3Hvm.jpg"/>
+<img src="http://i.imgur.com/Nq06hwXm.jpg"/>
+<img src="http://i.imgur.com/0pOnQXwm.jpg"/>
+<div class=center>
+<a href=# id=prev>◄◄ PREVIOUS…..</a>
+<a href=# id=next>…..NEXT ►►</a>
+</div>

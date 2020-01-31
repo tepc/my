@@ -1,0 +1,77 @@
+<style>
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus{outline:none;}
+.slides, .flex-control-nav, .flex-direction-nav{margin:0;padding:0;list-style:none;}
+.flexslider{margin:0;padding:0;}
+.flexslider .slides > li{display:none;
+-webkit-backface-visibility:hidden;
+-moz-backface-visibility:hidden;
+-ms-backface-visibility:hidden;
+-o-backface-visibility:hidden;
+backface-visibility:hidden;}
+.flexslider .slides img{width:100%;display:block;}
+.flex-pauseplay span{text-transform:capitalize;}
+.flexslider a.intro {bottom:0;color:rgba(0, 0, 0, 0.1);font-size:14px;position:absolute;right:0;text-decoration:none;z-index:99999;}
+.slides:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+html[xmlns] .slides{display:block;}
+* html .slides{height:1%;}
+.no-js .slides > li:first-child{display:block;}
+.flexslider{margin:0 0 5px;background:#115595;border:1px solid #4EFF44;position:relative;
+-webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; zoom:1;}
+.flex-viewport{max-height:150px; -webkit-transition:all 1s ease; -moz-transition:all 1s ease;
+-o-transition:all 1s ease; transition:all 1s ease;}
+.loading .flex-viewport{max-height:150px;}
+.flexslider .slides{zoom:1;}
+.carousel li{margin-right:5px;}
+.flexslider li {border: 0 none !important;padding: 0 !important;text-indent: 0 !important;}
+.flex-direction-nav a{width:30px;height:30px;margin:-20px 0 0;display:block; background:url(https://lh3.googleusercontent.com/-OlOKI59Y5qY/VSTy-zOTzqI/AAAAAAAAQr8/Q2YtZ8TQsIw/w57-h27-no/direction-nav.png) no-repeat 0 0;
+position:absolute;top:50%;cursor:pointer;text-indent:-9999px;opacity:0; 
+-webkit-transition:all .3s ease; -moz-transition:all .3s ease; -o-transition:all .3s ease; transition:all .3s ease;}
+.flex-direction-nav .flex-next{background-position:100% 0; right:-36px;}
+.flex-direction-nav .flex-prev{left:-36px;}
+.flexslider:hover .flex-next{opacity:0.8; right:5px;}
+.flexslider:hover .flex-prev{opacity:0.8; left:5px;}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover{opacity:1;}
+.flex-direction-nav .disabled{opacity: .3!important; filter:alpha(opacity=30);cursor:default;}
+.flex-control-nav{width:100%;position:absolute;bottom:5px;text-align:center;}
+.flex-control-nav li{margin:0px;display:inline-block;zoom:1;*display:inline;}
+.flex-control-paging li a{width:11px;height:11px;display:block;background:#FF1111;background:rgba(255,255,0);cursor:pointer;text-indent:-9999px; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px;}
+.flex-control-paging li a:hover{background:# FF1111;background:rgba(255,255,0);}
+.flex-control-paging li a.flex-active{background:#4EFF44;background:rgba(255,255,0);cursor:default;}
+.flex-control-thumbs{margin:5px 0 0;position:static;overflow:hidden;}
+.flex-control-thumbs li{width:50%;float:left;margin:0;}
+.flex-control-thumbs img{width:100%;display:block;opacity:.7;cursor:pointer;}
+.flex-control-thumbs img:hover{opacity:1;}
+.flex-control-thumbs .active{opacity:1; cursor:default;}
+</style>
+<script src="https://dl.dropboxusercontent.com/s/wmhlrt12l37tx4i/jquery.flexslider.js" type="text/javascript"></script>
+<script src="https://dl.dropboxusercontent.com/s/gsnnjdlv3rb8n7l/jquery.flexslider-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){  
+$(window).load(function() {
+$('.flexslider').flexslider({
+animation: "slide",
+animationLoop: true,
+itemWidth: 238,
+itemMargin: 0,
+minItems: 1,
+maxItems: 4});});});
+</script>
+<br />
+
+<div class="flexslider">
+<ul class="slides">
+<li><a href="http://i.imgur.com/fiVofHI.jpg" target="_blank"><img src="http://i.imgur.com/fiVofHIm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/rcivwQJ.jpg" target="_blank"><img src="http://i.imgur.com/rcivwQJm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/0nyxX2L.jpg" target="_blank"><img src="http://i.imgur.com/0nyxX2Lm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/gptb8xn.jpg" target="_blank"><img src="http://i.imgur.com/gptb8xnm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/oSC4D7R.jpg" target="_blank"><img src="http://i.imgur.com/oSC4D7Rm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/9GqSG9a.jpg" target="_blank"><img src="http://i.imgur.com/9GqSG9am.jpg"/></li></a>
+<li><a href="http://i.imgur.com/7X4wjWS.jpg" target="_blank"><img src="http://i.imgur.com/7X4wjWSm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/kbCkBYe.jpg" target="_blank"><img src="http://i.imgur.com/kbCkBYem.jpg"/></li></a>
+<li><a href="http://i.imgur.com/1l2cZBC.jpg" target="_blank"><img src="http://i.imgur.com/1l2cZBCm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/XZLp5MA.jpg" target="_blank"><img src="http://i.imgur.com/XZLp5MAm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/uFoNudk.jpg" target="_blank"><img src="http://i.imgur.com/uFoNudkm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/DgCJJQe.jpg" target="_blank"><img src="http://i.imgur.com/DgCJJQem.jpg"/></li></a>
+<li><a href="http://i.imgur.com/1Yul3Hv.jpg" target="_blank"><img src="http://i.imgur.com/1Yul3Hvm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/Nq06hwX.jpg" target="_blank"><img src="http://i.imgur.com/Nq06hwXm.jpg"/></li></a>
+<li><a href="http://i.imgur.com/0pOnQXw.jpg" target="_blank"><img src="http://i.imgur.com/0pOnQXwm.jpg"/></li></a></ul></div>

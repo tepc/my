@@ -1,0 +1,29 @@
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script src="https://github-codes.github.io/mycodes/javascripts/jquery-cycle2A.js"></script>
+<script src="https://github-codes.github.io/mycodes/javascripts/jquery-cycle2B.js"></script>
+<script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+<style>
+.slideshow {margin: auto}
+.slideshow img {width:auto; height:200px; padding:2px; }
+div.responsive img {width:auto; height:200}
+.center {position:static; text-align:center;margin-top:2px}
+div.vertical {width:auto;}
+</style>
+<div class="slideshow vertical" 
+    data-cycle-fx=carousel
+    data-cycle-timeout=2000    
+    data-cycle-carousel-visible=3
+    data-cycle-carousel-vertical=true
+    data-cycle-next="#next"
+    data-cycle-prev="#prev">
+<img alt="KERKYRA" src="http://i.imgur.com/Pq9Dexam.jpg" />
+<img alt="PAXOI" src="http://i.imgur.com/kbCkBYem.jpg" />
+<img alt="LEYKADA" src="http://i.imgur.com/gCr4ycDm.jpg" />
+<img alt="ITHAKI" src="http://i.imgur.com/JcRaeRSm.jpg" />
+<img alt="KEFALLONIA" src="http://i.imgur.com/XMS6PHsm.jpg" />
+<img alt="ZAKYNTHOS" src="http://i.imgur.com/I9SFA0sm.jpg" />
+</div>
+<div class=left>
+<a href=# id=prev>◄◄ PREV</a>
+<a href=# id=next>NEXT ►►</a>
+</div>
