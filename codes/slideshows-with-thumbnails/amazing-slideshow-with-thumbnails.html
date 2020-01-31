@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="slideshow">
+<head>
+<meta charset="utf-8"/>
+<title>AMAZING SLIDESHOW WITH THUMBNAILS</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<style>
+body {background:#115599;font-family:arial;font-size:16px;color:yellow;}
+.About {width: 100%;overflow-y: auto;background:#115599;}
+.arrow {cursor: pointer;display: block;height: 64px;margin-top:0px;outline: medium none;position: absolute;top:90%;width: 64px;z-index: 5;}
+.arrow.prev {background-image: url("https://www.script-tutorials.com/demos/366/images/prev.png");left: 0px;opacity: 0.7;transition: all 0.2s linear 0s;}
+.arrow.next {background-image: url("https://www.script-tutorials.com/demos/366/images/next.png");opacity: 0.7;right: 0px;transition: all 0.2s linear 0s;}
+.arrow.prev: hover {opacity: 1;}
+.arrow.next: hover {opacity: 1;}
+.nav {bottom:-35px;display: block;height:0px;left: 0;margin: 0 auto;padding: 1em 0 0.8em;position: absolute;right: 0;text-align: center;width: 100%;z-index: 5;}
+.nav li {border: 1px solid #ffbb22;border-radius: 5px;cursor: pointer;display: inline-block;height: 45px;margin: 0 8px;position: relative;width: 80px;}
+.nav li.active {border: 1px solid #FF00FF;}
+.nav li img {width: 100%;}
+.slider {border-radius: 5px;height:575px;margin:1px;position: relative;width:1024px;
+-webkit-perspective: 1000px;-moz-perspective: 1000px;-ms-perspective: 1000px; -o-perspective: 1000px;perspective: 1000px;
+-webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; -o-transform-style: preserve-3d; transform-style: preserve-3d;}
+.slide {position: absolute;top: 0;left: 0;}
+.slide.ng-hide-add {opacity: 1; -webkit-transition: 1s linear all; -moz-transition: 1s linear all; -o-transition: 1s linear all; transition: 1s linear all; -webkit-transform: rotateX(50deg) rotateY(30deg);
+  -moz-transform: rotateX(50deg) rotateY(30deg); -ms-transform: rotateX(50deg) rotateY(30deg); -o-transform: rotateX(50deg) rotateY(30deg); transform: rotateX(50deg) rotateY(30deg); -webkit-transform-origin: right top 0;
+  -moz-transform-origin: right top 0; -ms-transform-origin: right top 0; -o-transform-origin: right top 0; transform-origin: right top 0;}
+.slide.ng-hide-add.ng-hide-add-active {opacity: 0;}
+.slide.ng-hide-remove { -webkit-transition: 1s linear all; -moz-transition: 1s linear all; -o-transition: 1s linear all; transition: 1s linear all; display: block!important; opacity: 0;}
+.slide, .slide.ng-hide-remove.ng-hide-remove-active {opacity: 1;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+<script src="https://code.angularjs.org/1.2.0rc1/angular.js"></script>
+<script src="https://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+<script src="https://code.angularjs.org/1.2.0rc1/angular-touch.min.js"></script>
+<script>
+'use strict';
+angular.module('slideshow', ['ngAnimate', 'ngTouch'])
+.controller('MainCtrl', function ($scope) {
+$scope.photos = [
+        {src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+		{src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+		{src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+		{src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+		{src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+		{src: 'https://i.imgur.com/phbIVY1h.jpg', desc: 'Image 01', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/vkQmS8jh.jpg', desc: 'Image 02', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/Jrw6vMyh.jpg', desc: 'Image 03', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/pxOfj7vh.jpg', desc: 'Image 04', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/1OB6MoLh.jpg', desc: 'Image 05', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/okL2Ovkh.jpg', desc: 'Image 06', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/OHkrYfUh.jpg', desc: 'Image 07', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/aXZruOIh.jpg', desc: 'Image 08', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2t5y2Tch.jpg', desc: 'Image 09', comment: 'SANTORINI'},
+        {src: 'https://i.imgur.com/2eSYtrph.jpg', desc: 'Image 10', comment: 'SANTORINI'},
+    ];    
+    $scope._Index = 0;
+    $scope.isActive = function (index) {
+    return $scope._Index === index;};
+    $scope.showPrev = function () {
+    $scope._Index = ($scope._Index > 0) ? --$scope._Index : $scope.photos.length - 1;};
+    $scope.showNext = function () {
+    $scope._Index = ($scope._Index < $scope.photos.length - 1) ? ++$scope._Index : 0;};  
+    $scope.showPhoto = function (index) {
+    $scope._Index = index;};});
+</script>
+</head>
+<body ng-controller="MainCtrl">
+<div class="container slider">
+<img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+<a class="arrow prev" href="#" ng-click="showPrev()"></a>
+<a class="arrow next" href="#" ng-click="showNext()"></a>
+<ul class="nav">
+<li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+<img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);"/></li></ul>
+</div>
+<div ng-class="About" ng-show="photos[_Index].comment !== ''">{{photos[_Index].comment}}</div>
+</body>
+</html>   
+

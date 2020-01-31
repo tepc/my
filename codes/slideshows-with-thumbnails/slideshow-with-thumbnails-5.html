@@ -1,0 +1,96 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SLIDESHOW WITH THUMBNAILS-5</TITLE>
+<style>
+#slideshow {max-height:580px; max-width:910px;}
+#holder {height:580px;width:910px;position:relative;z-index:1;text-align:center;background-color:#333; overflow:hidden;} 
+#leftArrowD {position:absolute;left:0;top:0;height:inherit;width:30px; z-index:9;opacity:1;}
+#rightArrowD {position:absolute;right:0;top:0;height:inherit;width:30px;z-index:9;opacity:1;}
+#leftArrow {top:45%;left:0px; position:absolute;opacity:1;}
+#rightArrow {top:45%;right:0px; position:absolute;opacity:1;}
+#leftArrow:hover, #rightArrow:hover {cursor:pointer;opacity:1; }
+#descriptionBack {width:910px;height:40px;background:#000000;opacity:0.7;position:absolute; z-index:7; bottom:-40px; left:0px; filter:alpha(opacity=70); }
+#description {width:910px;padding:10px;position:absolute;z-index:8;color:#FFF;bottom:-40px;left:0;height:20px;}
+#thumbnails {width:950px; height:60px; margin-top:5px;}
+#window {width:910px; height:60px; overflow:hidden; float:left; position:relative;}
+#imageHolder {width:910px;height:60px; position:absolute; top:0px; left:0px;}
+#imageHolder img {width:96px; height:60px; float:left; margin-right:1px;cursor:pointer;}
+#thumbnails .thumbnailArrows {width:20px; height:60px; float:left;}
+#thumbnails .thumbnailArrows:hover {cursor:pointer;}
+</style>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<Div id="holder">
+<div id="leftArrowD"><img src='https://lh5.googleusercontent.com/-AQO4gm25Z4k/Vx9FdslH25I/AAAAAAAAU1M/EHwTHf7VDKEsFKSMC7J2pvwL-ZIAKX2DQCL0B/w18-h20-no/left-arrow.png' id='leftArrow' /></div>
+<div id="rightArrowD"><img src='https://lh5.googleusercontent.com/-GiAUZ5K59Iw/Vx9FdmoLHII/AAAAAAAAU1I/gxINi7iNOGYtfZSM688j1eT10sASGfebQCL0B/w18-h20-no/Right-arrow.png' id='rightArrow' /></div>
+<img src="http://i.imgur.com/uFoNudk.jpg" id="slideshow"/>
+<div id="description"></div>
+<div id="descriptionBack"></div>       
+</Div>
+<div id="thumbnails">
+<div class="thumbnailArrows"><img src="https://lh5.googleusercontent.com/-AQO4gm25Z4k/Vx9FdslH25I/AAAAAAAAU1M/EHwTHf7VDKEsFKSMC7J2pvwL-ZIAKX2DQCL0B/w18-h20-no/left-arrow.png" id="Tleft"/></div>
+<div id="window">
+<div id="imageHolder"></div></div>
+<div class="thumbnailArrows"><img src="https://lh5.googleusercontent.com/-GiAUZ5K59Iw/Vx9FdmoLHII/AAAAAAAAU1I/gxINi7iNOGYtfZSM688j1eT10sASGfebQCL0B/w18-h20-no/Right-arrow.png" id="Tright" /></div></div>
+
+<script>
+images = ['http://i.imgur.com/UMQ2IrD.jpg', 'http://i.imgur.com/1l2cZBC.jpg', 'http://i.imgur.com/l9hrZQQ.jpg', 'http://i.imgur.com/YezgGht.jpg', 'http://i.imgur.com/zamfiLB.jpg', 'http://i.imgur.com/oSC4D7R.jpg', 'http://i.imgur.com/W8LjNt5.jpg', 'http://i.imgur.com/0pOnQXw.jpg', 'http://i.imgur.com/1Yul3Hv.jpg', 'http://i.imgur.com/Nq06hwX.jpg', 'http://i.imgur.com/Z7B3z0F.jpg'];
+descriptions = ['ALONISOS-1', 'ALONISOS-2', 'ALONISOS-3', 'ALONISOS-4', 'ALONISOS-5', 'SKIATHOS-1', 'SKIATHOS-2', 'SKIATHOS-3', 'SKIATHOS-4', 'SKIATHOS-5', 'SKIATHOS-6'];
+$(document).ready(function() {
+$('#imageHolder').css('width', images.length * 96);
+$.each(images, function(index, value) {
+$('#imageHolder').append('<img src="' + value + '" />');});
+beginNow = setInterval(forwardImage, 4000);
+$('#description').html(descriptions[0]);
+$('.thumbnailArrows').hover(function() {
+var whiches = $(this).children('img').attr('id');
+if (whiches == 'Tleft') {movingThumbs(2000, '+');}
+else {movingThumbs(2000, '-');}}, function() {
+$('#imageHolder').stop();});
+function movingThumbs(speed, direction) {
+var currentLeft = $('#imageHolder').position().left;
+var moving = $('#imageHolder').width() - (Math.abs($('#imageHolder').position().left) + $('#window').width());
+if (currentLeft == 0 && direction == '+') {}
+else if (Math.abs($('#imageHolder').position().left) + $('#window').width() >= $('#imageHolder').width() && direction == '-') {} else if (direction == '+' && currentLeft != 0) {
+$('#imageHolder').animate({left: 0,}, speed);}
+else {
+$('#imageHolder').animate({left: '+='+direction + moving,}, speed);}}
+$('#imageHolder img').click(function() {
+var newImage = $(this).attr('src');
+$.each(images, function(index, value) {
+if (value == newImage) {descriptionChange(index); changeImage(index);}});
+clearInterval(beginNow);});
+$('#holder').hover(function() {
+$('#description, #descriptionBack').animate({bottom: 0,}, {duration: 400, queue: false});},
+function() {
+$('#description, #descriptionBack').animate({bottom: -40,}, {duration: 400, queue: false});});
+function descriptionChange(newDescript) {
+$('#description').stop().animate({opacity: 0,}, 200, function() {
+$('#description').html(descriptions[newDescript]);
+$('#description').animate({opacity: 1,}, 200)})}
+$('#leftArrow').click(function() {clearInterval(beginNow);backwardsImage();});
+$('#rightArrow').click(function() {clearInterval(beginNow);forwardImage();});
+$('#leftArrowD, #rightArrowD').hover(function() {
+$(this).stop().animate({opacity: 1,})},
+function() {
+$(this).stop().animate({opacity: 1,})})
+function currentImageKey() {i = jQuery.inArray($('#slideshow').attr('src'), images); return i;}
+function backwardsImage() {currentImageKey(); if (i == 0) {} else {changeImage(i - 1);}
+descriptionChange(i - 1); checkArrows(i - 1);}
+function forwardImage() {currentImageKey(); if (i < images.length - 1) {changeImage(i + 1); descriptionChange(i + 1);}
+else {}
+checkArrows(i + 1);}
+function checkArrows(i) {if (i == 0) {
+$('#leftArrow').css('display', 'none');
+$('#rightArrow').css('display', 'inline');}
+else if (i == images.length - 1) {
+$('#rightArrow').css('display', 'none');
+$('#leftArrow').css('display', 'inline');}
+else {
+$('#rightArrow').css('display', 'inline');
+$('#leftArrow').css('display', 'inline');}}
+function changeImage(i) {
+$('#slideshow').stop().animate({opacity: 0,}, 200, function() {
+$('#slideshow').attr('src', images[i]);
+$('#holder img').load(function() {
+$('#slideshow').stop().animate({opacity: 1,}, 200)})})}});
+</script>

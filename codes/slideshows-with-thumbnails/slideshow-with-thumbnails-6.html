@@ -1,0 +1,119 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SLIDESHOW WITH THUMBNAILS-6</TITLE>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<style>
+.slider_container{width:800px;margin:0;background:#115599;overflow:hidden;}
+.main_image_container{float:left;overflow:hidden;position:relative;}
+.main_image_scroller{float:left;position:relative;width:640px;height:400px;}
+.thumbs_list_container{float:left;height:400px;overflow-y:scroll;margin-left:1px;background:#105105;overflow-x:hidden;width:155px;}
+.thumb{padding:2px;background:#661111;margin:2px;filter:alpha(opacity=50);opacity:0.50; -moz-opacity:0.50;width:128px;height:80px;overflow-x:hidden;overflow-y:hidden;cursor:pointer;}
+.thumb:hover, .thumb_selected{filter:alpha(opacity=100);opacity:1; -moz-opacity:1;}
+.thumb_selected{background:url('selected.gif') no-repeat;}
+.main_image{float:left;clear:left;width:640px;height:400px;text-align:center;}
+.main_image img{vertical-align: middle;}
+.description_container{position:absolute;color:#FFFFFF;width:640px;background:#000000;bottom:0;filter:alpha(opacity=80);opacity:0.80; -moz-opacity:0.80;font-weight:bold;padding:5px;}
+</style>
+<script>
+(function($) {
+$.fn.imageSlider=function(options){
+var container=$(this);
+function deployCanvas(options,container){
+var auto_scroll=options.auto_scroll;
+var auto_scroll_speed=options.auto_scroll_speed;
+var images_path=options.images_path;
+var thumbs =options.thumbs;
+var stop_on_click=options.stop_on_click
+var stop_after=options.stop_after;
+var canvas_height=options.canvas_height;
+var canvas_width=options.canvas_width;
+var complete_cycle_slide=options.complete_cycle_slide;
+var main_image_container=$(document.createElement('div'))
+.addClass("main_image_container")
+.append($(document.createElement('div')).addClass("main_image_scroller"))
+.append($(document.createElement('div')).addClass("description_container"));
+var thumbs_list_container=$(document.createElement('div')).addClass("thumbs_list_container");
+container.append(main_image_container)
+.append(thumbs_list_container)
+.addClass("slider_container");
+container.find(".main_image_scroller")
+.css("height",canvas_height+"px")
+.css("width",canvas_width+"px")
+container.find(".thumbs_list_container").css("height",canvas_height+"px");
+var current_thumb=0;
+var current_cycle=1;
+var slide_interval=null;
+var images_number=thumbs.length;
+var thumbfrag=$();
+var mainfrag=$();
+for(var x=0;x<images_number;x++){
+var current_image=images_path+thumbs[x];
+thumbfrag=thumbfrag.add(new newThumb(current_image,x,container));
+mainfrag=mainfrag.add(new newMain(current_image,x,container))}
+container.find(".thumbs_list_container").append(thumbfrag);
+container.find(".main_image_scroller").append(mainfrag);
+var main_image_scroller=container.find(".main_image_scroller")
+var description_container=container.find(".description_container")
+var largeimages=main_image_scroller.find('div.main_image')
+var thumbs=container.find(".thumbs_list_container").find("div")
+var largeimageheight=largeimages.eq(0).outerHeight()
+if(thumbs.length==0)
+container.find(".thumbs_list_container").css('visibility','hidden');
+description_container.hide();
+function newThumb(src,no,container){
+return $(document.createElement('div'))
+.html($("<img src='"+encodeURI(src)+"' width=128 height=80>"))
+.addClass("thumb")
+.attr("src","'"+src+"'")
+.attr("id",'thumb_'+no)
+.prop("container",container)
+.mouseover(function(){
+clearTimeout(slide_interval);
+thumbs.removeClass('thumb_selected').eq(no).addClass('thumb_selected')
+main_image_scroller.stop().animate({top:'-'+(largeimageheight*no)},complete_cycle_slide);
+if(auto_scroll==true)
+{current_thumb=no
+current_thumb++;
+if(current_thumb==images_number)
+{current_thumb=0;
+current_cycle++;}                                                                              
+if((current_cycle>stop_after)&&(stop_after!=0))
+{autoscroll=false; return;}
+slide_interval=setTimeout(function(){
+thumbs.eq(current_thumb).trigger("mouseover");},auto_scroll_speed);}})
+.mouseup(function(){
+if(stop_on_click==true)
+auto_scroll=false;});};
+function newMain(src,no,container){
+return $(document.createElement('div'))
+.append($('<div style="width:100%;height:100%;background:url('+encodeURI(src)+')  center center no-repeat;"></div>'))
+.addClass("main_image")
+.attr("src",src)
+.attr("id","main_"+no)
+.click(function(){})
+.mouseover(function(){})
+.mouseout(function(){})}; 
+container.find(".thumbs_list_container").find("div").eq(0).trigger("mouseover");}
+var options = $.extend( {
+'auto_scroll':false,
+'auto_scroll_speed':4000,
+'images_path':'', 'thumbs':[],
+'stop_on_click':true,
+'stop_after':0,
+'complete_cycle_slide':400,
+'canvas_height':400,
+'canvas_width':640}, options);   
+return this.each(function(){
+var preloadimages=[]
+for (var i=0, c=options.thumbs.length; i<c; i++){
+preloadimages[i]=new Image()
+preloadimages[i].src=options.thumbs[i]}       
+new deployCanvas(options,container);});}})(jQuery)
+</script>
+
+<script>
+$(document).ready(function(){            
+$("#thumbsliderdiv").imageSlider({
+'thumbs': ["https://i.imgur.com/fiVofHIl.jpg", "https://i.imgur.com/rcivwQJl.jpg", "https://i.imgur.com/0nyxX2Ll.jpg", "https://i.imgur.com/gptb8xnl.jpg", "https://i.imgur.com/oSC4D7Rl.jpg", "https://i.imgur.com/9GqSG9al.jpg", "https://i.imgur.com/7X4wjWSl.jpg"],
+'auto_scroll':true, 'auto_scroll_speed':4000, 'stop_after': 4, 'canvas_width':640, 'canvas_height':400})});
+</script>
+<div id="thumbsliderdiv"></div>

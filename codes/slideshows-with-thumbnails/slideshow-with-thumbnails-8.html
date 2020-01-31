@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SLIDESHOW WITH THUMBNAILS-8</TITLE>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<style>
+body {background-color:#173377;font-family:arial;}
+p{padding:5px;line-height:10px;margin:0px;font-size:20px;}
+img {max-width: 100%;}
+#content {max-width: 960px;margin:0;padding:0;}
+main{background-color: #661111;}
+.container {position: relative;}
+.mySlides {display: none;}
+.cursor {cursor: pointer;}
+.prev, .next {cursor: pointer;position: absolute;top: 40%;width: auto;padding: 16px;margin-top: -50px;color:#FFF;font-weight:bold;font-size:20px;border-radius:0 3px 3px 0;user-select:none;-webkit-user-select:none;}
+.next {right: 0;border-radius: 3px 0 0 3px;}
+.prev:hover, .next:hover {background-color: rgba(0, 0, 0, 0.8);}
+.numbertext {background:#333;color:#FFF;font-size: 12px;padding:5px;position:absolute;top: 0;}
+.caption-container {text-align: center;background-color: #105105;padding:5px;color:#FFF;}
+.row:after {content: "";display: table;clear: both;}
+.column {float: left;width:160px;height:90px;}
+.demo {opacity: 0.5;}
+.active, .demo:hover {opacity: 1;}
+@media screen and (max-width: 550px) {.home-grid {display: block;}}
+</style> 
+<div id="content"><main>
+<div class="container"><div class="mySlides"><div class="numbertext">1 / 12</div>
+<img src="https://i.imgur.com/X1GGnpj.jpg" style="width:960px; height:540px;" ></div>
+<div class="mySlides"><div class="numbertext">2 / 12</div>
+<img src="https://i.imgur.com/HD6dsKg.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">3 / 12</div>
+<img src="https://i.imgur.com/ylGwxGw.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">4 / 12</div>
+<img src="https://i.imgur.com/V4V4YZI.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">5 / 12</div>
+<img src="https://i.imgur.com/Jrw6vMy.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">6 / 12</div>
+<img src="https://i.imgur.com/phbIVY1.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">7 / 12</div>
+<img src="https://i.imgur.com/LXa5y1y.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">8 / 12</div>
+<img src="https://i.imgur.com/OLZZEyp.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">9 / 12</div>
+<img src="https://i.imgur.com/PSKcGt8.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">10 / 12</div>
+<img src="https://i.imgur.com/KX8ScuV.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">11 / 12</div>
+<img src="https://i.imgur.com/OWulAvD.jpg" style="width:960px; height:540px;"></div>
+<div class="mySlides"><div class="numbertext">12 / 12</div>
+<img src="https://i.imgur.com/gYTByhi.jpg" style="width:960px; height:540px;"></div>  
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+<div class="caption-container"><p id="caption"></p></div>
+<div class="row"><div class="column">
+<img class="demo cursor" src="https://i.imgur.com/X1GGnpjt.jpg" style="width:160px; height:90px;" onclick="currentSlide(1)" alt="KERKYRA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/HD6dsKgt.jpg" style="width:160px; height:90px;" onclick="currentSlide(2)" alt="KERKYRA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/ylGwxGwt.jpg" style="width:160px; height:90px;" onclick="currentSlide(3)" alt="LEYKADA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/V4V4YZIt.jpg" style="width:160px; height:90px;" onclick="currentSlide(4)" alt="LEYKADA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/Jrw6vMyt.jpg" style="width:160px; height:90px;" onclick="currentSlide(5)" alt="SANTORINI"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/phbIVY1t.jpg" style="width:160px; height:90px;" onclick="currentSlide(6)" alt="SANTORINI"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/LXa5y1yt.jpg" style="width:160px; height:90px;" onclick="currentSlide(7)" alt="KEFALONIA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/OLZZEypt.jpg" style="width:160px; height:90px;" onclick="currentSlide(8)" alt="KEFALONIA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/PSKcGt8t.jpg" style="width:160px; height:90px;" onclick="currentSlide(9)" alt="KERKYRA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/KX8ScuVt.jpg" style="width:160px; height:90px;" onclick="currentSlide(10)" alt="KERKYRA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/OWulAvDt.jpg" style="width:160px; height:90px;" onclick="currentSlide(11)" alt="KERKYRA"></div>
+<div class="column">
+<img class="demo cursor" src="https://i.imgur.com/gYTByhit.jpg" style="width:160px; height:90px;" onclick="currentSlide(12)" alt="KERKYRA"></div></div></div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {showSlides(slideIndex += n);}
+function currentSlide(n) {showSlides(slideIndex = n);}
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("demo");
+var captionText = document.getElementById("caption");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+captionText.innerHTML = dots[slideIndex-1].alt;}
+</script>
+</main>
+</div>
+</body>
+</html>  
