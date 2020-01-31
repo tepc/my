@@ -1,0 +1,120 @@
+<style>
+.mbtslides-title2{font:bold 18px arial;!important;border:2px solid #FBBB22;color:#000; width:100%;}
+#mbt-c {margin:0px 5px; border:0;width:100%;} 
+.flexslider .slides {list-style-type:none; margin:0px auto 10px auto;padding:0px;} #mbt-c li {color:#0000FF;font:12px arial;overflow:hidden;position:relative;padding-top:10px; line-height: 1.6em;}
+#mbt-c .flex-control-nav{list-style:none outside none;position:absolute;top:-45px; right:5px;text-align:right;height:10px} 
+.flexslider .flex-control-nav li{display:inline-block;margin:0 2px} 
+.flexslider .flex-control-nav a{text-indent:9999px;display:block;width:10px; cursor:pointer;height:10px;background:#000;border:1px solid #000;border-radius:0!important} 
+.flexslider .flex-control-nav a.flex-active{background:rgb(132, 219, 6);border:1px solid rgb(144, 241, 40)} 
+#mbt-c .flex-div{margin:0px auto 20px auto; display:block; border-bottom:0px solid #eee; padding-bottom:20px!important; position:relative;} 
+#mbt-c li a { color:#0080ff; text-decoration:none; } 
+.flexslider i{color:#999; padding-right:5px; } 
+.flexslider .iline{line-height:2em; margin-top:3px;} 
+.flexslider .icontent{line-height:1.5em; margin-top:5px;} 
+.flexslider div span{margin:0 5px 0 0; display:inline-block;font-weight: normal; } #mbt-c .mbttitle {font:13px arial;color:#a11111;text-decoration:none;} 
+#mbt-c  .mbttitle:hover, .flexslider .itotal a:hover  {color:#333; text-decoration:none;} 
+.flexslider .iedit a{text-decoration:none; color:#999; cursor:pointer}
+.flexslider .iedit:before, .flexslider .iauthor:before, .flexslider .itag:before, .flexslider .icomments:before, .flexslider .idate:before, .flexslider .itotal span:before{font-family:arial; position:relative; padding-right:8px; color:#999;} 
+.flexslider .iauthorpic{width: 17px!important;height: 17px!important;border-radius: 50%; float: none; display: inline-block!important; margin:0px 0px 0px 0px; padding-right:3px; position:relative; top:3px;} 
+#mbt-c .iFeatured{overflow:hidden;position:relative;margin:0 0px 10px 0;padding:0;width:150px;} 
+.flexslider .iFeatured a {background: none; padding:0px; display: block;border:1px solid #eee;} 
+#mbt-c .iFeatured img{width:100%!important; height:94px!important;-moz-transition:all .3s;-webkit-transition:all .3s;transition:all .3s; border-radius: 2px;} 
+.flexslider .iFeatured:hover img{ opacity:1;   -moz-transform:scale(1.4);-webkit-transform:scale(1.4);transform:scale(1.4)} 
+.flexslider .icomments a{color:#0080ff; font-family: arial;font-size:12px;} .flexslider .icomments a:hover{text-decoration:underline} 
+.flexslider .icomments:before {content:'\f086'; padding:0px 3px 0px 7px; color:#84DB06;} 
+.flexslider .idate {position: absolute;left: 0px;top: -7px; background: rgb(132, 219, 6);color: #fff;padding: 3px 4px;font:11px arial;border: 1px solid rgb(144, 241, 40);} 
+.flexslider .idate div{width:18px; line-height:1.6em; text-align:center;} 
+.flexslider .idate:after {content: ' ';position: absolute;z-index:-9999px;width: 0;height: 0;left: 25px;top: -1px;border-width: 4px 6px;border-style: solid;border-color: transparent transparent rgb(125, 208, 4)  rgb(125, 208, 4);}
+</style>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' type='text/javascript'></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/flexslider.min.css' rel='stylesheet' type='text/css'/> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/jquery.flexslider.min.js' type='text/javascript'></script>
+
+<script type="text/javascript"> 
+$(window).load(function() { 
+$('#mbt-c').flexslider({ 
+animation: "slide", 
+directionNav: false, 
+itemWidth: 150, 
+itemMargin: 10, 
+touch: true,  
+slideshowSpeed: 2500, 
+pauseOnHover: true, 
+animationSpeed: 700, });}); 
+</script>
+
+<h2 class="mbtslides-title2">SLIDESHOWS</h2> 
+<div class="flexslider" id="mbt-c"> 
+<ul class="slides"> 
+<script> 
+var ListBlogLink = "https://the-best-widgets.blogspot.com"; 
+var ListCount = 30; 
+var ListLabel = "SLIDESHOWS"; 
+var TitleCount = 80; 
+var ImageSize = 150; 
+
+function mbtcarousel(json) {for (var i = 0; i < ListCount; i++){  
+var listing= ListImage = ListUrl = ListTitle = ListImage = ListContent = ListConten = ListAuthor = ListTag = ListDate = ListUpdate = ListComments = thumbUrl = TotalPosts = sk = AuthorPic= ListMonth = Y = D = M = m = YY = DD = MM = mm = TT =  ""; 
+if (json.feed.entry[i].category != null){ 
+for (var k = 0; k < json.feed.entry[i].category.length; k++) { 
+ListTag += "<a href='"+ListBlogLink+"/search/label/"+json.feed.entry[i].category[k].term+"'>"+json.feed.entry[i].category[k].term+"</a>"; 
+if(k < json.feed.entry[i].category.length-1) 
+{ ListTag += " ";}}} 
+for (var j = 0; j < json.feed.entry[i].link.length; j++) { 
+if (json.feed.entry[i].link[j].rel == 'alternate') { 
+break;}} 
+ListUrl= "'" + json.feed.entry[i].link[j].href + "'"; 
+TotalPosts = json.feed.openSearch$totalResults.$t; 
+if (json.feed.entry[i].title!= null){ 
+ListTitle= json.feed.entry[i].title.$t.substr(0, TitleCount);} 
+if (json.feed.entry[i].thr$total){ 
+ListComments= "<a href='"+json.feed.entry[i].link[j].href+"#comment-form'>"+json.feed.entry[i].thr$total.$t+"</a>";} 
+ListAuthor= json.feed.entry[i].author[0].name.$t.split(" "); 
+ListAuthor=ListAuthor.slice(0, 1).join(" "); 
+AuthorPic = json.feed.entry[i].author[0].gd$image.src; 
+ListMonth= ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]; 
+ListDate= json.feed.entry[i].published.$t.substring(0,10); 
+                         Y = ListDate.substring(0, 4); 
+                        m = ListDate.substring(5, 7); 
+                         D = ListDate.substring(8, 10); 
+                         M = ListMonth[parseInt(m - 1)];                       
+ListUpdate= json.feed.entry[i].updated.$t.substring(0, 16); 
+                         YY = ListUpdate.substring(0, 4); 
+                        mm = ListUpdate.substring(5, 7); 
+                         DD = ListUpdate.substring(8, 10); 
+                         TT = ListUpdate.substring(11, 16); 
+                         MM = ListMonth[parseInt(mm - 1)];   
+if (json.feed.entry[i].media$thumbnail!=null){ 
+thumbUrl = json.feed.entry[i].media$thumbnail.url; 
+sk= thumbUrl.replace("/s72-c/","/s"+ImageSize+"/"); 
+ListImage= "'" + sk.replace("?imgmax=800","") + "'";} 
+else if (json.feed.entry[i].content.$t.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/) != null){ 
+var youtube_id = json.feed.entry[i].content.$t.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop(); 
+if (youtube_id.length == 11) { 
+var ListImage = "'//img.youtube.com/vi/"+youtube_id+"/0.jpg'";}} 
+else if (json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/) != null){ 
+ListImage =  json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/)[1];} 
+else { 
+ListImage= "'http://4.bp.blogspot.com/-HALLtgFeep0/VfryhQ0C5oI/AAAAAAAAPcY/77mSGND4q84/s200/Icon.png'";} 
+var listing = "<li><div class='flex-div'><div class='iFeatured'><a  href=" 
++ ListUrl+ 
+  "><img src=" 
++ListImage+ 
+"/></a></div><a class='mbttitle' href=" 
++ListUrl+ 
+"target='_blank'>" 
++ListTitle+ 
+"</a><div class='iline'><span class='iauthor'><img class='iauthorpic' src='"+AuthorPic+"'/>" 
++ListAuthor+ 
+"</span><span class='icomments'>" 
++ListComments + 
+"</span> <span class='idate'><div>" 
++ D + 
+"</div><div> " 
++ M + 
+"</div></span></div></div></li>"; 
+document.write(listing);}} 
+document.write("<script src='"+ListBlogLink+"/feeds/posts/default/-/"+ListLabel+"?alt=json-in-script&callback=mbtcarousel'></"+"script>"); 
+</script> 
+</ul></div>
