@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CAROUSEL SLIDESHOW-2</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<style>
+* {box-sizing: border-box;}
+.slider {position: relative;width: 800px;height: 450px;margin:1px auto;}
+.slide {display: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;overflow: hidden;}
+img {width: 100%;height: auto;}
+.active-slide {display: block;}
+.slider-nav {text-align: center;margin-top:5px;}
+.arrow-prev {margin-right: 5px;display: inline-block;font-size:22px;vertical-align: top;margin-top: 15px;}
+.arrow-next {margin-left: 5px;display: inline-block;font-size:22px;vertical-align: top;margin-top: 15px;}
+.slider-dots {list-style: none;display: inline-block;padding-left: 0;margin-bottom: 0;}
+.slider-dots li {color: #f11111;display: inline;font-size:50px;margin-right: 5px;}
+.slider-dots li.active-dot {color: #115599;}
+</style>
+
+</head>
+<body>
+<div class="slider">
+<div class="slide active-slide">
+<img src="https://i.imgur.com/N4TUuqg.jpg" alt="rodos"></div>
+<div class="slide">
+<img src="https://i.imgur.com/wGsIadF.jpg" alt="rodos"></div>
+<div class="slide"><img src="https://i.imgur.com/TidabmU.jpg" alt="rodos"></div>
+<div class="slide"><img src="https://i.imgur.com/3SRq2CR.jpg" alt="rodos"></div>
+<div class="slide"><img src="https://i.imgur.com/MoYkPMR.jpg" alt="rodos"></div>
+<div class="slide"><img src="https://i.imgur.com/VTKt0Ne.jpg" alt="rodos"></div>
+ </div>
+<div class="slider-nav">
+<a href="#" class="arrow-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+<ul class="slider-dots">
+<li class="dot active-dot">&bull;</li>
+<li class="dot">&bull;</li>
+<li class="dot">&bull;</li>
+<li class="dot">&bull;</li>
+<li class="dot">&bull;</li>
+<li class="dot">&bull;</li>
+</ul>
+<a href="#" class="arrow-next"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+<script>
+var main = function() {
+  $('.arrow-next').click(function() {
+    var currentSlide = $('.active-slide');
+    var nextSlide = currentSlide.next();
+    var currentDot = $('.active-dot');
+    var nextDot = currentDot.next();
+    if (nextSlide.length == 0) {
+      nextSlide = $('.slide').first();
+      nextDot = $('.dot').first();}
+    currentSlide.fadeOut(600).removeClass('active-slide');
+    nextSlide.fadeIn(600).addClass('active-slide');
+    currentDot.removeClass('active-dot');
+    nextDot.addClass('active-dot');});
+  $('.arrow-prev').click(function() {
+    var currentSlide = $('.active-slide');
+    var prevSlide = currentSlide.prev();
+    var currentDot = $('.active-dot');
+    var prevDot = currentDot.prev();
+    if (prevSlide.length == 0) {
+      prevSlide = $('.slide').last();
+      prevDot = $('.dot').last();}
+    currentSlide.fadeOut(600).removeClass('active-slide');
+    prevSlide.fadeIn(600).addClass('active-slide');
+    currentDot.removeClass('active-dot');
+    prevDot.addClass('active-dot');});};
+$(document).ready(main);
+</script>
+</body>
+</html>

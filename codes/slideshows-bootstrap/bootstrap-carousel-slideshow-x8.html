@@ -1,0 +1,167 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>BOOTSTRAP CAROUSEL SLIDESHOW-5</TITLE>
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+body {font-family:arial;font-size:10pt;color:#FFF;}
+::-webkit-scrollbar {width: 0;height: 0;}
+#slider {position:absolute;top:0;left:0;right:0;bottom:0;width:1050px;height:250px;margin:auto;border-radius:5px;background:#333;overflow:hidden;}
+#slider .trigger {cursor: pointer;position: absolute;width: 35px;height: 50%;padding: 0;margin: 0;outline: 0;border: 0;background: transparent;}
+#slider .trigger:hover {background: rgba(255, 255, 255, 0.5);}
+#slider .trigger:before {content: '';position: absolute;top:0;left:0;right:0;bottom:0;width:10px;height:10px;margin:auto;border-style:solid;}
+#slider .first {left: 0;top: 0;}
+#slider .first:before {left: 5px;border-width: 3px 0 0 3px;border-color: #333 transparent transparent #333;box-shadow: inset 2px 2px #DDD, inset 5px 5px #333;
+transform: rotate(-45deg);}
+#slider .last {right: 0;top: 0;}
+#slider .last:before {right: 5px;border-width: 0 3px 3px 0;border-color: transparent #333 #333 transparent;box-shadow: inset -2px -2px #DDD, inset -5px -5px #333;
+transform: rotate(-45deg);}
+#slider .prev {left: 0;bottom: 0;}
+#slider .prev:before {left: 5px;border-width: 3px 0 0 3px;border-color: #333 transparent transparent #333;transform: rotate(-45deg);}
+#slider .next {right: 0;bottom: 0;}
+#slider .next:before {right: 5px;border-width: 3px 3px 0 0;border-color: #333 #333 transparent transparent;transform: rotate(45deg);}
+#slider .frame {position: absolute;top: 0;left: 35px;right: 35px;bottom: 0;border-left: 5px solid transparent;border-right: 5px solid transparent;overflow: hidden;}
+#slider .frame .item {position: absolute;top: 0;bottom: 0;width: 25%;height: 100%;}
+#slider .frame .item .inset {position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: 10px 5px;overflow: hidden;}
+#slider .frame .item .inset .title {margin: 10px 0;font-weight: bold;text-align: center;}
+#slider .frame .item .inset .caption {margin: 10px;font-size:10pt;text-align:left;}
+</style>
+
+<main id='slider'>
+  <button class='trigger first'></button>
+  <button class='trigger last'></button>
+  <button class='trigger prev'></button>
+  <button class='trigger next'></button>
+  <section class='frame'>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>ZAKYNTHOS</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 1 ΝΑΥΑΓΙΟ ΖΑΚΥΝΘΟΣ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>LEYKADA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 2 ΠΟΡΤΟ ΚΑΤΣΙΚΙ ΛΕΥΚΑΔΑ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>KEFALLONIA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 3 ΜΥΡΤΟΣ ΚΕΦΑΛΛΟΝΙΑ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>KERKYRA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 3 ΠΑΛΑΙΟΚΑΣΤΡΙΤΣΑ ΚΕΡΚΥΡΑ</div>
+      </div>
+    </article>
+   <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>ZAKYNTHOS</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 1 ΝΑΥΑΓΙΟ ΖΑΚΥΝΘΟΣ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>LEYKADA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 2 ΠΟΡΤΟ ΚΑΤΣΙΚΙ ΛΕΥΚΑΔΑ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>KEFALLONIA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 3 ΜΥΡΤΟΣ ΚΕΦΑΛΛΟΝΙΑ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>KERKYRA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 3 ΠΑΛΑΙΟΚΑΣΤΡΙΤΣΑ ΚΕΡΚΥΡΑ</div>
+      </div>
+    </article>
+   <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>ZAKYNTHOS</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 1 ΝΑΥΑΓΙΟ ΖΑΚΥΝΘΟΣ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>LEYKADA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 2 ΠΟΡΤΟ ΚΑΤΣΙΚΙ ΛΕΥΚΑΔΑ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>KEFALLONIA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 3 ΜΥΡΤΟΣ ΚΕΦΑΛΛΟΝΙΑ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>KERKYRA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 3 ΠΑΛΑΙΟΚΑΣΤΡΙΤΣΑ ΚΕΡΚΥΡΑ</div>
+      </div>
+    </article>
+   <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>ZAKYNTHOS</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 1 ΝΑΥΑΓΙΟ ΖΑΚΥΝΘΟΣ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>LEYKADA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 2 ΠΟΡΤΟ ΚΑΤΣΙΚΙ ΛΕΥΚΑΔΑ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>KEFALLONIA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 3 ΜΥΡΤΟΣ ΚΕΦΑΛΛΟΝΙΑ</div>
+      </div>
+    </article>
+    <article class='item'>
+      <div class='inset'>
+        <h1 class='title'>KERKYRA</h1>
+        <div class='caption'>ΠΑΡΑΛΙΑ Νο 3 ΠΑΛΑΙΟΚΑΣΤΡΙΤΣΑ ΚΕΡΚΥΡΑ</div>
+      </div>
+</article>
+</section>
+</main>
+<script>
+    $('#slider .item').each(function(i){
+  var $this = $(this),
+      width = $this.width(),
+      left = width * i,
+      color = 25 * i;
+  $this.css({ left: left })
+  .find('.inset').css({ backgroundColor: 'hsl(' + color + ',65%,50%)' });
+});
+$('#slider .item .inset').each(function(){
+  var $this = $(this),
+      color = $this.css('backgroundColor');
+  $this.append('<div class="shadow"></div>');
+  $this.find('.shadow').css({
+    position: 'absolute',
+    left: 0, right: 0, bottom: 0,
+    'box-shadow': '0 0 25px 25px ' + color
+  });
+});
+$('.trigger').on('click',function(){
+  var $this = $(this),
+      width = $('.item').width() * 4,
+      speed = 500;
+  if ( $this.hasClass('first') ) {
+    $('.frame').animate({ scrollLeft: 0 },speed * 3);
+  } else if ( $this.hasClass('last') ) {
+    $('.frame').animate({ scrollLeft: $('.frame')[0].scrollWidth },speed * 3);
+  } else if ( $this.hasClass('prev') ) {
+    $('.frame').animate({ scrollLeft: '-=' + width },speed);
+  } else if ( $this.hasClass('next') ) {
+    $('.frame').animate({ scrollLeft: '+=' + width },speed);
+  }
+});
+</script>

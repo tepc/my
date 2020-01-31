@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CAROUSEL SLIDESHOW-4</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"> </script>
+<style>
+.frame, .slide {width: 800px;height:450px;}
+.frame {overflow: hidden;position: relative;}
+.tray {position: relative;}
+.slide {float: left; }
+.prev, .next {position: absolute;top:200px;margin:1px;color:#115599;}
+.prev { left: 0; }
+.next {right: 0; }
+img, table, video. iframe {width: 100%;max-width: 100%;}
+</style>
+</head>
+<body>
+<div class="frame">
+<div class="tray">
+<div class="slide"><img src="https://i.imgur.com/b5PT6UY.jpg" width="800" height="450"></div>
+<div class="slide"><img src="https://i.imgur.com/LbXM96z.jpg" width="800" height="450"> </div>
+<div class="slide"><img src="https://i.imgur.com/yGKZhUp.jpg" width="800" height="450"> </div>
+<div class="slide"><img src="https://i.imgur.com/FjoU5XT.jpg" width="800" height="450"></div>
+</div>
+<a class="prev" href="#"><i class="fa fa-chevron-left fa-2x"></i></a>
+<a class="next" href="#"><i class="fa fa-chevron-right fa-2x"></i></a>
+</div>
+
+<script>
+$(function(){
+  var slideWidth = $('.slide').width(),
+      position = 0,
+      numSlides = $('.slide').size(),
+      trayWidth = slideWidth * numSlides;
+  $('.tray').width(trayWidth);
+  function slide() {
+    var distance = slideWidth * position;
+    $('.tray').animate({right: distance}, 600);}
+  $('.next').click(function () {
+    if (position === numSlides - 1) {
+      position = 0;
+    } else {
+      position += 1;}
+    slide();});
+  $('.prev').click(function () {
+    if (position === 0) {
+      position = numSlides - 1;
+    } else {
+      position -= 1;}
+    slide();});
+  $('.prev, .next').hide();
+  $('.frame').hover(function () {
+    $('.prev, .next').show();
+  }, function() {
+    $('.prev, .next').hide();});});
+</script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>BOOTSTRAP CAROUSEL SLIDESHOW-7</TITLE>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script> 
+$(document).ready(function(ev){
+var items = $(".nav li").length;
+var leftRight=0;
+if(items>7){
+leftRight=(items-7)*50*-1;}
+$('#custom_carousel').on('slide.bs.carousel', function (evt) { 
+$('#custom_carousel .controls li.active').removeClass('active');
+$('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');})
+$('.nav').draggable({ 
+axis: "x",
+stop: function() {
+var ml = parseInt($(this).css('left'));
+if(ml>0)
+$(this).animate({left:"0px"});
+if(ml<leftRight)
+$(this).animate({left:leftRight+"px"});}});});
+</script>   
+<style>
+#custom_carousel .item  .top {overflow:hidden;max-height:600px;max-width:960px;margin-bottom:0px;}
+#custom_carousel .item {color:#FFF;background:#115599;padding:5px;overflow:hidden}
+#custom_carousel .item img{padding:0px;margin:0px;width:auto;height:auto}
+#custom_carousel .izq {position:absolute;left:5px;top:40%;background-image: none;background:none repeat scroll 0 0 #222222;border:4px solid #FBBB22;border-radius:23px;height:40px;width:40px;margin-top: 30px;}
+#custom_carousel .der {position:absolute;right:5px !important;top:40%;left:inherit;background-image:none;background: none repeat scroll 0 0 #222222;border: 4px solid #FBBB22;
+border-radius: 23px;height: 40px;width : 40px;margin-top: 30px;}
+#custom_carousel .controls{overflow:hidden;padding:0;margin:0;white-space:nowrap;text-align:left;position:relative;width:100%;background:#621061;border:0;}
+#custom_carousel .controls .nav{padding:5px;margin:0;white-space: nowrap;text-align:left;position: relative;background:#333;width:100%;border: 0;}
+#custom_carousel .controls li {transition: all .5s ease;display: inline-block;max-width:120px;height:75px;opacity:.5;}
+#custom_carousel .controls li a{padding:0;}
+#custom_carousel .controls li img{width:100%;height:auto}
+#custom_carousel .controls li.active {background-color:#333;opacity:1;}
+#custom_carousel .controls a small {overflow:hidden;display:block;font-size:10px;margin-top:5px;font-weight:bold}
+</style>
+
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<div class="container-fluid">
+<div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+<div class="carousel-inner">
+<div class="item active">
+<div class="container-fluid">
+<div class="row">
+<div class="top col-md-6 col-xs-12"><img src="https://i.imgur.com/I9SFA0sl.jpg" class="img-responsive"></div>
+<div class="content col-md-6 col-xs-12">
+<h2>ΖΑΚΥΝΘΟΣ ΝΑΥΑΓΙΟ</h2>
+<p>Σήμα κατατεθέν της Ζακύνθου. Σίγουρα η διασημότερη παραλία της Ελλάδας και η πιο εντυπωσιακή της Μεσογείου. Η φωτογραφία της έχει κάνει το γύρο του κόσμου και περιλαμβάνεται σε όλους τους τουριστικούς οδηγούς που δείχνουν τη χώρα μας. Μαζί με την χελώνα Caretta Caretta αποτελούν τους κύριους διαφημιστές και εκπροσώπους του νησιού της Ζακύνθου, σε όλο τον κόσμο και κατατάσσεται σε μια από τις πιο πολυφωτογραφημένες παραλίες. Βρίσκεται στα βορειοδυτικά του νησιού. Η παλιά της ονομασία ήταν Αγιος Γεώργιος. Το σημερινό της όνομα Ναυάγιο το οφείλει σε ένα πραγματικό Ναυάγιο που συνέβη το 1983. Το εμπορικό πλοίο Παναγιώτης μετέφερε λαθραία τσιγάρα από την Τουρκία σε διεθνή ύδατα. Λόγω άσχημων καιρικών συνθηκών και χαλασμένης μηχανής το πλοίο έπεσε στα βράχια και ξεβράστηκε στην παραλία όπου παραμένει μέχρι και σήμερα. Αποτελεί ένα από τα σημαντικότερα αξιοθέατα του νησιού (όχι άδικα) και θα ήταν παράλειψη αν δεν δείτε από κοντά αυτή την εξαιρετική εικόνα. Στη μνήμη των ντόπιων υπάρχει ακόμη η θέα με τις χιλιάδες κούτες τσιγάρων να επιπλέουν στο νερό και ανάμεσά τους οι ναυτικοί, μέλη του πληρώματος του πλοίου να προσπαθούν κολυμπώντας να ξεφύγουν από την ακτοφυλακή. Οι επισκέπτες του νησιού έρχονται να θαυμάσουν το υπέροχο τοπίο και να κολυμπήσουν στα κρυστάλλινα νερά της.</p>
+</div></div></div></div> 
+<div class="item">
+<div class="container-fluid">
+<div class="row">
+<div class="top col-md-6 col-xs-12"><img src="https://i.imgur.com/gCr4ycDl.jpg" class="img-responsive"></div>
+<div class="content col-md-6 col-xs-12">
+<h2>ΛΕΥΚΑΔΑ ΠΟΡΤΟ ΚΑΤΣΙΚΙ</h2>
+<p>Για το Πόρτο Κατσίκι δεν χρειάζεται να πούμε και πολλά. Είναι χιλιοφωτογραφημένο και ξακουσμένο σε όλο τον κόσμο. Η παραλία είναι στρωμένη με άσπρο ψηλό βοτσαλάκι που είναι σαν ψεύτικο. Ο βράχος στην πλάτη της Παραλίας προκαλεί δέος. Το τοπίο στο Πόρτο Κατσίκι είναι επίσης εξωπραγματικό. 
+Υπάρχει ένα μικρό ακρωτήριο που μπορείς να πας μέσα από ένα στενό πέρασμα με σκαλοπάτια που σου προσφέρει πανοραμική θέα όλης της περιοχής και της μεγάλης παραλίας στο Πόρτο Κατσίκι αριστερά και αλλά και των άγριων βράχων-γκρεμών δεξιά. Επίσης από το ακρωτήριο στο Πόρτο Κατσίκι θα θαυμάσετε ένα φανταστικό ηλιοβασίλεμα. Οι απογευματινές ώρες είναι οι καλύτερες για να θαυμάσετε το τοπίο και για να περιμένετε το ηλιοβασίλεμα.
+Όλα στο Πόρτο Κατσίκι είναι θαυμάσια. Έχει μαγαζάκια για τα απαραίτητα, ξαπλώστρες και ομπρέλες στην παραλία. Αλλά οι περισσότεροι παίρνουν μαζί τους τις δικές τους ομπρέλες. Η Παραλία στο Πόρτο Κατσίκι, έχει επίσης και πάρα πολλούς επισκέπτες. Ο πολύς κόσμος για κάποιους είναι μειονέκτημα, για άλλους πάλι πλεονέκτημα, μένει σε εσάς, στον καθένα ξεχωριστά, να αποφασίσετε. Σε κάθε περίπτωση είτε μείνετε, είτε όχι, αυτή την περιοχή πρέπει να την δείτε.</p>
+</div></div></div></div> 
+<div class="item">
+<div class="container-fluid">
+<div class="row">
+<div class="top col-md-6 col-xs-12"><img src="https://i.imgur.com/XMS6PHsl.jpg" class="img-responsive"></div>
+<div class="content col-md-6 col-xs-12">
+<h2>ΚΕΦΑΛΟΝΙΑ ΜΥΡΤΟΣ</h2>
+<p>Η παραλία Μύρτος αποτελεί το σήμα κατατεθέν για την Κεφαλονιά. Είναι μία από τις πιο γνωστές παραλίες του νησιού, αν όχι η γνωστότερη. Βρίσκεται στο βόρειο τμήμα της Κεφαλονιάς, ανήκει στο δήμο Πυλάρου και απέχει 8 χλμ. από την Αγία Ευφημία, 3 χλμ. από το χωριό Διβαράτα, και γύρω στα 30 χλμ. από το Αργοστόλι.
+Η συγκεκριμένη παραλία έχει βραβευτεί πολλές φορές διεθνώς (και όχι άδικα) και κάθε χρόνο βραβεύεται με την γαλάζια σημαία του ΕΟΤ. Το τοπίο από ψηλά είναι ανεπανάληπτο, καταπράσινα βράχια που καταλήγουν σε μια αρκετά μεγάλη παραλία με άσπρα βότσαλα. 
+Κι  όταν πια κατεβεί κανείς κι έρχεται αντιμέτωπος με το απέραντο γαλάζιο, μαγεύεται. Είναι η θάλασσα στην οποία πρέπει να κολυμπήσετε. Τα γαλαζοπράσινα νερά της, με ή χωρίς κύμα θα κάνουν το μπάνιο σας αξέχαστο και δε θα αντισταθείτε - θα βγάλετε  πολλές πολλές φωτογραφίες.
+Η παραλία του Μύρτου είναι πλήρως οργανωμένη και θα βρείτε όλα τα απαραίτητα για να απολαύσετε το μπάνιο σας από νωρίς το πρωί εώς αργά το βράδυ. Μην φύγετε αν πρώτα δεν δείτε το ηλιοβασίλεμα το οποίο θα σας μείνει αξέχαστο.</p>
+</div></div></div></div>
+<div class="item">
+<div class="container-fluid">
+<div class="row">
+<div class="top col-md-6 col-xs-12"><img src="https://i.imgur.com/Pq9Dexal.jpg" class="img-responsive"></div>
+<div class="content col-md-6 col-xs-12">
+<h2>ΚΕΡΚΥΡΑ ΠΑΛΑΙΟΚΑΣΤΡΙΤΣΑ</h2>
+<p>Η Παλαιοκαστρίτσα αναμφίβολα αποτελεί μια από τις πλέον αναγνωρίσιμες περιοχές της Κέρκυρας με σήμα κατατεθέν της τα κρυστάλλινα νερά της αλλά και τη βραχώδη ακτή της με κόλπους χωρίς άμμο. Η ομορφιά εξάλλου του φυσικού τοπίου της περιοχής δεν αφήνει κανένα ασυγκίνητο μιας και ο επισκέπτης μαγεύεται από το πράσινο των πεύκων και τις ακρογιαλιές με τις χρυσαφένιες αμμουδιές. Περιλαμβάνει μια περιοχή που αποτελείται από 6 μικρότερους κόλπους ενώ οι βασικότερες παραλίες εντοπίζονται κάτω από ένα μοναστήρι ή κοντά στο λιμανάκι. Η περιοχή απέχει μόλις 25 χιλιόμετρα από το κέντρο της πόλης ενώ αποτελείται από δύο χερσονήσους και έξι μικρούς όρμους. Το φυσικό τοπίο παραμένει αναλλοίωτο μέσα στο χρόνο ενώ οι τουριστικές υποδομές σε καμία περίπτωση δεν το αλλοιώνουν. Η περιοχή ανακαλύφθηκε τουριστικά από Άγγλους περιηγητές ενώ μέχρι το 1950 στην περιοχή έστεκε μόνο η ιστορική Μονή της Παλαιοκαστρίτσας με μοναδικό συνεκτικό στοιχείο της πόλης με την πόλη της Κέρκυρας ένα δρόμο που κατασκεύασαν κατά την περίοδο της Αγγλοκρατίας στο νησί. Η Παλαιοκαστρίτσα μαγεύει με τα κρύα και κρυστάλλινα νερά της ενώ η κεντρική οργανωμένη παραλία της παρέχει όλες τις ανέσεις στον επισκέπτη. Αν όμως ανήκετε σε εκείνους που αποφεύγουν την πολυκοσμία τότε μικρότεροι όρμοι για κολύμπι όπως η Αλύπα, η Αγία Τριάδα, ο Άγιος Πέτρος, το Αμπελάκι και τα Πλατάκια θα σας αποζημιώσουν πέρα απο κάθε αμφιβολία. Αποτελώντας σήμερα μια από τις γνωστότερες εξοχικές τοποθεσίες του νησιού, η Παλαιοκαστρίτσα χαρακτηρίζεται από τουριστικές εγκαταστάσεις αλλά και παραθεριστικές κατοικίες που ξεπροβάλλουν ανάμεσα στο πράσινο δίχως να αλλοιώνουν τη φυσιογνωμία του νησιού.</p>
+</div></div></div></div> 
+<div class="item">
+<div class="container-fluid">
+<div class="row">
+<div class="top col-md-6 col-xs-12"><img src="https://i.imgur.com/gptb8xnl.jpg" class="img-responsive"></div>
+<div class="content col-md-6 col-xs-12">
+<h2>ΚΡΗΤΗ ΜΠΑΛΟΣ</h2>
+<p>Η παραλία του Μπάλου και το νησί Γραμβούσα βρίσκονται στο βορειοδυτικότερο άκρο της Κρήτης, στο νομό Χανίων. Μπάλος είναι η εξωτική παραλία-λιμνοθάλασσα που σχηματίζεται μεταξύ της χερσονήσου της Γραμβούσας και του ακρωτηρίου Τηγάνι, και Γραμβούσα (Ήμερη Γραμβούσα), το ένα απο τα δύο νησιά ακριβώς απέναντι από την λιμνοθάλασσα του Μπάλου, ενώ λίγο βορειότερα βρίσκεται το δεύτερο νησί, η Άγρια Γραμβούσα. Στον Μπάλο και την Ήμερη Γραμβούσα μπορείτε να πάτε με κρουαζιερόπλοιο από το λιμάνι της Κισσάμου, ενώ μόνο στον Μπάλο έχετε την δυνατότητα να πάτε και μόνοι σας, οδικώς μέχρι ενός σημείου και μετά περπατώντας. Όσους ωραίους χαρακτηρισμούς και αν διαβάσετε, όσες ωραίες φωτογραφίες και αν δείτε απο τον Μπάλο... Τίποτα δεν μπορεί να σας κάνει να αισθανθείτε αυτό που θα νιώσετε όταν έρθετε στον Μπάλο! Όταν περπατήσετε μέσα στην γαλήνια λιμνοθάλασσα. Όταν κολυμπήσετε μέσα στα ζεστά, ρηχά, κρυστάλινα, σμαραγδένια, γαλαζοπράσινα νερά του. Όταν χαλαρώσετε στην λευκή αμμουδιά κάτω απο τον καυτό ήλιο (ρόζ σε κάποια σημεία απο την σκόνη θρυματισμένων κοχυλιών).
+Όταν παρατηρήσετε την άγρια φυσική ομορφιά του τοπίου, τα βράχια και τις πλαγιές να υψώνονται πάνω απο το κεφάλι σας.</p>
+</div></div></div></div> 
+<div class="item">
+<div class="container-fluid">
+<div class="row">
+<div class="top col-md-6 col-xs-12"><img src="https://i.imgur.com/oSC4D7Rl.jpg" class="img-responsive"></div>
+<div class="content col-md-6 col-xs-12">
+<h2>ΣΚΙΑΘΟΣ ΚΟΥΚΟΥΝΑΡΙΕΣ</h2>
+<p>Η παραλία των Κουκουναριών βρίσκεται στο νοτιοδυτικό άκρο του νησιού και απέχει 13χλμ από την πόλη. Είναι η διασημότερη παραλία της Σκιάθου και πάντα κατακτά κάποια θέση σε ψηφοφορίες για τις ομορφότερες παραλίες της Ελλάδας. Θεωρείται ως το πιο πολύ φωτογραφημένο σημείο του νησιού. Χαρακτηρίζεται από την απέραντη χρυσαφένια αμμουδιά της. Τα νερά είναι ρηχά. Η άμμος της είναι λεπτόκοκκη και λαμπυρίζει κάτω από τον ήλιο γιαυτό και είναι γνωστή με το όνομα «χρυσή άμμος». Η ονομασία της προέρχεται από το πυκνό και πανέμορφο δάσος κουκουναριάς (Pinus pinea) που βρίσκεται ακριβώς πίσω από την αμμουδιά και σε όλο το μήκος της παραλίας (περίπου 700μ). το τοπίο συμπληρώνει η λίμνη της Στροφυλιάς, πίσω από το δάσος. Αποτελεί σημαντικό υγροβιότοπο όπου βρίσκουν καταφύγιο σπάνια είδη πουλιών κατά την μετανάστευση, όπως κύκνοι, ερωδιοί, πάπιες κλπ. Αποτελεί προστατευμένη περιοχή από το Δήμο Σκιάθου στο πλαίσιο ευρωπαϊκών προγραμμάτων. Μπορείτε να περπατήσετε κατά μήκος της λίμνης. Η παραλία είναι άρτια οργανωμένη αποτελώντας πρότυπο οργάνωσης και προσφέρετε δυνατότητα για όλα τα θαλάσσια σπορ. Υπάρχουν επίσης πολλά ξενοδοχεία, ενοικιαζόμενα δωμάτια, κάμπινγκ καθώς και πολλές ταβέρνες, εστιατόρια, καφετέριες, μπαρ κλπ. Ακόμη, θα βρει κανείς και σχολές ιππασίας και καταδύσεων. Ανήμερα του Αγίου Γεωργίου οργανώνονται ιππικοί αγώνες.</p>
+</div></div></div></div>
+<div class="item">
+<div class="container-fluid">
+<div class="row">
+<div class="top col-md-6 col-xs-12"><img src="https://i.imgur.com/xHwALvDl.jpg" class="img-responsive"></div>
+<div class="content col-md-6 col-xs-12">
+<h2>ΡΟΔΟΣ ΤΣΑΜΠΙΚΑ</h2>
+<p>Η αμμουδερή παραλία Τσαμπίκα βρίσκεται 26 χιλιόμετρα περίπου Νότια από την πόλη της Ρόδου, κοντά στο φημισμένο μοναστήρι της Παναγίας της Τσαμπίκα, μέσα σε ένα πανέμορφο φυσικό περιβάλλον. Δυνατότητες για διαμονή υπάρχουν στα κοντινά τουριστικά θέρετρα. Φαγητό και αναψυκτικά διατίθενται από κάποιες καντίνες που βρίσκονται κοντά στην θάλασσα. Η παραλία Τσαμπίκα είναι μια από τις ωραιότερες παραλίες στο νησί κι είναι αρκετά καλά οργανωμένη με ομπρέλες και ξαπλώστρες για την ηλιοθεραπεία, αρκετές δυνατότητες για θαλάσσια σπορ, υπέροχη αμμουδιά με χρυσή άμμο, κρυστάλλινα πεντακάθαρα νερά και φυσικά πολλούς και φανατικούς θαυμαστές της. Λόγω της μεγάλης αμμουδιάς της είναι ιδανική για οικογένειες με μικρά παιδιά, αλλά και για νέους που θέλουν χώρο για τα παιχνίδια τους, αλλά και για όλες τις ηλικίες και τα γούστα. Η χρυσή άμμος, τα κρυστάλλινα γαλάζια νερά και ο κόσμος που απολαμβάνει τον ήλιο με σχετική ησυχία συνθέτουν ένα όμορφο σκηνικό που προκαλεί τους επισκέπτες να το φωτογραφίσουν. Κοντά στην παραλία, ψηλά στο βράχο, βρίσκεται η παλιά Μονή της Παναγίας της Τσαμπίκας, από την οποία ονομάστηκε και η παραλία. Η ντόπια παράδοση θέλει την Παναγία εδώ να κάνει θαύματα και να βοηθάει τις γυναίκες να τεκνοποιήσουν. Για κάθε περίπτωση ανάγκης θα εξυπηρετηθείτε στο Κέντρο Υγείας και στο φαρμακείο στον γειτονικό Αρχάγγελο (3 χιλιόμετρα Νότια), όπου υπάρχει και αστυνομικός σταθμός. Η πρόσβαση στην παραλία γίνεται εύκολα από την πρωτεύουσα (26 χιλιόμετρα περίπου) με ταξί και ιδιωτικό, ή νοικιασμένο αυτοκίνητο, ή μοτοσικλέτα.</p>
+</div></div></div></div>
+<div class="item">
+<div class="container-fluid">
+<div class="row">
+<div class="top col-md-6 col-xs-12"><img src="https://i.imgur.com/UMQ2IrDl.jpg" class="img-responsive"></div>
+<div class="content col-md-6 col-xs-12">
+<h2>ΑΛΟΝΝΗΣΟΣ ΚΟΚΚΙΝΟΚΑΣΤΡΟ</h2>
+<p>Το Κοκκινόκαστρο είναι μια εντυπωσιακή παραλία με καθαρά και βαθιά νερά και έναν τεράστιο κόκκινο βράχο που φτάνει ως τη θάλασσα. Γύρω σας θα αντικρίσετε πολλά πεύκα τα οποία δημιουργούν φυσική σκιά. Είναι οργανωμένη με ομπρέλες και ξαπλώστρες, beach bar και δυνατότητα θαλάσσιων σπορ. Η θάλασσα έχει ένα γαλάζιο πανέμορφο χρώμα με κρυστάλλινα νερά και βότσαλα. Βρίσκεται βορειοανατολικά από το Πατητήρι όπου στους αρχαίους χρόνους υπήρχε οικισμός. Το κόκκινο χρώμα των βράχων, η χρυσαφένια άμμο και το βότσαλο που διαθέτει δημιουργούν ένα φανταστικό τοπίο. Θα αντικρίσετε χιλιάδες αποχρώσεις και μια θέα μαγευτική. Άμα η επιλογή των διακοπών σας είναι η Αλόννησος μην παραλείψετε την επίσκεψη σας στο όμορφο Κοκκινόκαστρο.</p>
+</div></div></div></div></div>
+<a data-slide="prev" href="#custom_carousel" class="izq carousel-control">‹</a>
+<a data-slide="next" href="#custom_carousel" class="der carousel-control">›</a>
+<div class="controls draggable ui-widget-content col-md-6 col-xs-12">
+<ul class="nav ui-widget-header">
+<li data-target="#custom_carousel" data-slide-to="0" class="active"><a href="#"><img src="https://i.imgur.com/I9SFA0st.jpg"><small>NAYAGIO</small></a></li>
+<li data-target="#custom_carousel" data-slide-to="1"><a href="#"><img src="https://i.imgur.com/gCr4ycDt.jpg"><small>PORTO KATSIKI</small></a></li>
+<li data-target="#custom_carousel" data-slide-to="2"><a href="#"><img src="https://i.imgur.com/XMS6PHst.jpg"><small>MYRTOS</small></a></li>
+<li data-target="#custom_carousel" data-slide-to="3"><a href="#"><img src="https://i.imgur.com/Pq9Dexat.jpg"><small>PALAIOKASTRITSA</small></a></li>
+<li data-target="#custom_carousel" data-slide-to="4"><a href="#"><img src="https://i.imgur.com/gptb8xnt.jpg"><small>MPALOS</small></a></li>
+<li data-target="#custom_carousel" data-slide-to="5"><a href="#"><img src="https://i.imgur.com/oSC4D7Rt.jpg"><small>KOUKOUNARIES</small></a></li>
+<li data-target="#custom_carousel" data-slide-to="6"><a href="#"><img src="https://i.imgur.com/xHwALvDt.jpg"><small>TSAMBIKA</small></a></li>
+<li data-target="#custom_carousel" data-slide-to="7"><a href="#"><img src="https://i.imgur.com/UMQ2IrDt.jpg"><small>KOKKINOKASTRO</small></a></li>      
+</ul></div></div></div>
+<div style="background: #ffffff; overflow:auto;width:auto;width:100%;font:22px arial;border:solid gray;border-width:4px;padding:.5px;"><table><tr><td><pre style="margin: 0; line-height: 125%">  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre></td><td><pre style="margin: 0;font:22px arial; line-height: 125%"><span style="color: #1e90ff; font-weight: bold">&lt;link</span> <span style="color: #1e90ff">rel=</span><span style="color: #aa5500">&quot;stylesheet&quot;</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;script </span><span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/script&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;script </span><span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/script&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;script&gt;</span> 
+$(<span style="color: #00aaaa">document</span>).ready(<span style="color: #0000aa">function</span>(ev){
+<span style="color: #0000aa">var</span> items = $(<span style="color: #aa5500">&quot;.nav li&quot;</span>).length;
+<span style="color: #0000aa">var</span> leftRight=<span style="color: #009999">0</span>;
+<span style="color: #0000aa">if</span>(items&gt;<span style="color: #009999">7</span>){
+leftRight=(items-<span style="color: #009999">7</span>)*<span style="color: #009999">50</span>*-<span style="color: #009999">1</span>;}
+$(<span style="color: #aa5500">&#39;#custom_carousel&#39;</span>).on(<span style="color: #aa5500">&#39;slide.bs.carousel&#39;</span>, <span style="color: #0000aa">function</span> (evt) { 
+$(<span style="color: #aa5500">&#39;#custom_carousel .controls li.active&#39;</span>).removeClass(<span style="color: #aa5500">&#39;active&#39;</span>);
+$(<span style="color: #aa5500">&#39;#custom_carousel .controls li:eq(&#39;</span>+$(evt.relatedTarget).index()+<span style="color: #aa5500">&#39;)&#39;</span>).addClass(<span style="color: #aa5500">&#39;active&#39;</span>);})
+$(<span style="color: #aa5500">&#39;.nav&#39;</span>).draggable({ 
+axis: <span style="color: #aa5500">&quot;x&quot;</span>,
+stop: <span style="color: #0000aa">function</span>() {
+<span style="color: #0000aa">var</span> ml = <span style="color: #00aaaa">parseInt</span>($(<span style="color: #0000aa">this</span>).css(<span style="color: #aa5500">&#39;left&#39;</span>));
+<span style="color: #0000aa">if</span>(ml&gt;<span style="color: #009999">0</span>)
+$(<span style="color: #0000aa">this</span>).animate({left:<span style="color: #aa5500">&quot;0px&quot;</span>});
+<span style="color: #0000aa">if</span>(ml&lt;leftRight)
+$(<span style="color: #0000aa">this</span>).animate({left:leftRight+<span style="color: #aa5500">&quot;px&quot;</span>});}});});
+<span style="color: #1e90ff; font-weight: bold">&lt;/script&gt;</span>   
+<span style="color: #1e90ff; font-weight: bold">&lt;style&gt;</span>
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.item</span>  <span style="color: #00aa00; text-decoration: underline">.top</span> {<span style="color: #0000aa">overflow</span>:<span style="color: #0000aa">hidden</span>;<span style="color: #0000aa">max-height</span>:<span style="color: #009999">600px</span>;<span style="color: #0000aa">max-width</span>:<span style="color: #009999">960px</span>;<span style="color: #0000aa">margin-bottom</span>:<span style="color: #009999">0px</span>;}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.item</span> {<span style="color: #0000aa">color</span>:<span style="color: #009999">#FFF</span>;<span style="color: #0000aa">background</span>:<span style="color: #009999">#115599</span>;<span style="color: #0000aa">padding</span>:<span style="color: #009999">5px</span>;<span style="color: #0000aa">overflow</span>:<span style="color: #0000aa">hidden</span>}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.item</span> <span style="color: #1e90ff; font-weight: bold">img</span>{<span style="color: #0000aa">padding</span>:<span style="color: #009999">0px</span>;<span style="color: #0000aa">margin</span>:<span style="color: #009999">0px</span>;<span style="color: #0000aa">width</span>:<span style="color: #0000aa">auto</span>;<span style="color: #0000aa">height</span>:<span style="color: #0000aa">auto</span>}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.izq</span> {<span style="color: #0000aa">position</span>:<span style="color: #0000aa">absolute</span>;<span style="color: #0000aa">left</span>:<span style="color: #009999">5px</span>;<span style="color: #0000aa">top</span>:<span style="color: #009999">40</span>%;<span style="color: #0000aa">background-image</span>: <span style="color: #0000aa">none</span>;<span style="color: #0000aa">background</span>:<span style="color: #0000aa">none</span> <span style="color: #0000aa">repeat</span> <span style="color: #0000aa">scroll</span> <span style="color: #009999">0</span> <span style="color: #009999">0</span> <span style="color: #009999">#222222</span>;<span style="color: #0000aa">border</span>:<span style="color: #009999">4px</span> <span style="color: #0000aa">solid</span> <span style="color: #009999">#FBBB22</span>;<span style="color: #0000aa">border</span>-radius:<span style="color: #009999">23px</span>;<span style="color: #0000aa">height</span>:<span style="color: #009999">40px</span>;<span style="color: #0000aa">width</span>:<span style="color: #009999">40px</span>;<span style="color: #0000aa">margin-top</span>: <span style="color: #009999">30px</span>;}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.der</span> {<span style="color: #0000aa">position</span>:<span style="color: #0000aa">absolute</span>;<span style="color: #0000aa">right</span>:<span style="color: #009999">5px</span> <span style="color: #4c8317">!important</span>;<span style="color: #0000aa">top</span>:<span style="color: #009999">40</span>%;<span style="color: #0000aa">left</span>:<span style="color: #0000aa">inherit</span>;<span style="color: #0000aa">background-image</span>:<span style="color: #0000aa">none</span>;<span style="color: #0000aa">background</span>: <span style="color: #0000aa">none</span> <span style="color: #0000aa">repeat</span> <span style="color: #0000aa">scroll</span> <span style="color: #009999">0</span> <span style="color: #009999">0</span> <span style="color: #009999">#222222</span>;<span style="color: #0000aa">border</span>: <span style="color: #009999">4px</span> <span style="color: #0000aa">solid</span> <span style="color: #009999">#FBBB22</span>;
+<span style="color: #0000aa">border</span>-radius: <span style="color: #009999">23px</span>;<span style="color: #0000aa">height</span>: <span style="color: #009999">40px</span>;<span style="color: #0000aa">width</span> : <span style="color: #009999">40px</span>;<span style="color: #0000aa">margin-top</span>: <span style="color: #009999">30px</span>;}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.controls</span>{<span style="color: #0000aa">overflow</span>:<span style="color: #0000aa">hidden</span>;<span style="color: #0000aa">padding</span>:<span style="color: #009999">0</span>;<span style="color: #0000aa">margin</span>:<span style="color: #009999">0</span>;<span style="color: #0000aa">white-space</span>:<span style="color: #0000aa">nowrap</span>;<span style="color: #0000aa">text-align</span>:<span style="color: #0000aa">left</span>;<span style="color: #0000aa">position</span>:<span style="color: #0000aa">relative</span>;<span style="color: #0000aa">width</span>:<span style="color: #009999">100</span>%;<span style="color: #0000aa">background</span>:<span style="color: #009999">#621061</span>;<span style="color: #0000aa">border</span>:<span style="color: #009999">0</span>;}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.controls</span> <span style="color: #00aa00; text-decoration: underline">.nav</span>{<span style="color: #0000aa">padding</span>:<span style="color: #009999">5px</span>;<span style="color: #0000aa">margin</span>:<span style="color: #009999">0</span>;<span style="color: #0000aa">white-space</span>: <span style="color: #0000aa">nowrap</span>;<span style="color: #0000aa">text-align</span>:<span style="color: #0000aa">left</span>;<span style="color: #0000aa">position</span>: <span style="color: #0000aa">relative</span>;<span style="color: #0000aa">background</span>:<span style="color: #009999">#333</span>;<span style="color: #0000aa">width</span>:<span style="color: #009999">100</span>%;<span style="color: #0000aa">border</span>: <span style="color: #009999">0</span>;}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.controls</span> <span style="color: #1e90ff; font-weight: bold">li</span> {transition: all <span style="color: #009999">.5s</span> ease;<span style="color: #0000aa">display</span>: <span style="color: #0000aa">inline</span>-<span style="color: #0000aa">block</span>;<span style="color: #0000aa">max-width</span>:<span style="color: #009999">120px</span>;<span style="color: #0000aa">height</span>:<span style="color: #009999">75px</span>;<span style="color: #0000aa">opacity</span>:.<span style="color: #009999">5</span>;}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.controls</span> <span style="color: #1e90ff; font-weight: bold">li</span> <span style="color: #1e90ff; font-weight: bold">a</span>{<span style="color: #0000aa">padding</span>:<span style="color: #009999">0</span>;}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.controls</span> <span style="color: #1e90ff; font-weight: bold">li</span> <span style="color: #1e90ff; font-weight: bold">img</span>{<span style="color: #0000aa">width</span>:<span style="color: #009999">100</span>%;<span style="color: #0000aa">height</span>:<span style="color: #0000aa">auto</span>}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.controls</span> <span style="color: #1e90ff; font-weight: bold">li</span><span style="color: #00aa00; text-decoration: underline">.active</span> {<span style="color: #0000aa">background-color</span>:<span style="color: #009999">#333</span>;<span style="color: #0000aa">opacity</span>:<span style="color: #009999">1</span>;}
+<span style="color: #00aa00">#custom_carousel</span> <span style="color: #00aa00; text-decoration: underline">.controls</span> <span style="color: #1e90ff; font-weight: bold">a</span> <span style="color: #1e90ff; font-weight: bold">small</span> {<span style="color: #0000aa">overflow</span>:<span style="color: #0000aa">hidden</span>;<span style="color: #0000aa">display</span>:<span style="color: #0000aa">block</span>;<span style="color: #0000aa">font-size</span>:<span style="color: #009999">10px</span>;<span style="color: #0000aa">margin-top</span>:<span style="color: #009999">5px</span>;<span style="color: #0000aa">font-weight</span>:<span style="color: #0000aa">bold</span>}
+<span style="color: #1e90ff; font-weight: bold">&lt;/style&gt;</span>
+
+<span style="color: #1e90ff; font-weight: bold">&lt;script </span><span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;//code.jquery.com/ui/1.11.4/jquery-ui.js&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/script&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">id=</span><span style="color: #aa5500">&quot;custom_carousel&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;carousel slide&quot;</span> <span style="color: #1e90ff">data-ride=</span><span style="color: #aa5500">&quot;carousel&quot;</span> <span style="color: #1e90ff">data-interval=</span><span style="color: #aa5500">&quot;4000&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;carousel-inner&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;item active&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;row&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;top col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/I9SFA0sl.jpg&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;img-responsive&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;h2&gt;</span>ΖΑΚΥΝΘΟΣ ΝΑΥΑΓΙΟ<span style="color: #1e90ff; font-weight: bold">&lt;/h2&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;p&gt;</span>Σήμα κατατεθέν της Ζακύνθου. Σίγουρα η διασημότερη παραλία της Ελλάδας και η πιο εντυπωσιακή της Μεσογείου. Η φωτογραφία της έχει κάνει το γύρο του κόσμου και περιλαμβάνεται σε όλους τους τουριστικούς οδηγούς που δείχνουν τη χώρα μας. Μαζί με την χελώνα Caretta Caretta αποτελούν τους κύριους διαφημιστές και εκπροσώπους του νησιού της Ζακύνθου, σε όλο τον κόσμο και κατατάσσεται σε μια από τις πιο πολυφωτογραφημένες παραλίες. Βρίσκεται στα βορειοδυτικά του νησιού. Η παλιά της ονομασία ήταν Αγιος Γεώργιος. Το σημερινό της όνομα Ναυάγιο το οφείλει σε ένα πραγματικό Ναυάγιο που συνέβη το 1983. Το εμπορικό πλοίο Παναγιώτης μετέφερε λαθραία τσιγάρα από την Τουρκία σε διεθνή ύδατα. Λόγω άσχημων καιρικών συνθηκών και χαλασμένης μηχανής το πλοίο έπεσε στα βράχια και ξεβράστηκε στην παραλία όπου παραμένει μέχρι και σήμερα. Αποτελεί ένα από τα σημαντικότερα αξιοθέατα του νησιού (όχι άδικα) και θα ήταν παράλειψη αν δεν δείτε από κοντά αυτή την εξαιρετική εικόνα. Στη μνήμη των ντόπιων υπάρχει ακόμη η θέα με τις χιλιάδες κούτες τσιγάρων να επιπλέουν στο νερό και ανάμεσά τους οι ναυτικοί, μέλη του πληρώματος του πλοίου να προσπαθούν κολυμπώντας να ξεφύγουν από την ακτοφυλακή. Οι επισκέπτες του νησιού έρχονται να θαυμάσουν το υπέροχο τοπίο και να κολυμπήσουν στα κρυστάλλινα νερά της.<span style="color: #1e90ff; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span> 
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;item&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;row&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;top col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/gCr4ycDl.jpg&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;img-responsive&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;h2&gt;</span>ΛΕΥΚΑΔΑ ΠΟΡΤΟ ΚΑΤΣΙΚΙ<span style="color: #1e90ff; font-weight: bold">&lt;/h2&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;p&gt;</span>Για το Πόρτο Κατσίκι δεν χρειάζεται να πούμε και πολλά. Είναι χιλιοφωτογραφημένο και ξακουσμένο σε όλο τον κόσμο. Η παραλία είναι στρωμένη με άσπρο ψηλό βοτσαλάκι που είναι σαν ψεύτικο. Ο βράχος στην πλάτη της Παραλίας προκαλεί δέος. Το τοπίο στο Πόρτο Κατσίκι είναι επίσης εξωπραγματικό. 
+Υπάρχει ένα μικρό ακρωτήριο που μπορείς να πας μέσα από ένα στενό πέρασμα με σκαλοπάτια που σου προσφέρει πανοραμική θέα όλης της περιοχής και της μεγάλης παραλίας στο Πόρτο Κατσίκι αριστερά και αλλά και των άγριων βράχων-γκρεμών δεξιά. Επίσης από το ακρωτήριο στο Πόρτο Κατσίκι θα θαυμάσετε ένα φανταστικό ηλιοβασίλεμα. Οι απογευματινές ώρες είναι οι καλύτερες για να θαυμάσετε το τοπίο και για να περιμένετε το ηλιοβασίλεμα.
+Όλα στο Πόρτο Κατσίκι είναι θαυμάσια. Έχει μαγαζάκια για τα απαραίτητα, ξαπλώστρες και ομπρέλες στην παραλία. Αλλά οι περισσότεροι παίρνουν μαζί τους τις δικές τους ομπρέλες. Η Παραλία στο Πόρτο Κατσίκι, έχει επίσης και πάρα πολλούς επισκέπτες. Ο πολύς κόσμος για κάποιους είναι μειονέκτημα, για άλλους πάλι πλεονέκτημα, μένει σε εσάς, στον καθένα ξεχωριστά, να αποφασίσετε. Σε κάθε περίπτωση είτε μείνετε, είτε όχι, αυτή την περιοχή πρέπει να την δείτε.<span style="color: #1e90ff; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span> 
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;item&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;row&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;top col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/XMS6PHsl.jpg&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;img-responsive&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;h2&gt;</span>ΚΕΦΑΛΟΝΙΑ ΜΥΡΤΟΣ<span style="color: #1e90ff; font-weight: bold">&lt;/h2&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;p&gt;</span>Η παραλία Μύρτος αποτελεί το σήμα κατατεθέν για την Κεφαλονιά. Είναι μία από τις πιο γνωστές παραλίες του νησιού, αν όχι η γνωστότερη. Βρίσκεται στο βόρειο τμήμα της Κεφαλονιάς, ανήκει στο δήμο Πυλάρου και απέχει 8 χλμ. από την Αγία Ευφημία, 3 χλμ. από το χωριό Διβαράτα, και γύρω στα 30 χλμ. από το Αργοστόλι.
+Η συγκεκριμένη παραλία έχει βραβευτεί πολλές φορές διεθνώς (και όχι άδικα) και κάθε χρόνο βραβεύεται με την γαλάζια σημαία του ΕΟΤ. Το τοπίο από ψηλά είναι ανεπανάληπτο, καταπράσινα βράχια που καταλήγουν σε μια αρκετά μεγάλη παραλία με άσπρα βότσαλα. 
+Κι  όταν πια κατεβεί κανείς κι έρχεται αντιμέτωπος με το απέραντο γαλάζιο, μαγεύεται. Είναι η θάλασσα στην οποία πρέπει να κολυμπήσετε. Τα γαλαζοπράσινα νερά της, με ή χωρίς κύμα θα κάνουν το μπάνιο σας αξέχαστο και δε θα αντισταθείτε - θα βγάλετε  πολλές πολλές φωτογραφίες.
+Η παραλία του Μύρτου είναι πλήρως οργανωμένη και θα βρείτε όλα τα απαραίτητα για να απολαύσετε το μπάνιο σας από νωρίς το πρωί εώς αργά το βράδυ. Μην φύγετε αν πρώτα δεν δείτε το ηλιοβασίλεμα το οποίο θα σας μείνει αξέχαστο.<span style="color: #1e90ff; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;item&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;row&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;top col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/Pq9Dexal.jpg&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;img-responsive&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;h2&gt;</span>ΚΕΡΚΥΡΑ ΠΑΛΑΙΟΚΑΣΤΡΙΤΣΑ<span style="color: #1e90ff; font-weight: bold">&lt;/h2&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;p&gt;</span>Η Παλαιοκαστρίτσα αναμφίβολα αποτελεί μια από τις πλέον αναγνωρίσιμες περιοχές της Κέρκυρας με σήμα κατατεθέν της τα κρυστάλλινα νερά της αλλά και τη βραχώδη ακτή της με κόλπους χωρίς άμμο. Η ομορφιά εξάλλου του φυσικού τοπίου της περιοχής δεν αφήνει κανένα ασυγκίνητο μιας και ο επισκέπτης μαγεύεται από το πράσινο των πεύκων και τις ακρογιαλιές με τις χρυσαφένιες αμμουδιές. Περιλαμβάνει μια περιοχή που αποτελείται από 6 μικρότερους κόλπους ενώ οι βασικότερες παραλίες εντοπίζονται κάτω από ένα μοναστήρι ή κοντά στο λιμανάκι. Η περιοχή απέχει μόλις 25 χιλιόμετρα από το κέντρο της πόλης ενώ αποτελείται από δύο χερσονήσους και έξι μικρούς όρμους. Το φυσικό τοπίο παραμένει αναλλοίωτο μέσα στο χρόνο ενώ οι τουριστικές υποδομές σε καμία περίπτωση δεν το αλλοιώνουν. Η περιοχή ανακαλύφθηκε τουριστικά από Άγγλους περιηγητές ενώ μέχρι το 1950 στην περιοχή έστεκε μόνο η ιστορική Μονή της Παλαιοκαστρίτσας με μοναδικό συνεκτικό στοιχείο της πόλης με την πόλη της Κέρκυρας ένα δρόμο που κατασκεύασαν κατά την περίοδο της Αγγλοκρατίας στο νησί. Η Παλαιοκαστρίτσα μαγεύει με τα κρύα και κρυστάλλινα νερά της ενώ η κεντρική οργανωμένη παραλία της παρέχει όλες τις ανέσεις στον επισκέπτη. Αν όμως ανήκετε σε εκείνους που αποφεύγουν την πολυκοσμία τότε μικρότεροι όρμοι για κολύμπι όπως η Αλύπα, η Αγία Τριάδα, ο Άγιος Πέτρος, το Αμπελάκι και τα Πλατάκια θα σας αποζημιώσουν πέρα απο κάθε αμφιβολία. Αποτελώντας σήμερα μια από τις γνωστότερες εξοχικές τοποθεσίες του νησιού, η Παλαιοκαστρίτσα χαρακτηρίζεται από τουριστικές εγκαταστάσεις αλλά και παραθεριστικές κατοικίες που ξεπροβάλλουν ανάμεσα στο πράσινο δίχως να αλλοιώνουν τη φυσιογνωμία του νησιού.<span style="color: #1e90ff; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span> 
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;item&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;row&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;top col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/gptb8xnl.jpg&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;img-responsive&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;h2&gt;</span>ΚΡΗΤΗ ΜΠΑΛΟΣ<span style="color: #1e90ff; font-weight: bold">&lt;/h2&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;p&gt;</span>Η παραλία του Μπάλου και το νησί Γραμβούσα βρίσκονται στο βορειοδυτικότερο άκρο της Κρήτης, στο νομό Χανίων. Μπάλος είναι η εξωτική παραλία-λιμνοθάλασσα που σχηματίζεται μεταξύ της χερσονήσου της Γραμβούσας και του ακρωτηρίου Τηγάνι, και Γραμβούσα (Ήμερη Γραμβούσα), το ένα απο τα δύο νησιά ακριβώς απέναντι από την λιμνοθάλασσα του Μπάλου, ενώ λίγο βορειότερα βρίσκεται το δεύτερο νησί, η Άγρια Γραμβούσα. Στον Μπάλο και την Ήμερη Γραμβούσα μπορείτε να πάτε με κρουαζιερόπλοιο από το λιμάνι της Κισσάμου, ενώ μόνο στον Μπάλο έχετε την δυνατότητα να πάτε και μόνοι σας, οδικώς μέχρι ενός σημείου και μετά περπατώντας. Όσους ωραίους χαρακτηρισμούς και αν διαβάσετε, όσες ωραίες φωτογραφίες και αν δείτε απο τον Μπάλο... Τίποτα δεν μπορεί να σας κάνει να αισθανθείτε αυτό που θα νιώσετε όταν έρθετε στον Μπάλο! Όταν περπατήσετε μέσα στην γαλήνια λιμνοθάλασσα. Όταν κολυμπήσετε μέσα στα ζεστά, ρηχά, κρυστάλινα, σμαραγδένια, γαλαζοπράσινα νερά του. Όταν χαλαρώσετε στην λευκή αμμουδιά κάτω απο τον καυτό ήλιο (ρόζ σε κάποια σημεία απο την σκόνη θρυματισμένων κοχυλιών).
+Όταν παρατηρήσετε την άγρια φυσική ομορφιά του τοπίου, τα βράχια και τις πλαγιές να υψώνονται πάνω απο το κεφάλι σας.<span style="color: #1e90ff; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span> 
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;item&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;row&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;top col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/oSC4D7Rl.jpg&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;img-responsive&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;h2&gt;</span>ΣΚΙΑΘΟΣ ΚΟΥΚΟΥΝΑΡΙΕΣ<span style="color: #1e90ff; font-weight: bold">&lt;/h2&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;p&gt;</span>Η παραλία των Κουκουναριών βρίσκεται στο νοτιοδυτικό άκρο του νησιού και απέχει 13χλμ από την πόλη. Είναι η διασημότερη παραλία της Σκιάθου και πάντα κατακτά κάποια θέση σε ψηφοφορίες για τις ομορφότερες παραλίες της Ελλάδας. Θεωρείται ως το πιο πολύ φωτογραφημένο σημείο του νησιού. Χαρακτηρίζεται από την απέραντη χρυσαφένια αμμουδιά της. Τα νερά είναι ρηχά. Η άμμος της είναι λεπτόκοκκη και λαμπυρίζει κάτω από τον ήλιο γιαυτό και είναι γνωστή με το όνομα «χρυσή άμμος». Η ονομασία της προέρχεται από το πυκνό και πανέμορφο δάσος κουκουναριάς (Pinus pinea) που βρίσκεται ακριβώς πίσω από την αμμουδιά και σε όλο το μήκος της παραλίας (περίπου 700μ). το τοπίο συμπληρώνει η λίμνη της Στροφυλιάς, πίσω από το δάσος. Αποτελεί σημαντικό υγροβιότοπο όπου βρίσκουν καταφύγιο σπάνια είδη πουλιών κατά την μετανάστευση, όπως κύκνοι, ερωδιοί, πάπιες κλπ. Αποτελεί προστατευμένη περιοχή από το Δήμο Σκιάθου στο πλαίσιο ευρωπαϊκών προγραμμάτων. Μπορείτε να περπατήσετε κατά μήκος της λίμνης. Η παραλία είναι άρτια οργανωμένη αποτελώντας πρότυπο οργάνωσης και προσφέρετε δυνατότητα για όλα τα θαλάσσια σπορ. Υπάρχουν επίσης πολλά ξενοδοχεία, ενοικιαζόμενα δωμάτια, κάμπινγκ καθώς και πολλές ταβέρνες, εστιατόρια, καφετέριες, μπαρ κλπ. Ακόμη, θα βρει κανείς και σχολές ιππασίας και καταδύσεων. Ανήμερα του Αγίου Γεωργίου οργανώνονται ιππικοί αγώνες.<span style="color: #1e90ff; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;item&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;row&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;top col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/xHwALvDl.jpg&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;img-responsive&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;h2&gt;</span>ΡΟΔΟΣ ΤΣΑΜΠΙΚΑ<span style="color: #1e90ff; font-weight: bold">&lt;/h2&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;p&gt;</span>Η αμμουδερή παραλία Τσαμπίκα βρίσκεται 26 χιλιόμετρα περίπου Νότια από την πόλη της Ρόδου, κοντά στο φημισμένο μοναστήρι της Παναγίας της Τσαμπίκα, μέσα σε ένα πανέμορφο φυσικό περιβάλλον. Δυνατότητες για διαμονή υπάρχουν στα κοντινά τουριστικά θέρετρα. Φαγητό και αναψυκτικά διατίθενται από κάποιες καντίνες που βρίσκονται κοντά στην θάλασσα. Η παραλία Τσαμπίκα είναι μια από τις ωραιότερες παραλίες στο νησί κι είναι αρκετά καλά οργανωμένη με ομπρέλες και ξαπλώστρες για την ηλιοθεραπεία, αρκετές δυνατότητες για θαλάσσια σπορ, υπέροχη αμμουδιά με χρυσή άμμο, κρυστάλλινα πεντακάθαρα νερά και φυσικά πολλούς και φανατικούς θαυμαστές της. Λόγω της μεγάλης αμμουδιάς της είναι ιδανική για οικογένειες με μικρά παιδιά, αλλά και για νέους που θέλουν χώρο για τα παιχνίδια τους, αλλά και για όλες τις ηλικίες και τα γούστα. Η χρυσή άμμος, τα κρυστάλλινα γαλάζια νερά και ο κόσμος που απολαμβάνει τον ήλιο με σχετική ησυχία συνθέτουν ένα όμορφο σκηνικό που προκαλεί τους επισκέπτες να το φωτογραφίσουν. Κοντά στην παραλία, ψηλά στο βράχο, βρίσκεται η παλιά Μονή της Παναγίας της Τσαμπίκας, από την οποία ονομάστηκε και η παραλία. Η ντόπια παράδοση θέλει την Παναγία εδώ να κάνει θαύματα και να βοηθάει τις γυναίκες να τεκνοποιήσουν. Για κάθε περίπτωση ανάγκης θα εξυπηρετηθείτε στο Κέντρο Υγείας και στο φαρμακείο στον γειτονικό Αρχάγγελο (3 χιλιόμετρα Νότια), όπου υπάρχει και αστυνομικός σταθμός. Η πρόσβαση στην παραλία γίνεται εύκολα από την πρωτεύουσα (26 χιλιόμετρα περίπου) με ταξί και ιδιωτικό, ή νοικιασμένο αυτοκίνητο, ή μοτοσικλέτα.<span style="color: #1e90ff; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;item&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;container-fluid&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;row&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;top col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/UMQ2IrDl.jpg&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;img-responsive&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;h2&gt;</span>ΑΛΟΝΝΗΣΟΣ ΚΟΚΚΙΝΟΚΑΣΤΡΟ<span style="color: #1e90ff; font-weight: bold">&lt;/h2&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;p&gt;</span>Το Κοκκινόκαστρο είναι μια εντυπωσιακή παραλία με καθαρά και βαθιά νερά και έναν τεράστιο κόκκινο βράχο που φτάνει ως τη θάλασσα. Γύρω σας θα αντικρίσετε πολλά πεύκα τα οποία δημιουργούν φυσική σκιά. Είναι οργανωμένη με ομπρέλες και ξαπλώστρες, beach bar και δυνατότητα θαλάσσιων σπορ. Η θάλασσα έχει ένα γαλάζιο πανέμορφο χρώμα με κρυστάλλινα νερά και βότσαλα. Βρίσκεται βορειοανατολικά από το Πατητήρι όπου στους αρχαίους χρόνους υπήρχε οικισμός. Το κόκκινο χρώμα των βράχων, η χρυσαφένια άμμο και το βότσαλο που διαθέτει δημιουργούν ένα φανταστικό τοπίο. Θα αντικρίσετε χιλιάδες αποχρώσεις και μια θέα μαγευτική. Άμα η επιλογή των διακοπών σας είναι η Αλόννησος μην παραλείψετε την επίσκεψη σας στο όμορφο Κοκκινόκαστρο.<span style="color: #1e90ff; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;a</span> <span style="color: #1e90ff">data-slide=</span><span style="color: #aa5500">&quot;prev&quot;</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;izq carousel-control&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>‹<span style="color: #1e90ff; font-weight: bold">&lt;/a&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;a</span> <span style="color: #1e90ff">data-slide=</span><span style="color: #aa5500">&quot;next&quot;</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;der carousel-control&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>›<span style="color: #1e90ff; font-weight: bold">&lt;/a&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;div</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;controls draggable ui-widget-content col-md-6 col-xs-12&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;ul</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;nav ui-widget-header&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;li</span> <span style="color: #1e90ff">data-target=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">data-slide-to=</span><span style="color: #aa5500">&quot;0&quot;</span> <span style="color: #1e90ff">class=</span><span style="color: #aa5500">&quot;active&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;a</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/I9SFA0st.jpg&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;small&gt;</span>NAYAGIO<span style="color: #1e90ff; font-weight: bold">&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;li</span> <span style="color: #1e90ff">data-target=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">data-slide-to=</span><span style="color: #aa5500">&quot;1&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;a</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/gCr4ycDt.jpg&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;small&gt;</span>PORTO KATSIKI<span style="color: #1e90ff; font-weight: bold">&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;li</span> <span style="color: #1e90ff">data-target=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">data-slide-to=</span><span style="color: #aa5500">&quot;2&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;a</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/XMS6PHst.jpg&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;small&gt;</span>MYRTOS<span style="color: #1e90ff; font-weight: bold">&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;li</span> <span style="color: #1e90ff">data-target=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">data-slide-to=</span><span style="color: #aa5500">&quot;3&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;a</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/Pq9Dexat.jpg&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;small&gt;</span>PALAIOKASTRITSA<span style="color: #1e90ff; font-weight: bold">&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;li</span> <span style="color: #1e90ff">data-target=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">data-slide-to=</span><span style="color: #aa5500">&quot;4&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;a</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/gptb8xnt.jpg&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;small&gt;</span>MPALOS<span style="color: #1e90ff; font-weight: bold">&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;li</span> <span style="color: #1e90ff">data-target=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">data-slide-to=</span><span style="color: #aa5500">&quot;5&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;a</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/oSC4D7Rt.jpg&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;small&gt;</span>KOUKOUNARIES<span style="color: #1e90ff; font-weight: bold">&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;li</span> <span style="color: #1e90ff">data-target=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">data-slide-to=</span><span style="color: #aa5500">&quot;6&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;a</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/xHwALvDt.jpg&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;small&gt;</span>TSAMBIKA<span style="color: #1e90ff; font-weight: bold">&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;li</span> <span style="color: #1e90ff">data-target=</span><span style="color: #aa5500">&quot;#custom_carousel&quot;</span> <span style="color: #1e90ff">data-slide-to=</span><span style="color: #aa5500">&quot;7&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;a</span> <span style="color: #1e90ff">href=</span><span style="color: #aa5500">&quot;#&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;img</span> <span style="color: #1e90ff">src=</span><span style="color: #aa5500">&quot;http://i.imgur.com/UMQ2IrDt.jpg&quot;</span><span style="color: #1e90ff; font-weight: bold">&gt;&lt;small&gt;</span>KOKKINOKASTRO<span style="color: #1e90ff; font-weight: bold">&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;</span>      
+<span style="color: #1e90ff; font-weight: bold">&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span>
+</pre></td></tr></table></div>
