@@ -60,10 +60,10 @@ a:active {color:#FFF;text-decoration:underline;}
 #content{background:rgba(0,30,0, 0.75);float:left;padding:0px;width:992px;height:auto;font:13px arial;border-radius:8px;border-radius:8px;}
 #left-col,#right-col {width:250px;float:left;position:relative;}
 #gad-box {width:238px;float:left;position:relative;background:rgba(0,30,0, 0.75);border:solid #00FF00 1px;border-radius:8px;padding:5px;color:#FFF;}
-#sidebar1 {width:240px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
-#sidebar2 {width:240px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
-#sidebar3 {width:240px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
-#sidebar4 {width:240px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
+#sidebar1 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
+#sidebar2 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
+#sidebar3 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
+#sidebar4 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
 #post-box {float:left;margin-right:5px;margin-bottom:5px;padding:3px;width:185px;height:200px;background:rgba(0,30,0, 0.75);border:solid #00FF00 1px;border-radius:8px;}
 #a500 {background:none;float:left;padding:0;width:500px;}
 #a490 {background:rgba(30,0,0, 0.7);float:left;padding:5px;width:490px;height:auto;font:13px arial;}
