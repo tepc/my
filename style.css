@@ -93,8 +93,7 @@ a:active {color:#FFF;text-decoration:underline;}
 #f250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}
 #f1500 {background:rgba(0,0,30, 0.75);float:left;width:1498px;padding:0px;margin:0px;border:solid #00FF00 1px;border-radius:8px;} 
 #f750 {background:rgba(0,0,30, 0.75);float:left;width:738px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}
-#f500 {background:none;float:left;width:500px;padding:0px;margin:0px;border:none;} 
-#f488 {background:rgba(0,0,30, 0.75);float:left;width:488px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}    
+#f500 {background:rgba(0,0,30, 0.75);float:left;width:488px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}  
 /* FOOTER STYLE ----------------------------------------------- */
 #footer{height:100%;width:1498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
 #footer1{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
