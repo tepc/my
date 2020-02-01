@@ -93,10 +93,10 @@ a:active {color:#FFF;text-decoration:underline;}
 #f750 {background:rgba(0,0,30, 0.75);float:left;width:738px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
 #f500 {background:rgba(0,0,30, 0.75);float:left;width:488px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}  
 /* FOOTER STYLE ----------------------------------------------- */
-#footer{height:100%;width:1498px;float:left;background:rgba(0,30,0, 0.75);position:relative;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
-#footer1{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
-#footer2{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
-#footer3{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
+#footer{height:100%;width:1498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:hidden;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
+#footer1{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:hidden;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
+#footer2{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:hidden;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
+#footer3{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:hidden;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
 /* COLOR BUTTONS STYLE ----------------------------------------------- */
 .button{font:13px Arial;text-decoration:none !important;white-space:nowrap;display:inline-block;vertical-align:baseline;position:relative;cursor:pointer;
 padding:4px 4px;background-clip:border-box;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;webkit-transition:background-position 1s;
