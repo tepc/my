@@ -58,13 +58,11 @@ a:active {color:#FFF;text-decoration:underline;}
 /* CONTENT AND SIDEBARS STYLE ----------------------------------------------- */
 #site-width {width:1500px;}
 #content{background:rgba(0,30,0, 0.75);float:left;padding:0px;width:1000px;height:auto;font:13px arial;border-radius:8px;border-radius:8px;}
-#left-col,#right-col {width:250px;float:left;position:relative;}
-#gad-box {width:238px;float:left;position:relative;background:rgba(0,30,0, 0.75);border:solid #00FF00 1px;border-radius:8px;padding:5px;color:#FFF;}
-#sidebar1 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
-#sidebar2 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
-#sidebar3 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
-#sidebar4 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:solid #00FF00 1px;border-radius:8px;padding:5px;}
-#post-box {float:left;margin:3px;padding:3px;width:186px;height:200px;background:rgba(0,30,0, 0.75);border:solid #00FF00 1px;border-radius:8px;}
+#sidebar1 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
+#sidebar2 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
+#sidebar3 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
+#sidebar4 {width:238px;background:rgba(0,0,30, 0.75);float:left;position:relative;border:1px solid #00FF00;border-radius:8px;padding:5px;}
+#post-box {float:left;margin:3px;padding:3px;width:186px;height:200px;background:rgba(0,30,0, 0.75);border:1px solid #00FF00;border-radius:8px;}
 #a500 {background:none;float:left;padding:0;width:500px;}
 #a490 {background:rgba(30,0,0, 0.7);float:left;padding:5px;width:490px;height:auto;font:13px arial;}
 #b500 {background:none;float:left;padding:0;width:500px;}
@@ -85,20 +83,20 @@ a:active {color:#FFF;text-decoration:underline;}
 #d240 {background:rgba(0,30,0, 0.7);float:left;padding:5px;width:240px;height:auto;font:13px arial;}
 #e240 {background:rgba(0,0,30, 0.7);float:left;padding:5px;width:240px;height:auto;font:13px arial;}
 #f240 {background:rgba(0,0,0, 0.7);float:left;padding:5px;width:240px;height:auto;font:13px arial;}
-#a250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}
-#b250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}
-#c250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}
-#d250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}
-#e250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}      
-#f250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}
-#f1500 {background:rgba(0,0,30, 0.75);float:left;width:1498px;padding:0px;margin:0px;border:solid #00FF00 1px;border-radius:8px;} 
-#f750 {background:rgba(0,0,30, 0.75);float:left;width:738px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}
-#f500 {background:rgba(0,0,30, 0.75);float:left;width:488px;padding:5px;margin:0px;border:solid #00FF00 1px;border-radius:8px;}  
+#a250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
+#b250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
+#c250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
+#d250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
+#e250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}      
+#f250 {background:rgba(0,0,30, 0.75);float:left;width:238px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
+#f1500 {background:rgba(0,0,30, 0.75);float:left;width:1498px;padding:0px;margin:0px;border:1px solid #00FF00;border-radius:8px;} 
+#f750 {background:rgba(0,0,30, 0.75);float:left;width:738px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}
+#f500 {background:rgba(0,0,30, 0.75);float:left;width:488px;padding:5px;margin:0px;border:1px solid #00FF00;border-radius:8px;}  
 /* FOOTER STYLE ----------------------------------------------- */
-#footer{height:100%;width:1498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
-#footer1{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
-#footer2{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
-#footer3{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
+#footer{height:100%;width:1498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
+#footer1{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
+#footer2{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
+#footer3{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:1px solid #00FF00;border-radius:8px;}
 /* COLOR BUTTONS STYLE ----------------------------------------------- */
 .button{font:13px Arial;text-decoration:none !important;white-space:nowrap;display:inline-block;vertical-align:baseline;position:relative;cursor:pointer;
 padding:4px 4px;background-clip:border-box;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;webkit-transition:background-position 1s;
