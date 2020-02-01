@@ -49,7 +49,7 @@ h3.cFF0999 {background:#FF0999;color:#FFF;margin:0px;padding:5px;font:bold 14px 
 #cc240-105105 {display:inline-block;width:240px;padding:2px;border-radius:4px;font:bold 16px arial;background:#105105;color:#FFF;}
 #cc240-173374 {display:inline-block;width:240px;padding:2px;border-radius:4px;background:#173374;color:#FFF;}
 /* NAVBAR STYLE ----------------------------------------------- */
-#navbar{position:relative;background:rgba(0,0,30, 0.75);color:#FFF;width:1490px;height:30px;float:left;margin:0px;padding:5px;font:13px arial;}
+#navbar{position:relative;background:rgba(0,0,30, 0.75);color:#FFF;width:1500px;height:30px;float:left;margin:0px;padding:0px;font:13px arial;}
 /* LINKS STYLE ----------------------------------------------- */
 a:link {color:#33FFFF;text-decoration:none;}
 a:visited {color:#33FFFF;text-decoration:none;}
@@ -92,10 +92,10 @@ a:active {color:#FFF;text-decoration:underline;}
 #f250 {background:none;float:left;padding:0;width:250px;}
 #f240 {background:rgba(0,0,0, 0.7);float:left;padding:5px;width:240px;height:auto;font:13px arial;}
 /* FOOTER STYLE ----------------------------------------------- */
-#footer{height:100%;width:1500px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #661111 1px;border-radius:8px;}
-#footer1{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #661111 1px;border-radius:8px;}
-#footer2{height:100%;width:496px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #661111 1px;border-radius:8px;}
-#footer3{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #661111 1px;border-radius:8px;}
+#footer{height:100%;width:1498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
+#footer1{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
+#footer2{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
+#footer3{height:100%;width:498px;float:left;background:rgba(0,30,0, 0.75);position:relative;overflow:auto;margin:0;padding:0;border:solid #00FF00 1px;border-radius:8px;}
 /* COLOR BUTTONS STYLE ----------------------------------------------- */
 .button{font:13px Arial;text-decoration:none !important;white-space:nowrap;display:inline-block;vertical-align:baseline;position:relative;cursor:pointer;
 padding:4px 4px;background-clip:border-box;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;webkit-transition:background-position 1s;
