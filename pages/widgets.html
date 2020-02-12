@@ -39,20 +39,6 @@
 width="990" height="2000" marginwidth=0 marginheight=0 frameborder=0 border=0 
 style="border:0;margin:0;padding:0;overflow-x: auto; overflow-y: scroll "></iframe>
 </div>
-<div id="nb-root" style="float:left;width:490px;height:520px;" class="t7"></div>      
-<script>
-var es = document.createElement("script"); es.async = true;
-es.src = "https://www.newsbomb.gr/services/js/news.js?vs=7"
-document.getElementById("nb-root").appendChild(es);
-</script>
-<div class="t7" id="cnn-root" style="float:left;height: 520px; width: 490px;"></div>
-<script>var es = document.createElement("script"); es.async = true;
-es.src = "//www.cnn.gr/services/js/news.js?vs=1";
-document.getElementById("cnn-root").appendChild(es);
-</script>
-<div style="float:left;"><iframe src="https://www.amna.gr/news-widget" height="520" width="490" frameborder="0"></iframe></div>
-<div style="float:left;"><iframe src="https://www.sdna.gr/widgets/news" width="490" height="520" scrolling="no" style="border:0;"></iframe>
-</div>
 </div>
 <div id="sidebar2">
 <iframe src="https://tepc.github.io/my/sidebar2.html" frameborder="0" width="238" height="2000"></iframe>		
@@ -62,7 +48,11 @@ document.getElementById("cnn-root").appendChild(es);
 </div>
 <div id="footer">
 <h4>VISIT MY BOOKMARKS</h4>
-<iframe src="https://tepc.github.io/my/widgets/bmarks.html" frameborder="0" width="1498" height="180"></iframe>          
+<div class="t7" id="cnn-root" style="float:left;height: 520px; width: 490px;"></div>
+<script>var es = document.createElement("script"); es.async = true;
+es.src = "//www.cnn.gr/services/js/news.js?vs=1";
+document.getElementById("cnn-root").appendChild(es);
+</script>
 </div>
 <div id="footer">
 <h6>LISTEN LIVE RADIO STATIONS</h6>
